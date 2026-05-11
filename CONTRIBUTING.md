@@ -22,7 +22,7 @@ bude uvedeno v `autor:` frontmatter daného souboru.
 
 ## Pravidla pro recepty
 
-- **Provozní velikost** 10 kg várka (Carpigiani / Bravo / Frigomat třída).
+- **Provozní velikost** 10 kg várka.
 - **Bilance je nutná** — uveď tuk %, MSNF %, cukry %, PAC.
 - **Vysvětli "proč"** — proč tento poměr cukrů, proč tato teplota, proč tento postup.
 - **Reference** k použité literatuře, pokud čerpáš.
