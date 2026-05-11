@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TagList from "../../components/TagList.astro";
+import { getCollection, render } from "astro:content";
+import { KATEGORIE_LABEL } from "../../lib/utils";
+
+export async function getStaticPaths() {
+  const all = await getCollection("ingredience");
+  return all.map((i) => ({ params: { slug: i.id }, props: { ing: i } }));
+}
+
+const { ing } = Astro.props;
+const { Content } = await render(ing);
+
+// Najdi recepty co tuto ingredienci používají
+const allRecepty = await getCollection("recepty");
+const usedIn = allRecepty.filter((r) => r.data.ingredience.includes(ing.id));
+---
+
+<BaseLayout title={ing.data.title} description={ing.data.description}>
+  <article>
+    <h1>{ing.data.title}</h1>
+    <div class="meta" style="color:var(--muted);font-size:0.95rem">
+      Kategorie: <strong>{KATEGORIE_LABEL[ing.data.kategorie] ?? ing.data.kategorie}</strong>
+      {ing.data.nazev_alt.length > 0 && <span> · Také známo jako: {ing.data.nazev_alt.join(", ")}</span>}
+    </div>
+
+    <TagList tags={ing.data.tags} />
+
+    <Content />
+
+    {ing.data.eshopy.length > 0 && (
+      <section>
+        <h2>Kde koupit</h2>
+        <ul>
+          {ing.data.eshopy.map((shop) => (
+            <li>
+              <a href={shop.url} target="_blank" rel="noopener noreferrer">{shop.nazev}</a>
+              {shop.poznamka && <span> — {shop.poznamka}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {usedIn.length > 0 && (
+      <section class="related">
+        <h2>Použito v receptech ({usedIn.length})</h2>
+        <div class="cards">
+          {usedIn.map((r) => (
+            <div class="card">
+              <h3><a href={`/recepty/${r.id}/`} class="titlelink">{r.data.title}</a></h3>
+              {r.data.description && <p class="desc">{r.data.description}</p>}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>

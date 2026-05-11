@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TagList from "../../components/TagList.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const all = await getCollection("knowledge");
+  return all.map((k) => ({ params: { slug: k.id }, props: { article: k } }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+
+// Recepty používající ingredience které ukazují na tento knowledge článek
+const allRecepty = await getCollection("recepty");
+const allIng = await getCollection("ingredience");
+const ingrUsingThis = allIng.filter((i) => i.data.knowledge_refs.includes(article.id));
+const ingrSlugs = new Set(ingrUsingThis.map((i) => i.id));
+const relatedRecipes = allRecepty.filter((r) =>
+  r.data.ingredience.some((s) => ingrSlugs.has(s))
+);
+---
+
+<BaseLayout title={article.data.title} description={article.data.description}>
+  <article>
+    <h1>{article.data.title}</h1>
+    {article.data.description && <p style="color:var(--muted);font-size:1.02rem">{article.data.description}</p>}
+    <TagList tags={article.data.tags} />
+
+    <Content />
+
+    {ingrUsingThis.length > 0 && (
+      <section class="related">
+        <h2>Související ingredience</h2>
+        <div class="cards">
+          {ingrUsingThis.map((i) => (
+            <div class="card">
+              <h3><a href={`/ingredience/${i.id}/`} class="titlelink">{i.data.title}</a></h3>
+              {i.data.description && <p class="desc">{i.data.description}</p>}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {relatedRecipes.length > 0 && (
+      <section class="related">
+        <h2>Recepty využívající tuto teorii</h2>
+        <ul>
+          {relatedRecipes.map((r) => (
+            <li><a href={`/recepty/${r.id}/`}>{r.data.title}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </article>
+</BaseLayout>

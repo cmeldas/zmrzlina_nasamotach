@@ -1,0 +1,70 @@
+/* Tisková stylesheet — pro stránky bez vlastního print layoutu (knowledge,
+   ingredience, indexy). Recepty mají vlastní layout v recipe-print.css. */
+@page {
+  size: A4 portrait;
+  margin: 12mm 14mm;
+}
+
+/* Ovládání obecné print viditelnosti */
+.print-only { display: none; }
+
+@media print {
+  /* Když má stránka vlastní print layout (recepty), úplně skryj screen verzi */
+  body.has-custom-print .screen-only { display: none !important; }
+  body.has-custom-print .print-only { display: block !important; }
+
+  /* Pro stránky bez custom print: standardní pravidla níže */
+  body { background: white; font-size: 10pt; line-height: 1.45; color: #2a1f12; }
+
+  .site-header,
+  .site-footer,
+  .actions,
+  .related,
+  nav,
+  .no-print { display: none !important; }
+
+  main { padding: 0; }
+  .container { max-width: 100%; padding: 0; }
+
+  h1 { font-size: 18pt; margin: 0 0 4pt; page-break-after: avoid; }
+  h2 { font-size: 13pt; margin: 10pt 0 4pt; border-bottom: 1.5pt solid #c47a15; page-break-after: avoid; }
+  h3 { font-size: 11pt; margin: 8pt 0 3pt; page-break-after: avoid; }
+  h4 { font-size: 10pt; margin: 6pt 0 2pt; }
+
+  p, li { font-size: 10pt; }
+  ul, ol { margin: 4pt 0; padding-left: 16pt; }
+  li { margin: 1pt 0; }
+
+  table { font-size: 9pt; page-break-inside: avoid; margin: 6pt 0; }
+  th, td { padding: 2.5pt 4pt; border: 0.5pt solid #888; }
+  th { background: #f3ecd8 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  tr { page-break-inside: avoid; }
+
+  blockquote { background: #faf6ee !important; border-left: 3pt solid #e8a723; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .recipe-meta { background: #faf6ee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: 6pt 8pt; }
+  .recipe-meta dt { font-size: 7pt; }
+  .recipe-meta dd { font-size: 9.5pt; }
+
+  .tags { display: none; }
+
+  /* zápatí každé stránky */
+  .print-footer {
+    display: block !important;
+    position: fixed;
+    bottom: 4mm;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 7.5pt;
+    color: #6b5a45;
+    border-top: 0.5pt solid #c47a15;
+    padding-top: 2pt;
+  }
+
+  a { color: #2a1f12; text-decoration: none; border: none; }
+  /* skryj URL u interních linků (ne)tisknuté */
+  a[href^="/"]::after { content: ""; }
+}
+
+.print-footer { display: none; }

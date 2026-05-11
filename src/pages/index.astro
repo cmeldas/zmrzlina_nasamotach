@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const recepty = (await getCollection("recepty")).sort(
+  (a, b) => (a.data.cislo ?? 999) - (b.data.cislo ?? 999)
+);
+const knowledgeCount = (await getCollection("knowledge")).length;
+const ingredienceCount = (await getCollection("ingredience")).length;
+---
+
+<BaseLayout title="Zmrzlina Na Samotách" description="Otevřená knowledge base a receptury na točenou zmrzlinu — sdílíme vše, co jsme se naučili.">
+  <section class="hero">
+    <h1>Zmrzlina Na Samotách</h1>
+    <p class="lead">
+      Otevřená knowledge base a receptury na točenou zmrzlinu.
+      Fyzikální chemie, postupy a recepty, které jsme si museli posbírat sami — a teď je sdílíme s tebou.
+    </p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn" href="/recepty/">Recepty ({recepty.length})</a>
+      <a class="btn secondary" href="/knowledge/">Knowledge ({knowledgeCount})</a>
+      <a class="btn secondary" href="/ingredience/">Ingredience ({ingredienceCount})</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Proč tenhle web vznikl</h2>
+    <p>
+      Když jsme začínali s točenou zmrzlinou, sami jsme bojovali s nedostatkem
+      použitelných informací v češtině. Většina receptů na internetu je buď
+      „vejce, smetana, cukr" bez vysvětlení, nebo úzkostlivě střežené tajemství
+      profi gelaterií. A my jsme chtěli pochopit <em>proč</em> — co dělá strukturu,
+      jak funguje PAC, kdy se přidává stabilizátor a proč nestačí dát to všechno
+      naráz do hrnce.
+    </p>
+    <p>
+      Posbírali jsme to z desítek zdrojů, knih, videí, vlastních pokusů a omylů.
+      Tady to dáváme dohromady — pro každého, kdo chce dělat <strong>opravdu dobrou
+      zmrzlinu</strong> a rozumět tomu, co dělá.
+    </p>
+    <p>
+      Web je <a href="/licence/">otevřený</a> a každý může přispět svým receptem
+      přes <a href="/prispivat/">pull request na GitHubu</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Začni tady</h2>
+    <div class="cards">
+      <div class="card">
+        <h3><a href="/knowledge/cukry-ve-zmrzline/" class="titlelink">1 · Cukry a PAC</a></h3>
+        <p class="desc">PAC, FPDF, jak vybrat poměr sacharóza/dextróza/glukóza. Nejdůležitější pojem v celé zmrzlinařině.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/knowledge/tuky-ve-zmrzline/" class="titlelink">2 · Tuky a struktura</a></h3>
+        <p class="desc">Mléčný tuk, částečná koalescence, MFGM — srdce krémové textury.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/knowledge/procesni-parametry/" class="titlelink">3 · Procesy</a></h3>
+        <p class="desc">Pasterizace, homogenizace, aging, freezing, hardening — co se kdy a proč dělá.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/recepty/smetanovy-zaklad/" class="titlelink">4 · Univerzální základ</a></h3>
+        <p class="desc">Smetanový základ, ze kterého se dá postavit vanilka, čokoláda, ořech i ovoce.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Recepty ({recepty.length})</h2>
+    <div class="cards">
+      {recepty.map((r) => (
+        <div class="card">
+          <h3><a href={`/recepty/${r.id}/`} class="titlelink">{r.data.title}</a></h3>
+          <div class="meta">{r.data.typ} · PAC {r.data.pac ?? "—"} · {r.data.tuk_pct ?? 0} % tuku</div>
+          {r.data.description && <p class="desc">{r.data.description}</p>}
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

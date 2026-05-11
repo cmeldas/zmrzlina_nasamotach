@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Hledat" description="Fulltextové hledání v receptech, ingrediencích a knowledge bázi.">
+  <h1>Hledat</h1>
+  <p>
+    Fulltextové hledání ve všem obsahu — receptech, ingrediencích i knowledge článcích.
+    Stačí napsat slovo (např. „vanilka", „PAC", „karagenan") a uvidíš výsledky napříč webem.
+  </p>
+
+  <div id="search"></div>
+
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <script src="/pagefind/pagefind-ui.js" is:inline></script>
+  <script is:inline>
+    window.addEventListener("DOMContentLoaded", () => {
+      // @ts-ignore
+      new PagefindUI({
+        element: "#search",
+        showSubResults: true,
+        showImages: false,
+        translations: {
+          placeholder: 'Hledat zmrzlinu, suroviny, postupy…',
+          clear_search: 'Vymazat',
+          load_more: 'Načíst další',
+          search_label: 'Hledat na webu',
+          filters_label: 'Filtry',
+          zero_results: 'Pro [SEARCH_TERM] nic nenalezeno',
+          many_results: '[COUNT] výsledků pro [SEARCH_TERM]',
+          one_result: '[COUNT] výsledek pro [SEARCH_TERM]',
+          alt_search: 'Pro [SEARCH_TERM] nic nenalezeno. Zkus [DIFFERENT_TERM]',
+          search_suggestion: 'Pro [SEARCH_TERM] nic nenalezeno. Zkus některé z těchto:',
+          searching: 'Hledám [SEARCH_TERM]…',
+        },
+      });
+    });
+  </script>
+
+  <p style="margin-top:2rem;color:var(--muted);font-size:0.9rem">
+    Index se generuje při buildu webu pomocí <a href="https://pagefind.app/" target="_blank" rel="noopener">Pagefind</a>.
+    Hledání běží 100% v prohlížeči, žádný server.
+  </p>
+</BaseLayout>

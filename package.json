@@ -1,0 +1,22 @@
+{
+  "name": "zmrzlina-nasamotach",
+  "type": "module",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Otevřená knowledge base a receptury na točenou zmrzlinu",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "astro": "astro",
+    "pdfs": "python scripts/build_pdfs.py"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.0.0",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.0.0",
+    "pagefind": "^1.2.0"
+  },
+  "license": "MIT"
+}

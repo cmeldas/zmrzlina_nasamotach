@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { slugifyTag } from "../../lib/utils";
+
+export async function getStaticPaths() {
+  const recepty = await getCollection("recepty");
+  const ingredience = await getCollection("ingredience");
+  const knowledge = await getCollection("knowledge");
+
+  const tagMap = new Map<string, { tag: string; recepty: any[]; ingredience: any[]; knowledge: any[] }>();
+
+  const add = (tag: string, kind: "recepty" | "ingredience" | "knowledge", entry: any) => {
+    const slug = slugifyTag(tag);
+    if (!tagMap.has(slug)) tagMap.set(slug, { tag, recepty: [], ingredience: [], knowledge: [] });
+    tagMap.get(slug)![kind].push(entry);
+  };
+
+  for (const r of recepty) for (const t of r.data.tags) add(t, "recepty", r);
+  for (const i of ingredience) for (const t of i.data.tags) add(t, "ingredience", i);
+  for (const k of knowledge) for (const t of k.data.tags) add(t, "knowledge", k);
+
+  return Array.from(tagMap.entries()).map(([slug, data]) => ({
+    params: { tag: slug },
+    props: data,
+  }));
+}
+
+const { tag, recepty, ingredience, knowledge } = Astro.props;
+const total = recepty.length + ingredience.length + knowledge.length;
+---
+
+<BaseLayout title={`Tag #${tag}`} description={`Vše označené tagem #${tag}`}>
+  <h1>Tag <span style="color:var(--gold-dark)">#{tag}</span></h1>
+  <p>{total} výsledků celkem.</p>
+
+  {recepty.length > 0 && (
+    <section>
+      <h2>Recepty ({recepty.length})</h2>
+      <div class="cards">
+        {recepty.map((r: any) => (
+          <div class="card">
+            <h3><a href={`/recepty/${r.id}/`} class="titlelink">{r.data.title}</a></h3>
+            {r.data.description && <p class="desc">{r.data.description}</p>}
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {ingredience.length > 0 && (
+    <section>
+      <h2>Ingredience ({ingredience.length})</h2>
+      <div class="cards">
+        {ingredience.map((i: any) => (
+          <div class="card">
+            <h3><a href={`/ingredience/${i.id}/`} class="titlelink">{i.data.title}</a></h3>
+            {i.data.description && <p class="desc">{i.data.description}</p>}
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {knowledge.length > 0 && (
+    <section>
+      <h2>Knowledge ({knowledge.length})</h2>
+      <div class="cards">
+        {knowledge.map((k: any) => (
+          <div class="card">
+            <h3><a href={`/knowledge/${k.id}/`} class="titlelink">{k.data.title}</a></h3>
+            {k.data.description && <p class="desc">{k.data.description}</p>}
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

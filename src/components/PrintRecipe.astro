@@ -1,0 +1,56 @@
+---
+import "../styles/recipe-print.css";
+import { TYP_LABEL } from "../lib/utils";
+
+interface Props {
+  num: number;
+  title: string;
+  typ: string;
+  tuk_pct?: number;
+  pac?: number;
+  serv_teplota?: string;
+  varka_kg?: number;
+  autor: string;
+}
+
+const { num, title, typ, tuk_pct, pac, serv_teplota, varka_kg = 10, autor } = Astro.props;
+const generated = new Date().toLocaleDateString("cs-CZ", { day: "numeric", month: "numeric", year: "numeric" });
+---
+
+<div class="recipe-print-wrap">
+  <article class="recipe-print">
+    <header class="rp-header">
+      <div class="rp-header-left">
+        <div class="rp-num">Recept č.&nbsp;{num}</div>
+        <h1 class="rp-title">{title}</h1>
+      </div>
+      <div class="rp-header-right">
+        <div class="rp-brand">
+          <strong>Zmrzlina&nbsp;Na&nbsp;Samotách</strong>
+          Otevřená receptura
+        </div>
+        <div class="rp-license-tag">
+          <strong>CC&nbsp;BY-SA&nbsp;4.0</strong> · Sdílej a uprav. Uveď zdroj, zachovej licenci.
+        </div>
+      </div>
+    </header>
+
+    <div class="rp-meta">
+      <span><strong>Typ:</strong> {TYP_LABEL[typ] ?? typ}</span>
+      <span><strong>Tuk:</strong> {tuk_pct !== undefined ? `${tuk_pct} %` : "—"}</span>
+      <span><strong>PAC:</strong> {pac ?? "—"}</span>
+      <span><strong>Servírování:</strong> {serv_teplota ?? "—"}</span>
+      <span><strong>Várka:</strong> {varka_kg} kg</span>
+    </div>
+
+    <main class="rp-body">
+      <slot />
+    </main>
+
+    <div class="rp-running-footer" aria-hidden="true">
+      <span>zmrzlina.nasamotach.cz</span>
+      <span>{autor}</span>
+      <span>{generated}</span>
+    </div>
+  </article>
+</div>

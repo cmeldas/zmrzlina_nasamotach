@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TagList from "../../components/TagList.astro";
+import { getCollection } from "astro:content";
+import { SEKCE_LABEL } from "../../lib/utils";
+
+const all = (await getCollection("knowledge")).sort(
+  (a, b) => a.data.poradi - b.data.poradi
+);
+
+const groups: Record<string, typeof all> = {};
+for (const k of all) {
+  (groups[k.data.sekce] ||= []).push(k);
+}
+const order = Object.keys(SEKCE_LABEL).filter((k) => groups[k]);
+const allTags = [...new Set(all.flatMap((k) => k.data.tags))].sort();
+---
+
+<BaseLayout title="Knowledge base" description="Komplexní průvodce fyzikální chemií a technologií točené zmrzliny.">
+  <h1>Knowledge base</h1>
+  <p>
+    Komplexní průvodce fyzikální chemií a technologií točené zmrzliny.
+    Každý článek se zaměřuje na jednu složku nebo procesní fázi a obsahuje
+    praktické doporučení pro malovýrobu.
+  </p>
+
+  <h2>Tagy</h2>
+  <TagList tags={allTags} />
+
+  {order.map((s) => (
+    <section>
+      <h2>{SEKCE_LABEL[s]} ({groups[s].length})</h2>
+      <div class="cards">
+        {groups[s].map((k) => (
+          <div class="card">
+            <h3><a href={`/knowledge/${k.id}/`} class="titlelink">{k.data.title}</a></h3>
+            {k.data.description && <p class="desc">{k.data.description}</p>}
+            <TagList tags={k.data.tags.slice(0, 4)} />
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+</BaseLayout>

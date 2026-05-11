@@ -1,0 +1,267 @@
+/* Brand barvy Ranče Na Samotách */
+:root {
+  --brown: #3d2e1e;
+  --gold: #e8a723;
+  --gold-dark: #c47a15;
+  --cream: #faf6ee;
+  --cream-2: #f5f0e3;
+  --line: #d8c89a;
+  --text: #2b2117;
+  --muted: #6b5a45;
+  --bg: #fdfaf3;
+  --max: 980px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16.5px;
+  color: var(--text);
+  background: var(--bg);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--gold-dark);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+a:hover {
+  border-bottom-color: var(--gold);
+  color: var(--brown);
+}
+
+h1, h2, h3, h4 {
+  font-family: "Sriracha", "Rubik", cursive;
+  color: var(--brown);
+  line-height: 1.2;
+  font-weight: 400;
+}
+h1 { font-size: 2.4rem; margin: 1.2rem 0 1rem; }
+h2 { font-size: 1.6rem; margin: 2rem 0 0.8rem; border-bottom: 2px solid var(--line); padding-bottom: 0.3rem; }
+h3 { font-size: 1.25rem; margin: 1.4rem 0 0.6rem; }
+h4 { font-size: 1.05rem; margin: 1rem 0 0.4rem; font-family: "Rubik", sans-serif; font-weight: 600; }
+
+p { margin: 0.6rem 0; }
+
+ul, ol { padding-left: 1.4rem; }
+li { margin: 0.2rem 0; }
+
+blockquote {
+  border-left: 4px solid var(--gold);
+  background: var(--cream);
+  margin: 1rem 0;
+  padding: 0.6rem 1rem;
+  color: var(--muted);
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: var(--cream-2);
+  font-weight: 600;
+  color: var(--brown);
+}
+tr:nth-child(even) td { background: rgba(255,255,255,0.5); }
+
+code {
+  background: var(--cream-2);
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.92em;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+}
+pre {
+  background: var(--brown);
+  color: #f0e6cc;
+  padding: 0.9rem 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+pre code { background: transparent; color: inherit; padding: 0; }
+
+hr {
+  border: none;
+  border-top: 1px dashed var(--line);
+  margin: 2rem 0;
+}
+
+/* Layout */
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+.site-header {
+  background: var(--brown);
+  color: var(--cream);
+  padding: 1rem 0;
+  border-bottom: 4px solid var(--gold);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.site-header a { color: var(--cream); border: none; }
+.site-header .logo {
+  font-family: "Sriracha", cursive;
+  font-size: 1.6rem;
+  color: var(--gold);
+}
+.site-header .logo span { color: var(--cream); font-size: 0.95rem; opacity: 0.8; margin-left: 0.4rem; }
+.site-header nav { display: flex; gap: 1.1rem; flex-wrap: wrap; font-size: 0.98rem; }
+.site-header nav a:hover { color: var(--gold); }
+
+main { padding: 1.5rem 0 3rem; }
+
+.site-footer {
+  background: var(--brown);
+  color: var(--cream);
+  padding: 1.6rem 0;
+  margin-top: 3rem;
+  font-size: 0.92rem;
+}
+.site-footer a { color: var(--gold); border: none; }
+.site-footer .cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+}
+
+/* Cards / lists */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.2rem 0;
+}
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(61,46,30,0.1);
+}
+.card h3 { margin: 0; font-size: 1.15rem; }
+.card .meta { color: var(--muted); font-size: 0.85rem; }
+.card a.titlelink { color: var(--brown); border: none; }
+.card a.titlelink:hover { color: var(--gold-dark); }
+.card .desc { font-size: 0.93rem; color: var(--text); flex: 1; }
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.4rem 0;
+}
+.tag {
+  display: inline-block;
+  background: var(--cream-2);
+  color: var(--brown);
+  border: 1px solid var(--line);
+  font-size: 0.78rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+.tag:hover { background: var(--gold); color: white; border-color: var(--gold-dark); }
+
+/* Recipe specific */
+.recipe-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.6rem;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+}
+.recipe-meta dt { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; margin: 0; }
+.recipe-meta dd { margin: 0; font-weight: 600; color: var(--brown); }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 1.4rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--gold);
+  color: var(--brown);
+  border: 2px solid var(--gold-dark);
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { background: var(--gold-dark); color: white; border-color: var(--brown); }
+.btn.secondary { background: white; }
+
+/* Hero (homepage) */
+.hero {
+  background: linear-gradient(135deg, var(--cream), var(--cream-2));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 2rem 1.6rem;
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+.hero h1 { font-size: 2.8rem; margin-top: 0; }
+.hero p.lead { font-size: 1.15rem; color: var(--muted); max-width: 640px; margin: 0.8rem auto; }
+
+/* Search */
+#pagefind-search {
+  --pagefind-ui-primary: var(--brown);
+  --pagefind-ui-text: var(--text);
+  --pagefind-ui-background: white;
+  --pagefind-ui-border: var(--line);
+  --pagefind-ui-tag: var(--cream-2);
+  --pagefind-ui-border-radius: 6px;
+  --pagefind-ui-font: "Rubik", sans-serif;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.35rem; }
+  .site-header .container { flex-direction: column; align-items: flex-start; }
+}

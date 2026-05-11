@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TagList from "../../components/TagList.astro";
+import PrintRecipe from "../../components/PrintRecipe.astro";
+import { getCollection, render } from "astro:content";
+import { TYP_LABEL, OBTIZNOST_LABEL } from "../../lib/utils";
+
+export async function getStaticPaths() {
+  const recepty = await getCollection("recepty");
+  return recepty.map((r) => ({ params: { slug: r.id }, props: { recipe: r } }));
+}
+
+const { recipe } = Astro.props;
+const { Content } = await render(recipe);
+---
+
+<BaseLayout title={recipe.data.title} description={recipe.data.description} customPrint={true}>
+  <article>
+    <h1>{recipe.data.title}</h1>
+    {recipe.data.description && <p style="font-size:1.05rem;color:var(--muted)">{recipe.data.description}</p>}
+
+    <dl class="recipe-meta">
+      <div><dt>Typ</dt><dd>{TYP_LABEL[recipe.data.typ] ?? recipe.data.typ}</dd></div>
+      {recipe.data.tuk_pct !== undefined && <div><dt>Tuk</dt><dd>{recipe.data.tuk_pct} %</dd></div>}
+      {recipe.data.pac !== undefined && <div><dt>PAC</dt><dd>{recipe.data.pac}</dd></div>}
+      {recipe.data.serv_teplota && <div><dt>Servírování</dt><dd>{recipe.data.serv_teplota}</dd></div>}
+      {recipe.data.varka_kg && <div><dt>Várka</dt><dd>{recipe.data.varka_kg} kg</dd></div>}
+      <div><dt>Obtížnost</dt><dd>{OBTIZNOST_LABEL[recipe.data.obtiznost] ?? recipe.data.obtiznost}</dd></div>
+    </dl>
+
+    <TagList tags={recipe.data.tags} />
+
+    <div class="actions no-print">
+      {recipe.data.pdf && (
+        <a class="btn" href={recipe.data.pdf} download>
+          ⬇ Stáhnout jako A4 PDF
+        </a>
+      )}
+      <button class="btn secondary" onclick="window.print()">🖨 Vytisknout</button>
+    </div>
+
+    <Content />
+
+    <section class="no-print" style="margin-top:2rem;font-size:0.9rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:1rem">
+      <strong>Licence:</strong> {recipe.data.licence}
+      &nbsp;·&nbsp;
+      <strong>Autor:</strong> {recipe.data.autor}
+      &nbsp;·&nbsp;
+      <a href="/licence/">Co to znamená?</a>
+    </section>
+  </article>
+
+  <PrintRecipe
+    slot="print"
+    num={recipe.data.cislo ?? 0}
+    title={recipe.data.title}
+    typ={recipe.data.typ}
+    tuk_pct={recipe.data.tuk_pct}
+    pac={recipe.data.pac}
+    serv_teplota={recipe.data.serv_teplota}
+    varka_kg={recipe.data.varka_kg}
+    autor={recipe.data.autor}
+  >
+    <Content />
+  </PrintRecipe>
+</BaseLayout>

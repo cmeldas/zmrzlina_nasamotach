@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TagList from "../../components/TagList.astro";
+import { getCollection } from "astro:content";
+import { TYP_LABEL } from "../../lib/utils";
+
+const recepty = (await getCollection("recepty")).sort(
+  (a, b) => (a.data.cislo ?? 999) - (b.data.cislo ?? 999)
+);
+
+const allTags = [...new Set(recepty.flatMap((r) => r.data.tags))].sort();
+---
+
+<BaseLayout title="Recepty" description="Receptury na točenou zmrzlinu, sorbety a nanuky pro provozní velikost várky 10 kg.">
+  <h1>Recepty</h1>
+  <p>
+    Všechny receptury jsou laděny pro <strong>provozní várku 10 kg</strong>
+    (~12–14 litrů točené po šlehání) a typickou servírovací teplotu
+    <strong>−10 až −12 °C</strong> (kromě nanuků, které jdou na −18 °C).
+    Každý recept je ke stažení jako jedna A4 ve formátu pro tisk.
+  </p>
+
+  <h2>Filtrovat podle tagů</h2>
+  <TagList tags={allTags} />
+
+  <h2>Všechny recepty ({recepty.length})</h2>
+  <div class="cards">
+    {recepty.map((r) => (
+      <div class="card">
+        <h3><a href={`/recepty/${r.id}/`} class="titlelink">{r.data.title}</a></h3>
+        <div class="meta">
+          {TYP_LABEL[r.data.typ] ?? r.data.typ}
+          {r.data.tuk_pct !== undefined && ` · ${r.data.tuk_pct} % tuku`}
+          {r.data.pac !== undefined && ` · PAC ${r.data.pac}`}
+        </div>
+        {r.data.description && <p class="desc">{r.data.description}</p>}
+        <TagList tags={r.data.tags.slice(0, 5)} />
+      </div>
+    ))}
+  </div>
+</BaseLayout>

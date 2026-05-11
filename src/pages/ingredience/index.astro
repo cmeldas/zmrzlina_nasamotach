@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TagList from "../../components/TagList.astro";
+import { getCollection } from "astro:content";
+import { KATEGORIE_LABEL } from "../../lib/utils";
+
+const all = (await getCollection("ingredience")).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title, "cs")
+);
+
+const groups: Record<string, typeof all> = {};
+for (const i of all) {
+  (groups[i.data.kategorie] ||= []).push(i);
+}
+const order = Object.keys(KATEGORIE_LABEL).filter((k) => groups[k]);
+
+const allTags = [...new Set(all.flatMap((i) => i.data.tags))].sort();
+---
+
+<BaseLayout title="Ingredience" description="Databáze surovin pro výrobu zmrzliny — specifikace, dávkování a kde koupit.">
+  <h1>Databáze ingrediencí</h1>
+  <p>
+    Pro každou ingredienci najdeš základní specifikaci (sušina, PAC, dávkování),
+    odkazy na odpovídající knowledge články a (časem) i ověřené eshopy, kde
+    lze koupit. Eshop linky jsou otevřené komunitě — pošli PR.
+  </p>
+
+  <h2>Tagy</h2>
+  <TagList tags={allTags} />
+
+  {order.map((k) => (
+    <section>
+      <h2>{KATEGORIE_LABEL[k]} ({groups[k].length})</h2>
+      <div class="cards">
+        {groups[k].map((i) => (
+          <div class="card">
+            <h3><a href={`/ingredience/${i.id}/`} class="titlelink">{i.data.title}</a></h3>
+            {i.data.typicke_davkovani && <div class="meta">Dávkování: {i.data.typicke_davkovani}</div>}
+            {i.data.description && <p class="desc">{i.data.description}</p>}
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+</BaseLayout>

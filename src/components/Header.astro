@@ -1,0 +1,18 @@
+---
+const path = Astro.url.pathname;
+const isActive = (p: string) => path === p || (p !== "/" && path.startsWith(p));
+---
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">Zmrzlina <span>Na Samotách</span></a>
+    <nav>
+      <a href="/recepty/" class={isActive("/recepty/") ? "active" : ""}>Recepty</a>
+      <a href="/ingredience/" class={isActive("/ingredience/") ? "active" : ""}>Ingredience</a>
+      <a href="/knowledge/" class={isActive("/knowledge/") ? "active" : ""}>Knowledge</a>
+      <a href="/hledat/" class={isActive("/hledat/") ? "active" : ""}>Hledat</a>
+      <a href="/o-projektu/" class={isActive("/o-projektu/") ? "active" : ""}>O projektu</a>
+      <a href="/prispivat/" class={isActive("/prispivat/") ? "active" : ""}>Přispět</a>
+    </nav>
+  </div>
+</header>

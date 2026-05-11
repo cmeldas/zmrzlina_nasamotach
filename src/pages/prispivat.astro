@@ -1,0 +1,176 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Jak přispět" description="Jak přidat vlastní recept nebo opravit existující obsah přes pull request.">
+  <h1>Jak přispět</h1>
+
+  <p>
+    Tenhle projekt je <strong>otevřený</strong>. Pokud máš ověřený recept,
+    víš o lepším eshopu na nějakou ingredienci, nebo jsi narazil na chybu —
+    pošli pull request.
+  </p>
+
+  <h2>Přidat nový recept</h2>
+  <ol>
+    <li>Forkni si <a href="https://github.com/" target="_blank" rel="noopener">repozitář na GitHubu</a>.</li>
+    <li>
+      Vytvoř nový soubor <code>src/content/recepty/tvuj-recept.md</code>.
+      Zkopíruj strukturu z některého existujícího (např. <code>smetanovy-zaklad.md</code>) a uprav.
+    </li>
+    <li>
+      Vyplň <strong>frontmatter</strong>:
+      <pre><code>---
+title: "Název receptu"
+typ: tocena    # tocena | sorbet | nanuk | kopeckova | premium
+tuk_pct: 8
+pac: 28
+serv_teplota: "−10 až −12 °C"
+varka_kg: 10
+obtiznost: stredne-pokrocily
+tags: [smetanova, vanilka, klasika]
+ingredience: [plnotucne-mleko, smetana-33, vajecny-zloutek, sacharoza, dextroza]
+description: "Krátký popis na jednu větu."
+autor: "Tvé jméno"
+licence: "CC BY-SA 4.0"
+---</code></pre>
+    </li>
+    <li>Napiš tělo receptu v Markdownu — surovinová tabulka, bilance, postup, tipy.</li>
+    <li>Otevři pull request s krátkým popisem.</li>
+  </ol>
+
+  <h2>Přidat eshop link k ingredienci</h2>
+  <p>
+    Otevři odpovídající <code>src/content/ingredience/*.md</code> a přidej do
+    frontmatter pod <code>eshopy:</code>:
+  </p>
+  <pre><code>eshopy:
+  - nazev: "Název obchodu"
+    url: "https://eshop.cz/produkt"
+    poznamka: "balení 1 kg, ~250 Kč"
+</code></pre>
+
+  <h2>Přidat článek do knowledge base</h2>
+  <p>
+    Vytvoř <code>src/content/knowledge/nazev-clanku.md</code> s frontmatter:
+  </p>
+  <pre><code>---
+title: "Název článku"
+sekce: slozky    # slozky | chemie | procesy | reference
+tags: [tag1, tag2]
+poradi: 50
+description: "Krátký popis."
+---</code></pre>
+
+  <h2>Použít AI asistenta (Claude, GitHub Copilot)</h2>
+  <p>
+    V repu je <strong>skill</strong> (návod pro AI agenta), který dokáže
+    z hlavní příchuti a pár ingrediencí <strong>navrhnout celý recept</strong>,
+    spočítat bilanci (tuk, MSNF, PAC, sušina), uložit <code>.md</code> do
+    <code>src/content/recepty/</code> a rovnou vygenerovat PDF. Najdeš ho v
+    <a
+      href="https://github.com/cmeldas/zmrzlina_nasamotach/blob/main/skills/zmrzlina-recept/SKILL.md"
+      target="_blank"
+      rel="noopener"
+      ><code>skills/zmrzlina-recept/SKILL.md</code></a
+    >.
+  </p>
+
+  <h3>Claude Code / Claude.ai</h3>
+  <ol>
+    <li>
+      Naklonuj repo lokálně:
+      <pre><code>git clone https://github.com/cmeldas/zmrzlina_nasamotach.git
+cd zmrzlina_nasamotach</code></pre>
+    </li>
+    <li>
+      Spusť Claude Code v rootu repa. Skill najde sám (složka
+      <code>skills/zmrzlina-recept/</code>).
+    </li>
+    <li>
+      Zadej prompt, např.:
+      <blockquote>
+        „Udělej recept na <strong>pistáciovou zmrzlinu</strong> se smetanou 33&nbsp;%,
+        pistáciovou pastou a žloutky. Použij skill <code>zmrzlina-recept</code>."
+      </blockquote>
+    </li>
+    <li>
+      Claude se případně doptá (typ, cílový tuk, suroviny), pak napíše
+      <code>.md</code>, doplní karty surovin a pustí
+      <code>python scripts/build_pdfs.py --recipe NN</code>.
+    </li>
+    <li>Zkontroluj výsledek, otestuj v provozu, otevři PR.</li>
+  </ol>
+
+  <h3>GitHub Copilot ve VS Code (agent mode)</h3>
+  <ol>
+    <li>Otevři repo ve VS Code s nainstalovaným rozšířením GitHub Copilot.</li>
+    <li>
+      Přepni Copilot Chat do <strong>Agent</strong> módu (ikona <em>Agent</em>
+      v hlavičce chatu).
+    </li>
+    <li>
+      V chatu napiš požadavek a explicitně se odkaž na skill:
+      <pre><code>Použij skill skills/zmrzlina-recept/SKILL.md
+a navrhni mangový sorbet s limetkou.</code></pre>
+    </li>
+    <li>
+      Copilot načte SKILL.md, projde knowledge soubory, napočítá bilanci,
+      vytvoří <code>src/content/recepty/mangovy-sorbet.md</code> a spustí
+      build PDF.
+    </li>
+    <li>
+      Pokud nějaká ingredience nemá kartu v <code>src/content/ingredience/</code>,
+      skill ji založí podle šablony — zkontroluj hodnoty (<code>pac</code>,
+      <code>sucha_latka_pct</code>).
+    </li>
+  </ol>
+
+  <h3>Co od AI vždy zkontroluj</h3>
+  <ul>
+    <li>
+      Součet ingrediencí = <strong>přesně 10 000&nbsp;g</strong>
+      a 100,00&nbsp;%.
+    </li>
+    <li>PAC v cílovém rozsahu (točená 28–30, sorbet 28–32, nanuk 22–26).</li>
+    <li>Sůl <strong>1&nbsp;g</strong>, ne víc.</li>
+    <li>
+      Pro nanuk glukózový sirup v prášku (např. GL01934), ne tekutý.
+    </li>
+    <li>Pro čokoládu žádná jedlá soda.</li>
+    <li>Čerstvé ovoce, kůra a extrakty se přidávají <strong>po pasteraci</strong>.</li>
+    <li>
+      Odkazy na karty surovin (<code>/ingredience/&#123;slug&#125;/</code>)
+      ukazují na existující soubory.
+    </li>
+  </ul>
+
+  <p>
+    <strong>Pozor:</strong> AI ti dá kvalitní výchozí návrh, ale chuť a
+    texturu musíš ověřit v reálné várce. Po první zkoušce klidně iteruj
+    (uprav cukry, tuk, stabilizátor) a pošli PR s ověřenou verzí.
+  </p>
+
+  <h2>Pravidla pro recepty</h2>
+  <ul>
+    <li><strong>Provozní velikost:</strong> všechny recepty jsou na várku 10 kg (provoz Carpigiani / Bravo). Pokud má tvůj recept jinou velikost, uveď to jasně.</li>
+    <li><strong>Bilance je nutná:</strong> uveď tuk %, MSNF %, cukry %, PAC. Bez čísel je to jen babiččina kuchařka.</li>
+    <li><strong>Vysvětli "proč"</strong> — proč zrovna tento poměr cukrů, proč tato teplota, proč tento postup.</li>
+    <li><strong>Zdroje:</strong> pokud čerpáš z konkrétní knihy nebo článku, uveď referenci.</li>
+    <li><strong>Bezpečnost:</strong> u syrových složek (vejce) uveď pasterizační režim.</li>
+  </ul>
+
+  <h2>Licence příspěvku</h2>
+  <p>
+    Otevřením pull requestu souhlasíš, že tvůj příspěvek bude uvolněn pod
+    licencí <a href="/licence/">CC BY-SA 4.0</a>. Tvoje autorství zůstává,
+    ostatní jen mohou recept sdílet a upravovat za stejných podmínek.
+  </p>
+
+  <h2>Co nepřijímáme</h2>
+  <ul>
+    <li>Recepty obsahující obchodně chráněné receptury (NDA, výrobci komerčních směsí).</li>
+    <li>Marketingové texty na konkrétní produkty bez technické hodnoty.</li>
+    <li>Opisy z knih bez přepracování (autorská práva).</li>
+  </ul>
+</BaseLayout>

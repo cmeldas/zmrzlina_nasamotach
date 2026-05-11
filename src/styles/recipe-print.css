@@ -1,0 +1,241 @@
+/* Tisková verze receptu — identická s PDF generovaným scripts/build_pdfs.py.
+   Aktivní pouze při window.print() (přes @media print) a přes třídu .print-mode
+   pro náhled. */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 11mm 12mm 16mm 12mm;
+  }
+}
+
+.recipe-print {
+  display: none;
+}
+
+@media print {
+  .recipe-print {
+    display: block !important;
+  }
+}
+
+.recipe-print {
+  background: white;
+  color: #3d2e1e;
+  font-family: "Rubik", Arial, sans-serif;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+
+  --rp-fs: 9.5pt;
+  --rp-h3: 10.5pt;
+  --rp-tb: 8.5pt;
+}
+
+.recipe-print * { box-sizing: border-box; }
+
+/* === HEADER === */
+.recipe-print .rp-header {
+  border-bottom: 0.6mm solid #e8a723;
+  padding-bottom: 3mm;
+  margin-bottom: 4mm;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 6mm;
+  break-inside: avoid;
+  break-after: avoid;
+}
+.recipe-print .rp-header-left { flex: 1; min-width: 0; }
+.recipe-print .rp-header-right {
+  text-align: right;
+  flex-shrink: 0;
+  max-width: 75mm;
+}
+.recipe-print .rp-num {
+  font-family: "Sriracha", cursive;
+  font-size: 11pt;
+  color: #c47a15;
+  line-height: 1;
+  margin-bottom: 1mm;
+}
+.recipe-print .rp-title {
+  font-family: "Sriracha", cursive;
+  font-size: 22pt;
+  color: #3d2e1e;
+  line-height: 1.05;
+  margin: 0;
+  font-weight: 400;
+  border: none;
+  padding: 0;
+}
+.recipe-print .rp-brand {
+  text-align: right;
+  font-size: 7pt;
+  color: #c47a15;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 1.5mm;
+}
+.recipe-print .rp-brand strong {
+  display: block;
+  font-family: "Sriracha", cursive;
+  font-size: 11pt;
+  color: #3d2e1e;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.recipe-print .rp-license-tag {
+  font-size: 6.5pt;
+  color: #3d2e1e;
+  line-height: 1.25;
+  background: #faf6ee;
+  border-left: 0.5mm solid #e8a723;
+  padding: 0.8mm 1.5mm;
+  text-align: left;
+}
+.recipe-print .rp-license-tag strong {
+  color: #c47a15;
+  font-weight: 700;
+}
+
+/* === META PILLS === */
+.recipe-print .rp-meta {
+  display: flex;
+  gap: 4mm;
+  flex-wrap: wrap;
+  font-size: 8pt;
+  color: #c47a15;
+  margin-bottom: 3mm;
+  break-inside: avoid;
+  break-after: avoid;
+}
+.recipe-print .rp-meta span {
+  padding: 0.5mm 2mm;
+  background: #faf6ee;
+  border-radius: 1mm;
+}
+.recipe-print .rp-meta strong { color: #3d2e1e; }
+
+/* === BODY (2 sloupce) === */
+.recipe-print .rp-body {
+  font-size: var(--rp-fs);
+  line-height: 1.32;
+  column-count: 2;
+  column-gap: 6mm;
+  column-rule: 0.15mm solid #d8c89a;
+  column-fill: auto;
+}
+.recipe-print .rp-body > * + * { margin-top: 0; }
+.recipe-print .rp-body p,
+.recipe-print .rp-body ul,
+.recipe-print .rp-body ol,
+.recipe-print .rp-body table,
+.recipe-print .rp-body blockquote,
+.recipe-print .rp-body h3,
+.recipe-print .rp-body h4 {
+  margin: 0 0 1.6mm 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.recipe-print .rp-body h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: var(--rp-h3);
+  font-weight: 700;
+  color: #c47a15;
+  margin: 2.5mm 0 1.2mm;
+  padding-bottom: 0.5mm;
+  border-bottom: 0.15mm dotted #e8a723;
+  letter-spacing: 0.1pt;
+  break-inside: avoid;
+}
+.recipe-print .rp-body h3 {
+  font-family: "Rubik", sans-serif;
+  font-size: var(--rp-h3);
+  font-weight: 700;
+  color: #c47a15;
+  margin: 2.5mm 0 1.2mm;
+  padding-bottom: 0.5mm;
+  border-bottom: 0.15mm dotted #e8a723;
+  letter-spacing: 0.1pt;
+}
+.recipe-print .rp-body h2:first-child,
+.recipe-print .rp-body h3:first-child { margin-top: 0; }
+.recipe-print .rp-body h4 {
+  font-size: var(--rp-fs);
+  font-weight: 700;
+  color: #3d2e1e;
+  margin: 1.8mm 0 0.8mm;
+}
+.recipe-print .rp-body strong { color: #3d2e1e; font-weight: 600; }
+.recipe-print .rp-body em { color: #6b5536; }
+.recipe-print .rp-body ul,
+.recipe-print .rp-body ol { padding-left: 4mm; }
+.recipe-print .rp-body li { margin-bottom: 0.4mm; }
+.recipe-print .rp-body blockquote {
+  border-left: 0.6mm solid #e8a723;
+  padding: 0.8mm 0 0.8mm 2mm;
+  background: #faf6ee;
+  color: #5a4528;
+  font-style: italic;
+  border-radius: 0;
+}
+.recipe-print .rp-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--rp-tb);
+  line-height: 1.2;
+}
+.recipe-print .rp-body th,
+.recipe-print .rp-body td {
+  border: 0.1mm solid #d8c89a;
+  padding: 0.6mm 1.2mm;
+  text-align: left;
+  vertical-align: top;
+}
+.recipe-print .rp-body th {
+  background: #faf6ee;
+  color: #3d2e1e;
+  font-weight: 600;
+}
+.recipe-print .rp-body tbody tr:nth-child(even) td {
+  background: rgba(232, 167, 35, 0.05);
+}
+.recipe-print .rp-body td:not(:first-child),
+.recipe-print .rp-body th:not(:first-child) { text-align: right; }
+
+.recipe-print .rp-body a {
+  color: #c47a15;
+  text-decoration: none;
+  border-bottom: 0.1mm dotted #e8a723;
+}
+
+/* === RUNNING FOOTER (opakuje se na každé stránce, position:fixed do okraje @page) === */
+.recipe-print .rp-running-footer {
+  display: none;
+}
+@media print {
+  .recipe-print .rp-running-footer {
+    display: flex !important;
+    position: fixed;
+    bottom: -10mm;
+    left: 0;
+    right: 0;
+    padding-top: 2mm;
+    border-top: 0.3mm solid #d8c89a;
+    font-size: 8pt;
+    color: #c47a15;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .recipe-print .rp-running-footer span:nth-child(2) { color: #3d2e1e; }
+}
+
+/* === Skryj zbytek webu při tisku === */
+@media print {
+  /* potlač globální print-footer (řešeno přes body.has-custom-print v print.css) */
+  .print-footer { display: none !important; }
+}
