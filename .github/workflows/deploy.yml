@@ -5,14 +5,14 @@ name: Deploy to Vercel
 # v repo Settings → Secrets and variables → Actions.
 #
 # Provoz:
-#   - push do main → produkční deploy (--prod)
+#   - push do master → produkční deploy (--prod)
 #   - PR z forku   → preview deploy (komentář s URL)
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
