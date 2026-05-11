@@ -58,6 +58,22 @@
   line-height: 1;
   margin-bottom: 1mm;
 }
+.recipe-print .rp-stav-pill {
+  display: inline-block;
+  padding: 0.1mm 1.5mm;
+  border-radius: 2mm;
+  font-family: "Rubik", sans-serif;
+  font-size: 7pt;
+  font-weight: 600;
+  letter-spacing: 0.2pt;
+  vertical-align: 1mm;
+  margin-left: 1mm;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.recipe-print .rp-stav-pill.rp-stav-navrh { background: #fef3e8; color: #8a4a08; border: 0.1mm solid #f0c177; }
+.recipe-print .rp-stav-pill.rp-stav-testovany { background: #fff7d6; color: #6b4d05; border: 0.1mm solid #e8c34a; }
+.recipe-print .rp-stav-pill.rp-stav-odladeny { background: #e8f4e0; color: #2d5016; border: 0.1mm solid #8ac070; }
 .recipe-print .rp-title {
   font-family: "Sriracha", cursive;
   font-size: 22pt;

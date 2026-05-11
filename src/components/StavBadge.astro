@@ -1,0 +1,67 @@
+---
+import { STAV_LABEL, STAV_POPIS } from "../lib/utils";
+
+interface Props {
+  stav: "navrh" | "testovany" | "odladeny";
+  showPopis?: boolean;
+  size?: "sm" | "md";
+}
+
+const { stav, showPopis = false, size = "md" } = Astro.props;
+const label = STAV_LABEL[stav] ?? stav;
+const popis = STAV_POPIS[stav] ?? "";
+---
+
+<span class={`stav-badge stav-${stav} size-${size}`} title={popis}>
+  <span class="stav-dot" aria-hidden="true"></span>
+  {label}
+  {showPopis && <span class="stav-popis">— {popis}</span>}
+</span>
+
+<style>
+  .stav-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.15em 0.6em;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.2;
+    background: var(--cream, #faf6ee);
+    border: 1px solid var(--line, #d8c89a);
+    color: var(--brown, #3d2e1e);
+    white-space: nowrap;
+  }
+  .stav-badge.size-sm {
+    font-size: 0.7rem;
+    padding: 0.1em 0.5em;
+  }
+  .stav-dot {
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+  .stav-navrh {
+    background: #fef3e8;
+    border-color: #f0c177;
+    color: #8a4a08;
+  }
+  .stav-testovany {
+    background: #fff7d6;
+    border-color: #e8c34a;
+    color: #6b4d05;
+  }
+  .stav-odladeny {
+    background: #e8f4e0;
+    border-color: #8ac070;
+    color: #2d5016;
+  }
+  .stav-popis {
+    font-weight: 400;
+    opacity: 0.8;
+  }
+</style>

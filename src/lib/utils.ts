@@ -48,3 +48,26 @@ export const OBTIZNOST_LABEL: Record<string, string> = {
   "stredne-pokrocily": "Středně pokročilý",
   pokrocily: "Pokročilý",
 };
+
+/** Stav vývoje receptu (frontmatter `stav`). */
+export const STAV_LABEL: Record<string, string> = {
+  navrh: "Návrh",
+  testovany: "Testovaný",
+  odladeny: "Odladěný",
+};
+
+export const STAV_POPIS: Record<string, string> = {
+  navrh: "Teoretický návrh — ještě jsme to nevyrobili.",
+  testovany: "Minimálně jednou jsme to vyrobili, ale stále ladíme.",
+  odladeny: "Ověřený, používáme v provozu.",
+};
+
+/**
+ * Vyfiltruje recepty, které nejsou publikované (`publikovat: false`),
+ * ale jen v produkčním buildu (Vercel). V `astro dev` zůstávají viditelné,
+ * aby se s nimi dalo pracovat.
+ */
+export function filterPublished<T extends { data: { publikovat?: boolean } }>(items: T[]): T[] {
+  if (!import.meta.env.PROD) return items;
+  return items.filter((it) => it.data.publikovat !== false);
+}

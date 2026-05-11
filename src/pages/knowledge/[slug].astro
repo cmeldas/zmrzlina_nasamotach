@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TagList from "../../components/TagList.astro";
 import { getCollection, render } from "astro:content";
+import { filterPublished } from "../../lib/utils";
 
 export async function getStaticPaths() {
   const all = await getCollection("knowledge");
@@ -12,7 +13,7 @@ const { article } = Astro.props;
 const { Content } = await render(article);
 
 // Recepty používající ingredience které ukazují na tento knowledge článek
-const allRecepty = await getCollection("recepty");
+const allRecepty = filterPublished(await getCollection("recepty"));
 const allIng = await getCollection("ingredience");
 const ingrUsingThis = allIng.filter((i) => i.data.knowledge_refs.includes(article.id));
 const ingrSlugs = new Set(ingrUsingThis.map((i) => i.id));

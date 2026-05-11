@@ -25,9 +25,8 @@ ingredience:
   - mec3-natura-50
 description: "Plná čokoládová zmrzlina z přírodního raw kakaa a kakaové hmoty, ~10 % tuku."
 pdf: "/pdfs/recept-08-cokoladova-zmrzlina.pdf"
----
-
-**Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
+stav: testovany
+---**Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
 
 **Cíl:** Plná, autentická čokoládová chuť díky kombinaci **přírodního nealkalizovaného kakaa z nepražených (raw) bobů** (ovocná, kyselejší aromatika s květinovými/lesními tóny) a **kakaové hmoty** (55 % kakaového másla — máslové aroma, krémovost, hloubka čokoládové chuti). Cílová tučnost ~10 %.
 
@@ -59,7 +58,7 @@ pdf: "/pdfs/recept-08-cokoladova-zmrzlina.pdf"
 | [Přírodní raw kakao (~11 % tuku)](/ingredience/raw-kakao/) | 350        | 3,5 %     |
 | [Sacharóza](/ingredience/sacharoza/)                       | 1 450      | 14,5 %    |
 | [Dextróza](/ingredience/dextroza/)                        | 250        | 2,5 %     |
-| Glukóza (prášek, sušený sirup)  | 200        | 2,0 %     |
+| [Glukóza (prášek, sušený sirup)](/ingredience/dextroza/)  | 200        | 2,0 %     |
 | [Sušené odtučněné mléko (SOM)](/ingredience/som/)    | 250        | 2,5 %     |
 | [MEC3 Natura 50](/ingredience/mec3-natura-50/)                  | 50         | 0,5 %     |
 | Špetka soli                     | 1          | 0,01 %    |
@@ -72,17 +71,17 @@ pdf: "/pdfs/recept-08-cokoladova-zmrzlina.pdf"
 | **Tuk**      | mléko 520×0,035 + smetana 150×0,33 + kak. hmota 60×0,55 + kakao 35×0,11 | ~105 g → **10,5 %** |
 | **MSNF**     | mléko ~9 % + smetana (67%×9%) + SOM 25                             | ~81 g → **8,1 %**   |
 | **Cukry**    | 145 + 25 + 20 + 15 + laktóza ~42                                   | ~25 % efektivně     |
-| **Kakaová sušina** | hmota 60×0,45 + prášek 35×0,89                               | ~58 g → **5,8 %**   |
+| [**Kakaová sušina**](/ingredience/kakaova-hmota/) | hmota 60×0,45 + prášek 35×0,89                               | ~58 g → **5,8 %**   |
 | **Sušina**   | tuk + cukry + MSNF + kakao + stabilizátor                          | **~44 %**           |
 
 **PAC výpočet (na 100 g):**
 
-| Cukr             | g/100 g | FPDF | PAC      |
+| [Cukr](/ingredience/sacharoza/)             | g/100 g | FPDF | PAC      |
 | ---------------- | ------- | ---- | -------- |
 | Sacharóza        | 14,5    | 1,0  | 14,5     |
 | Dextróza         | 2,5     | 1,9  | 4,75     |
 | Glukóza (prášek) | 2,0     | 0,8  | 1,6      |
-| Invertní cukr    | 1,5     | 1,9  | 2,85     |
+| [Invertní cukr](/ingredience/invertni-cukr/)    | 1,5     | 1,9  | 2,85     |
 | Laktóza          | ~4,2    | 1,0  | 4,2      |
 | **Celkem PAC**   |         |      | **~28**  |
 

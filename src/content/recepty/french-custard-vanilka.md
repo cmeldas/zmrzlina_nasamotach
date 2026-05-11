@@ -25,9 +25,9 @@ ingredience:
   - stabilizator-guar-lbg
 description: "Klasická francouzská vanilková zmrzlina na bázi crème anglaise, vysoký podíl žloutků."
 pdf: "/pdfs/recept-07-french-custard-vanilka.pdf"
----
-
-**Typ:** točená zmrzlina (premium) | **Servírování:** −10 až −12 °C
+stav: navrh
+publikovat: false
+---**Typ:** točená zmrzlina (premium) | **Servírování:** −10 až −12 °C
 
 **Cíl:** Klasická francouzská vanilková zmrzlina na bázi anglické krému (crème anglaise). Vyšší tuk (12 %), vysoký podíl žloutků (6 %) → bohatá, máslová, hluboká chuť.
 
@@ -72,11 +72,11 @@ pdf: "/pdfs/recept-07-french-custard-vanilka.pdf"
 
 **PAC výpočet (na 100 g):**
 
-| Cukr             | g/100 g | FPDF | PAC      |
+| [Cukr](/ingredience/sacharoza/)             | g/100 g | FPDF | PAC      |
 | ---------------- | ------- | ---- | -------- |
 | Sacharóza        | 12,0    | 1,0  | 12,0     |
-| Dextróza         | 5,0     | 1,9  | 9,5      |
-| Invertní cukr    | 1,5     | 1,9  | 2,85     |
+| [Dextróza](/ingredience/dextroza/)         | 5,0     | 1,9  | 9,5      |
+| [Invertní cukr](/ingredience/invertni-cukr/)    | 1,5     | 1,9  | 2,85     |
 | Laktóza          | ~3,7    | 1,0  | 3,7      |
 | **Celkem PAC**   |         |      | **~28**  |
 

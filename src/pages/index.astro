@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import { filterPublished } from "../lib/utils";
 
-const recepty = (await getCollection("recepty")).sort(
+const recepty = filterPublished(await getCollection("recepty")).sort(
   (a, b) => (a.data.cislo ?? 999) - (b.data.cislo ?? 999)
 );
 const knowledgeCount = (await getCollection("knowledge")).length;

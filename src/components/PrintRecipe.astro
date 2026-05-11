@@ -1,6 +1,6 @@
 ---
 import "../styles/recipe-print.css";
-import { TYP_LABEL } from "../lib/utils";
+import { TYP_LABEL, STAV_LABEL } from "../lib/utils";
 
 interface Props {
   num: number;
@@ -11,9 +11,10 @@ interface Props {
   serv_teplota?: string;
   varka_kg?: number;
   autor: string;
+  stav?: "navrh" | "testovany" | "odladeny";
 }
 
-const { num, title, typ, tuk_pct, pac, serv_teplota, varka_kg = 10, autor } = Astro.props;
+const { num, title, typ, tuk_pct, pac, serv_teplota, varka_kg = 10, autor, stav = "navrh" } = Astro.props;
 const generated = new Date().toLocaleDateString("cs-CZ", { day: "numeric", month: "numeric", year: "numeric" });
 ---
 
@@ -21,7 +22,10 @@ const generated = new Date().toLocaleDateString("cs-CZ", { day: "numeric", month
   <article class="recipe-print">
     <header class="rp-header">
       <div class="rp-header-left">
-        <div class="rp-num">Recept č.&nbsp;{num}</div>
+        <div class="rp-num">
+          Recept č.&nbsp;{num}
+          <span class={`rp-stav-pill rp-stav-${stav}`}>{STAV_LABEL[stav]}</span>
+        </div>
         <h1 class="rp-title">{title}</h1>
       </div>
       <div class="rp-header-right">

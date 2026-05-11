@@ -1,10 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-import { slugifyTag } from "../../lib/utils";
+import { slugifyTag, filterPublished } from "../../lib/utils";
 
 export async function getStaticPaths() {
-  const recepty = await getCollection("recepty");
+  const recepty = filterPublished(await getCollection("recepty"));
   const ingredience = await getCollection("ingredience");
   const knowledge = await getCollection("knowledge");
 

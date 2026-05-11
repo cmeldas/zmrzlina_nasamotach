@@ -26,9 +26,9 @@ ingredience:
   - mec3-natura-frutta-50
 description: "Sorbet s 45 % jahodového pyré, hladká krémová textura bez mléka i vajec."
 pdf: "/pdfs/recept-01-jahodovy-sorbet.pdf"
----
-
-**Typ:** točená zmrzlina (sorbet) | **Servírování:** −10 až −12 °C
+stav: navrh
+publikovat: false
+---**Typ:** točená zmrzlina (sorbet) | **Servírování:** −10 až −12 °C
 
 **Cíl:** Intenzivní jahodová chuť, hladká krémová textura.
 
@@ -42,7 +42,7 @@ pdf: "/pdfs/recept-01-jahodovy-sorbet.pdf"
 | **SYPKÉ**                       |             |           |
 | [Sacharóza](/ingredience/sacharoza/)                       | 1 400       | 14,0 %    |
 | [Dextróza](/ingredience/dextroza/)                        | 700         | 7,0 %     |
-| Glukóza (prášek)                | 700         | 7,0 %     |
+| [Glukóza (prášek)](/ingredience/dextroza/)                | 700         | 7,0 %     |
 | [Fruktóza](/ingredience/fruktoza/)                        | 200         | 2,0 %     |
 | [MEC3 Natura frutta 50](/ingredience/mec3-natura-frutta-50/)           | 50          | 0,5 %     |
 | **Celkem**                      | **10 000**  | **100 %** |

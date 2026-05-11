@@ -21,6 +21,14 @@ const recepty = defineCollection({
     autor: z.string().default("Ranč Na Samotách"),
     licence: z.string().default("CC BY-SA 4.0"),
     aktualizovano: z.coerce.date().optional(),
+    /** Stav vývoje receptu:
+     *  - navrh:    teoretický návrh, nevyzkoušený
+     *  - testovany: jednou vyrobený, ale ještě dolaďujeme
+     *  - odladeny: ověřený, použitelný v provozu
+     */
+    stav: z.enum(["navrh", "testovany", "odladeny"]).default("navrh"),
+    /** Pokud false, recept se nevygeneruje do Vercel buildu (zůstává v Gitu). */
+    publikovat: z.boolean().default(true),
   }),
 });
 

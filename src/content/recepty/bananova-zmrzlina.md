@@ -15,17 +15,15 @@ ingredience:
   - banan
   - plnotucne-mleko
   - smetana-33
-  - vajecny-zloutek
   - citronova-stava
   - som
   - sacharoza
   - dextroza
   - mec3-natura-50
-description: "Banánová zmrzlina ze zralých banánů, mléka a smetany, ~7,5 % tuku."
+description: "Banánová zmrzlina ze zralých banánů, mléka a smetany, bez vajec, ~7,5 % tuku."
 pdf: "/pdfs/recept-05-bananova-zmrzlina.pdf"
----
-
-**Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
+stav: testovany
+---**Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
 
 **Cíl:** Krémová banánová zmrzlina ze zralých banánů, mléka a smetany.
 Plná banánová chuť bez umělých příchutí, ~7,5 % tuku.
@@ -33,9 +31,8 @@ Plná banánová chuť bez umělých příchutí, ~7,5 % tuku.
 | Ingredience                | g/10 kg    | %         |
 | -------------------------- | ---------- | --------- |
 | **TEKUTÉ** (základ k pasteraci) |        |           |
-| [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)    | 3 129      | 31,29 %   |
-| [Smetana 33 %](/ingredience/smetana-33/)               | 1 800      | 18,0 %    |
-| [Vaječný žloutek (pasterovaný)](/ingredience/vajecny-zloutek/) | 250      | 2,5 %     |
+| [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)    | 3 149      | 31,49 %   |
+| [Smetana 33 %](/ingredience/smetana-33/)               | 2 030      | 20,3 %    |
 | **SYPKÉ**                  |            |           |
 | SOM                        | 350        | 3,5 %     |
 | [Sacharóza](/ingredience/sacharoza/)                  | 800        | 8,0 %     |
@@ -51,18 +48,18 @@ Plná banánová chuť bez umělých příchutí, ~7,5 % tuku.
 
 | Složka  | Výpočet                                      | Hodnota         |
 | ------- | -------------------------------------------- | --------------- |
-| **Tuk** | mléko 313×0,035 + smetana 180×0,33 + žl. 25×0,30 | ~78 g → **7,8 %** |
-| **MSNF** | mléko (313×0,09) + smetana (180×0,67×0,09) + SOM 35 | ~74 g → ~7,4 %  |
+| **Tuk** | mléko 315×0,035 + smetana 203×0,33                  | ~78 g → **7,8 %** |
+| **MSNF** | mléko (315×0,09) + smetana (203×0,067) + SOM 35 | ~77 g → ~7,7 %  |
 | **Cukry z banánu** | 320 × 0,16 (cca 16 % cukru ve zralém banánu) | ~51 g           |
 | **Cukry přidané** | sacharóza 80 + dextróza 30                       | 110 g           |
 | **Cukry celkem** | (přidané + banán)                            | ~16 % (efektivní) |
 
 **PAC výpočet (na 100 g):**
 
-| Cukr                | g/100 g | FPDF | PAC   |
+| [Cukr](/ingredience/sacharoza/)                | g/100 g | FPDF | PAC   |
 | ------------------- | ------- | ---- | ----- |
 | Sacharóza (přidaná) | 8,0     | 1,0  | 8,0   |
-| Dextróza            | 3,0     | 1,9  | 5,7   |
+| [Dextróza](/ingredience/dextroza/)            | 3,0     | 1,9  | 5,7   |
 | Banánový cukr*      | 5,1     | ~1,5 | ~7,7  |
 | Laktóza (z mléka + SOM) | ~4,2 | 1,0  | 4,2   |
 | **Celkem PAC**      |         |      | **~25,5** |
@@ -75,7 +72,7 @@ Plná banánová chuť bez umělých příchutí, ~7,5 % tuku.
 
 - **Banán dodává ~5 % vlastního cukru** (mix sacharózy, glukózy, fruktózy) — proto stačí jen 11 % přidaného cukru
 - **Banánový pectin a škrob** přirozeně zahušťuje směs → stačí standardních 0,5 % MEC3 Natura 50
-- **Žloutky 2,5 %** dávají krémovost, ale nemaskují banánové aroma
+- **Vyšší podíl smetany (20 %)** doplňuje tuk a krémovost — nahrazuje dříve používané žloutky bez kompromisu v aroma
 - **Citronová šťáva** zabraňuje hnědnutí (oxidace polyfenoloxidázou) a balancuje sladkost
 - **Špetka soli** zvýrazní banánovou chuť (klasický pekařský trik)
 - **Nižší smetana (18 % místo 20 %)** — banán už dodává plnost
@@ -85,7 +82,7 @@ Plná banánová chuť bez umělých příchutí, ~7,5 % tuku.
 
 1. **Vyber správné banány:** velmi zralé, slupka s hnědými skvrnami („tygří" banány). Nezralé banány = škrobnaté, hořké, méně sladké. Přezralé (zcela hnědé) = příliš měkké, oxidace.
 2. **Pyré:** banány oloupat, ihned smíchat s citronovou šťávou (zabrání zhnědnutí), rozmixovat tyčovým mixérem do hladka. Zpracovat **ihned**.
-3. **Mléčný základ:** smíchat mléko, smetanu, SOM, cukry, žloutek, sůl, MEC3 Natura 50 (předem promnáčknout s cukrem). Pasterizovat 65 °C / 30 min nebo 80 °C / 25 s.
+3. **Mléčný základ:** smíchat mléko, smetanu, SOM, cukry, sůl, MEC3 Natura 50 (předem promnáčknout s cukrem). Pasterizovat 65 °C / 30 min nebo 80 °C / 25 s.
 4. **Spojení:** zchladit mléčný základ na ~30 °C, vmíchat banánové pyré (vysoká teplota by aktivovala oxidaci a změnila chuť na „vařeně banánovou").
 5. **Aging:** 6–12 h při 4 °C — banán „zešedne" mírně, ale chuť se stabilizuje.
 6. **Šlehat ve výrobníku** standardně, **servírovat ihned přímo z výrobníku** (točená, −10 až −12 °C).

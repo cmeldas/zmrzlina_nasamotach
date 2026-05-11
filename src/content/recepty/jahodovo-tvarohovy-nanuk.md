@@ -25,9 +25,9 @@ ingredience:
   - pektin
 description: "Nanuk s 50 % jahod a 22 % tvarohu, na špejli ve formičkách."
 pdf: "/pdfs/recept-06-jahodovo-tvarohovy-nanuk.pdf"
----
-
-**Typ:** **NANUK** (na špejli, ve formičkách) — nikoli točená zmrzlina! | **Servírování:** přímo z mrazáku, −18 °C
+stav: navrh
+publikovat: false
+---**Typ:** **NANUK** (na špejli, ve formičkách) — nikoli točená zmrzlina! | **Servírování:** přímo z mrazáku, −18 °C
 
 **Cíl:** Nanuk na špejli (formičky), 50 % jahod, 22 % tvarohu, lehce krémový s plnou jahodovou chutí.
 
@@ -56,7 +56,7 @@ Nanuk se konzumuje při **−18 °C**, takže potřebuje **vyšší PAC než kop
 | **SYPKÉ** (aktivace v horké vodě)  |            |           |
 | [Sacharóza](/ingredience/sacharoza/)                         | 1 300      | 13,0 %    |
 | [Dextróza](/ingredience/dextroza/)                          | 250        | 2,5 %     |
-| Glukóza – sušený sirup GL01934    | 400        | 4,0 %     |
+| [Glukóza – sušený sirup GL01934](/ingredience/dextroza/)    | 400        | 4,0 %     |
 | [MEC3 Natura 50](/ingredience/mec3-natura-50/)                    | 50         | 0,5 %     |
 | [Pektin (NH, jableko)](/ingredience/pektin/)              | 10         | 0,1 %     |
 | **Celkem**                        | **10 000** | **100 %** |
@@ -70,14 +70,14 @@ Nanuk se konzumuje při **−18 °C**, takže potřebuje **vyšší PAC než kop
 
 **PAC výpočet (na 100 g):**
 
-| Cukr                | g/100 g | FPDF | PAC      |
+| [Cukr](/ingredience/sacharoza/)                | g/100 g | FPDF | PAC      |
 | ------------------- | ------- | ---- | -------- |
 | Sacharóza (přidaná) | 13,0    | 1,0  | 13,0     |
 | Glukóza – sušený sirup (DE ~38) | 4,0 | 0,8 | 3,2  |
 | Dextróza            | 2,5     | 1,9  | 4,75     |
-| Invertní cukr       | 1,0     | 1,9  | 1,9      |
+| [Invertní cukr](/ingredience/invertni-cukr/)       | 1,0     | 1,9  | 1,9      |
 | Cukry z jahod*      | 3,5     | ~1,4 | ~4,9     |
-| Laktóza (tvaroh)    | 0,55    | 1,0  | 0,55     |
+| [Laktóza (tvaroh)](/ingredience/tvaroh/)    | 0,55    | 1,0  | 0,55     |
 | **Celkem PAC**      |         |      | **~28**  |
 
 *Jahody: ~50 % sacharóza, ~25 % glukóza, ~25 % fruktóza → vážený FPDF ≈ 1,4
@@ -103,10 +103,10 @@ Cíl: **nepřesáhnout 21 % přidaných cukrů**, aby nanuk nebyl „jen sladká
 
 | Složka                   | Sušina (g)                       |
 | ------------------------ | -------------------------------- |
-| Jahody (10 % sušiny)     | 500 × 0,10 = 50                  |
+| [Jahody (10 % sušiny)](/ingredience/jahodove-pyre/)     | 500 × 0,10 = 50                  |
 | Tvaroh (~25 % sušiny)    | 220 × 0,25 = 55                  |
 | Cukry (přidané)          | 205                              |
-| MEC3 Natura 50 + pektin  | 6                                |
+| [MEC3 Natura 50 + pektin](/ingredience/mec3-natura-50/)  | 6                                |
 | **Celk. sušina**         | **~316 g (31,6 %)**              |
 
 Vysoká sušina (>30 %) je správně pro nanuk — málo „volné vody" = méně velkých krystalů ledu = hladší vjem v puse.

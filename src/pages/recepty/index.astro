@@ -1,10 +1,11 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TagList from "../../components/TagList.astro";
+import StavBadge from "../../components/StavBadge.astro";
 import { getCollection } from "astro:content";
-import { TYP_LABEL } from "../../lib/utils";
+import { TYP_LABEL, STAV_LABEL, filterPublished } from "../../lib/utils";
 
-const recepty = (await getCollection("recepty")).sort(
+const recepty = filterPublished(await getCollection("recepty")).sort(
   (a, b) => (a.data.cislo ?? 999) - (b.data.cislo ?? 999)
 );
 
@@ -26,12 +27,20 @@ const allTags = [...new Set(recepty.flatMap((r) => r.data.tags))].sort();
   <h2>Všechny recepty ({recepty.length})</h2>
   <div class="cards">
     {recepty.map((r) => (
-      <div class="card">
-        <h3><a href={`/recepty/${r.id}/`} class="titlelink">{r.data.title}</a></h3>
+      <div class={`card stav-card-${r.data.stav}`}>
+        <h3>
+          <a href={`/recepty/${r.id}/`} class="titlelink">{r.data.title}</a>
+          {r.data.publikovat === false && (
+            <span class="unpub-tag" title="Recept je viditelný jen v devu, ne na Vercelu">DEV</span>
+          )}
+        </h3>
         <div class="meta">
           {TYP_LABEL[r.data.typ] ?? r.data.typ}
           {r.data.tuk_pct !== undefined && ` · ${r.data.tuk_pct} % tuku`}
           {r.data.pac !== undefined && ` · PAC ${r.data.pac}`}
+        </div>
+        <div style="margin-top:0.4rem">
+          <StavBadge stav={r.data.stav} size="sm" />
         </div>
         {r.data.description && <p class="desc">{r.data.description}</p>}
         <TagList tags={r.data.tags.slice(0, 5)} />
@@ -39,3 +48,19 @@ const allTags = [...new Set(recepty.flatMap((r) => r.data.tags))].sort();
     ))}
   </div>
 </BaseLayout>
+
+<style>
+  .unpub-tag {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.05em 0.5em;
+    background: #fde2e2;
+    border: 1px solid #d97777;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.5pt;
+    color: #8b1a1a;
+    vertical-align: middle;
+  }
+</style>

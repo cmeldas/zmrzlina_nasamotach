@@ -122,6 +122,20 @@ html, body {{
 }}
 .header .license-tag strong {{ color: {GOLD_DARK}; font-weight: 700; }}
 
+.recipe-num .stav-pill {{
+    display: inline-block;
+    padding: 0.1mm 1.5mm;
+    border-radius: 2mm;
+    font-family: "Rubik", sans-serif;
+    font-size: 7pt;
+    font-weight: 600;
+    letter-spacing: 0.2pt;
+    vertical-align: 0.5mm;
+}}
+.recipe-num .stav-pill.stav-navrh {{ background: #fef3e8; color: #8a4a08; border: 0.1mm solid #f0c177; }}
+.recipe-num .stav-pill.stav-testovany {{ background: #fff7d6; color: #6b4d05; border: 0.1mm solid #e8c34a; }}
+.recipe-num .stav-pill.stav-odladeny {{ background: #e8f4e0; color: #2d5016; border: 0.1mm solid #8ac070; }}
+
 .recipe-num {{
     font-family: "Sriracha", cursive;
     font-size: 11pt; color: {GOLD_DARK};
@@ -203,7 +217,7 @@ HTML_TEMPLATE = """<!doctype html>
 <div class="page">
   <header class="header">
     <div class="header-left">
-      <div class="recipe-num">Recept č.&nbsp;{NUM}</div>
+      <div class="recipe-num">Recept č.&nbsp;{NUM} &nbsp;·&nbsp; <span class="stav-pill stav-{STAV}">{STAV_LABEL}</span></div>
       <h1 class="recipe-title">{TITLE}</h1>
     </div>
     <div class="header-right">
@@ -244,6 +258,8 @@ def build_html(num: int, fm: dict, body_md: str, *, fs: float, cols: int) -> str
         PAC=fm.get("pac", "—"),
         SERV=fm.get("serv_teplota", "—"),
         VARKA=fm.get("varka_kg", 10),
+        STAV=fm.get("stav", "navrh"),
+        STAV_LABEL={"navrh": "Návrh", "testovany": "Testovaný", "odladeny": "Odladěný"}.get(fm.get("stav", "navrh"), "Návrh"),
         AUTOR=fm.get("autor", "Ranč Na Samotách"),
     )
 
@@ -332,6 +348,10 @@ def main() -> int:
     parser.add_argument("--min-font-size", type=float, default=7.5)
     parser.add_argument("--columns", type=int, default=2, choices=[1, 2, 3])
     parser.add_argument("--keep-html", action="store_true")
+    parser.add_argument(
+        "--include-unpublished", action="store_true",
+        help="Generuj PDF i pro recepty s `publikovat: false` (defaultně se přeskakují).",
+    )
     args = parser.parse_args()
 
     if not SRC.exists():
@@ -348,6 +368,9 @@ def main() -> int:
         fm, body = parse_frontmatter(f.read_text(encoding="utf-8"))
         num = int(fm.get("cislo", 0))
         if args.recipe is not None and num != args.recipe:
+            continue
+        if fm.get("publikovat") is False and not args.include_unpublished:
+            print(f"⊘ {num}. {fm.get('title')} — přeskočeno (publikovat: false)")
             continue
         slug = f.stem
         out_html = OUT / f"recept-{num:02d}-{slug}.html"
