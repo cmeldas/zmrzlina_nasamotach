@@ -19,8 +19,10 @@ permissions:
   contents: read
   pull-requests: write
 
+# Nový commit na stejnou referenci (branch / PR) zruší předchozí běh
+# a spustí čerstvý deploy. Šetří minuty na runneru i Vercel build cache hits.
 concurrency:
-  group: deploy-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
