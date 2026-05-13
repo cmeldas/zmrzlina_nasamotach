@@ -46,14 +46,13 @@ const { Content } = await render(recipe);
 
     <TagList tags={recipe.data.tags} />
 
-    <div class="actions no-print">
-      {recipe.data.pdf && (
+    {recipe.data.pdf && (
+      <div class="actions no-print">
         <a class="btn" href={recipe.data.pdf} download>
           ⬇ Stáhnout jako A4 PDF
         </a>
-      )}
-      <button class="btn secondary" onclick="window.print()">🖨 Vytisknout</button>
-    </div>
+      </div>
+    )}
 
     <Content />
 

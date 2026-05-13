@@ -19,21 +19,34 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       Zkopíruj strukturu z některého existujícího (např. <code>smetanovy-zaklad.md</code>) a uprav.
     </li>
     <li>
-      Vyplň <strong>frontmatter</strong>:
+      Vyplň <strong>frontmatter</strong> (povinná pole jsou označená, ostatní mají rozumný default):
       <pre><code>---
-title: "Název receptu"
-typ: tocena    # tocena | sorbet | nanuk | kopeckova | premium
-tuk_pct: 8
-pac: 28
-serv_teplota: "−10 až −12 °C"
-varka_kg: 10
-obtiznost: stredne-pokrocily
+title: "Název receptu"            # POVINNÉ
+typ: tocena                       # POVINNÉ: tocena | sorbet | nanuk | kopeckova | premium
+cislo: 12                         # volitelné, pořadové číslo receptu
+obtiznost: stredne-pokrocily      # zacatecnik | stredne-pokrocily | pokrocily (default: stredne-pokrocily)
+tuk_pct: 8                        # volitelné, % tuku ve směsi
+pac: 28                           # volitelné, anti-freezing power
+serv_teplota: "−10 až −12 °C"     # volitelné
+overrun: "35 %"                   # volitelné, nárůst objemu
+varka_kg: 10                      # default 10
 tags: [smetanova, vanilka, klasika]
 ingredience: [plnotucne-mleko, smetana-33, vajecny-zloutek, sacharoza, dextroza]
+souvisejici: [vanilkovy-zaklad]   # slugy souvisejících receptů
 description: "Krátký popis na jednu větu."
-autor: "Tvé jméno"
-licence: "CC BY-SA 4.0"
+pdf: "recepty/12-nazev.pdf"       # volitelné, vyplní build_pdfs.py
+autor: "Tvé jméno"                # default: "Ranč Na Samotách"
+licence: "CC BY-SA 4.0"           # default: "CC BY-SA 4.0"
+aktualizovano: 2026-05-13         # volitelné, datum poslední úpravy
+stav: navrh                       # navrh | testovany | odladeny (default: navrh)
+publikovat: true                  # default: true. Pokud false, recept se nepublikuje na web (zůstane v Gitu).
 ---</code></pre>
+      <p style="font-size:0.9rem;color:var(--muted);margin-top:0.5rem">
+        <strong>Stav vývoje:</strong>
+        <code>navrh</code> = teoretický návrh, nevyzkoušený ·
+        <code>testovany</code> = jednou vyrobený, dolaďujeme ·
+        <code>odladeny</code> = ověřený v provozu.
+      </p>
     </li>
     <li>Napiš tělo receptu v Markdownu — surovinová tabulka, bilance, postup, tipy.</li>
     <li>Otevři pull request s krátkým popisem.</li>
@@ -46,19 +59,40 @@ licence: "CC BY-SA 4.0"
   </p>
   <pre><code>eshopy:
   - nazev: "Název obchodu"
+    url: "https://eshop.cz/produkt"   # POVINNÉ, musí být validní URL
+    poznamka: "balení 1 kg, ~250 Kč"  # volitelné
+</code></pre>
+
+  <h3>Celý frontmatter karty ingredience</h3>
+  <pre><code>---
+title: "Plnotučné mléko"                  # POVINNÉ
+kategorie: tuk-mlecny                    # POVINNÉ: cukr | tuk-mlecny | protein | stabilizator |
+                                          # emulgator | ovoce | kakao | aroma | sul-mineral |
+                                          # vlaknina | alkohol | baze-komercni | voda
+nazev_alt: ["mléko 3,5 %", "whole milk"]  # alternativní názvy / synonyma
+forma: kapalna                           # kapalna | sypka | pasta | polotuhe (volitelné)
+sucha_latka_pct: 12.5                    # volitelné, % sušiny
+pac: 0                                   # volitelné
+pod: 0                                   # volitelné, POD (sweetness power)
+typicke_davkovani: "40–60 % m/m"         # volitelné
+tags: [mleko, baze]
+knowledge_refs: [tuky-ve-zmrzline]       # slugy souvisejících knowledge článků
+eshopy:
+  - nazev: "Název obchodu"
     url: "https://eshop.cz/produkt"
     poznamka: "balení 1 kg, ~250 Kč"
-</code></pre>
+description: "Krátký popis."
+---</code></pre>
 
   <h2>Přidat článek do knowledge base</h2>
   <p>
     Vytvoř <code>src/content/knowledge/nazev-clanku.md</code> s frontmatter:
   </p>
   <pre><code>---
-title: "Název článku"
-sekce: slozky    # slozky | chemie | procesy | reference
+title: "Název článku"     # POVINNÉ
+sekce: slozky             # slozky | chemie | procesy | reference (default: slozky)
 tags: [tag1, tag2]
-poradi: 50
+poradi: 50                # řazení v sekci, nižší = výš (default: 100)
 description: "Krátký popis."
 ---</code></pre>
 

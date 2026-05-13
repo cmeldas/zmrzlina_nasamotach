@@ -27,10 +27,6 @@ Nejsladší běžný cukr (~140 % sladkosti sacharózy). Rychlý profil sladkost
 - **PAC:** 1.9
 - **Typické dávkování:** 0,5–3 % m/m
 
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
-
 ## Související knowledge
 
 - [cukry-ve-zmrzline](/knowledge/cukry-ve-zmrzline/)

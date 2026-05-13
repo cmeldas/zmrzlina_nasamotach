@@ -22,7 +22,7 @@ ingredience:
   - mec3-natura-50
 description: "Banánová zmrzlina ze zralých banánů, mléka a smetany, bez vajec, ~7,5 % tuku."
 pdf: "/pdfs/recept-05-bananova-zmrzlina.pdf"
-stav: testovany
+stav: odladeny
 ---**Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
 
 **Cíl:** Krémová banánová zmrzlina ze zralých banánů, mléka a smetany.
@@ -85,7 +85,7 @@ Plná banánová chuť bez umělých příchutí, ~7,5 % tuku.
 3. **Mléčný základ:** smíchat mléko, smetanu, SOM, cukry, sůl, MEC3 Natura 50 (předem promnáčknout s cukrem). Pasterizovat 65 °C / 30 min nebo 80 °C / 25 s.
 4. **Spojení:** zchladit mléčný základ na ~30 °C, vmíchat banánové pyré (vysoká teplota by aktivovala oxidaci a změnila chuť na „vařeně banánovou").
 5. **Aging:** 6–12 h při 4 °C — banán „zešedne" mírně, ale chuť se stabilizuje.
-6. **Šlehat ve výrobníku** standardně, **servírovat ihned přímo z výrobníku** (točená, −10 až −12 °C).
+
 
 **Tipy a varianty:**
 

@@ -22,10 +22,6 @@ Pitná voda dobré kvality (filtrovaná, bez chloru). Tvoří ~60–75 % směsi.
 - **Sušina:** ~0.0 %
 - **Typické dávkování:** doplnění do 100 %
 
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
-
 ## Související knowledge
 
 - [voda-a-led](/knowledge/voda-a-led/)

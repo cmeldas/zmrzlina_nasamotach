@@ -15,7 +15,10 @@ tags:
   - sorbet
 knowledge_refs:
   - stabilizatory-ve-zmrzline
-eshopy: []
+eshopy:
+  - nazev: "MEC3 Czech"
+    url: "https://mec3.cz/"
+    poznamka: "Nutné kontaktovat obchodního zástupce — neprodává se přímo z eshopu"
 description: "Hotová báze pro sorbety. Obsahuje rostlinná vlákna, glukózový sirup, maltodextrin, gumu tara, gumu guar a dřeň baobabu. Bez mléčné složky."
 ---
 
@@ -25,10 +28,6 @@ Hotová báze pro sorbety. Obsahuje rostlinná vlákna, glukózový sirup, malto
 
 - **Sušina:** ~95.0 %
 - **Typické dávkování:** 0,5 % m/m (50 g/10 kg)
-
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
 
 ## Související knowledge
 

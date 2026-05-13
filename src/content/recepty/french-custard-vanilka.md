@@ -100,8 +100,7 @@ publikovat: false
 5. **Pasterizace „nappe":** vrátit zpět do kastrolu, zahřívat na **střední teplotě** za stálého míchání dřevěnou vařečkou. Cílová teplota **82–84 °C** (ne výš — žloutek koaguluje!). Kontrola: krém pokryje rubovou stranu vařečky a po prstu zůstane stopa.
 6. **Okamžité zchlazení:** propasírovat přes jemné síto (zachytí případné koagulované kousky) do nádoby ponořené v ledové lázni. Míchat, dokud teplota neklesne na ~10 °C.
 7. **Aging 12–24 h při 4 °C** — pro custard base nezbytné! Žloutkové proteiny se hydratují, lecitin přesune na rozhraní tuku. Bez aging je textura znatelně horší.
-8. **Šlehání ve výrobníku** standardně. Custard base je hustší než běžný mix → kratší doba šlehání (8–12 min místo 15).
-9. **Servírovat ihned přímo z výrobníku** (točená, −10 až −12 °C).
+
 
 ### Bezpečnost
 

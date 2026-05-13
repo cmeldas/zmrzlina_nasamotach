@@ -25,10 +25,6 @@ Synergická směs guar + LBG (1:1) je klasická volba — guar pracuje za studen
 - **Sušina:** ~92.0 %
 - **Typické dávkování:** 0,15–0,3 % m/m
 
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
-
 ## Související knowledge
 
 - [stabilizatory-ve-zmrzline](/knowledge/stabilizatory-ve-zmrzline/)

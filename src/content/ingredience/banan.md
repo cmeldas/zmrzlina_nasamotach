@@ -22,10 +22,6 @@ Velmi zralé banány („tygří“ se skvrnami) — nezralé jsou škrobnaté, 
 - **Sušina:** ~25.0 %
 - **Typické dávkování:** 25–35 % m/m
 
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
-
 ## Související knowledge
 
 - [chutove-slozky](/knowledge/chutove-slozky/)

@@ -13,7 +13,10 @@ tags:
 knowledge_refs:
   - chutove-slozky
   - kyseliny-a-ph
-eshopy: []
+eshopy:
+  - nazev: "Kol Do Kol"
+    url: "https://eshop.koldokol.cz/citron-stava-bio-100--3kg/"
+    poznamka: "BIO 100% citronová šťáva, 3 kg balení"
 description: "Kyselina citronová (~5 %) + vitamin C. Vyvažuje sladkost, zvýrazňuje ovocné chutě, brání oxidaci (banány, jablka). Pozor na pH u mléčných základů."
 ---
 
@@ -23,10 +26,6 @@ Kyselina citronová (~5 %) + vitamin C. Vyvažuje sladkost, zvýrazňuje ovocné
 
 - **Sušina:** ~9.0 %
 - **Typické dávkování:** 0,5–8 % m/m
-
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
 
 ## Související knowledge
 

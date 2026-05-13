@@ -29,9 +29,9 @@ const usedIn = allRecepty.filter((r) => r.data.ingredience.includes(ing.id));
 
     <Content />
 
-    {ing.data.eshopy.length > 0 && (
-      <section>
-        <h2>Kde koupit</h2>
+    <section class="kde-koupit">
+      <h2>Kde koupit</h2>
+      {ing.data.eshopy.length > 0 ? (
         <ul>
           {ing.data.eshopy.map((shop) => (
             <li>
@@ -40,8 +40,15 @@ const usedIn = allRecepty.filter((r) => r.data.ingredience.includes(ing.id));
             </li>
           ))}
         </ul>
-      </section>
-    )}
+      ) : (
+        <p class="muted">
+          <em>Zatím tu nemáme ověřený zdroj.</em>
+        </p>
+      )}
+      <p class="contrib-note">
+        Víš o lepším / jiném zdroji? <a href="/prispivat/">Přidej ho sem</a>.
+      </p>
+    </section>
 
     {usedIn.length > 0 && (
       <section class="related">
@@ -58,3 +65,24 @@ const usedIn = allRecepty.filter((r) => r.data.ingredience.includes(ing.id));
     )}
   </article>
 </BaseLayout>
+
+<style>
+  .kde-koupit {
+    margin-top: 2rem;
+  }
+  .kde-koupit .contrib-note {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    opacity: 0.75;
+  }
+  .kde-koupit .contrib-note a {
+    color: var(--muted);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  .kde-koupit .contrib-note a:hover {
+    color: var(--accent);
+  }
+</style>

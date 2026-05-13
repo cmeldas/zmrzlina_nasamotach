@@ -14,7 +14,10 @@ tags:
 knowledge_refs:
   - chutove-slozky
   - tuky-ve-zmrzline
-eshopy: []
+eshopy:
+  - nazev: "Čokoládovna Troubelice"
+    url: "https://www.cokoladovnatroubelice.cz/kakaova-hmota/kakaova-hmota-bio--cokoladovna-troubelice/"
+    poznamka: "Kakaová hmota BIO 100 %"
 description: "Čistá pasta z mletých kakaových bobů, ~55 % kakaového másla. Doplňuje raw kakao o krémovost, máslové aroma a hloubku. Rozpouštět v mléce/smetaně při 50–60 °C."
 ---
 
@@ -24,10 +27,6 @@ description: "Čistá pasta z mletých kakaových bobů, ~55 % kakaového másla
 
 - **Sušina:** ~99.0 %
 - **Typické dávkování:** 5–10 % m/m
-
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
 
 ## Související knowledge
 

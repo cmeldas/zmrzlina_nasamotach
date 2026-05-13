@@ -14,7 +14,10 @@ tags:
   - sladidlo
 knowledge_refs:
   - cukry-ve-zmrzline
-eshopy: []
+eshopy:
+  - nazev: "Makro"
+    url: "https://www.makro.cz/"
+    poznamka: "Cukr krystal v gastro balení (10 / 25 kg)"
 description: "Disacharid glukózy a fruktózy. Základní sladidlo všech receptů. FPDF = 1,0 — drží PAC v rozumných mezích, takže lze dávkovat ve větších množstvích bez rizika př"
 ---
 
@@ -25,10 +28,6 @@ Disacharid glukózy a fruktózy. Základní sladidlo všech receptů. FPDF = 1,0
 - **Sušina:** ~99.9 %
 - **PAC:** 1.0
 - **Typické dávkování:** 10–15 % m/m
-
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
 
 ## Související knowledge
 

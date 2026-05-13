@@ -15,7 +15,10 @@ tags:
 knowledge_refs:
   - proteiny-ve-zmrzline
   - sucha-latka-total-solids
-eshopy: []
+eshopy:
+  - nazev: "Monaco Int."
+    url: "https://www.monacoint.com/eshop/produkt/dom08332"
+    poznamka: "Sušené odtučněné mléko, kód DOM08332"
 description: "Hlavní zdroj MSNF (mléčné sušiny bez tuku). Dodává proteinovou strukturu, váže vodu a podporuje šlehání pěny. Obsahuje ~50 % laktózy — pozor na pískovitost při "
 ---
 
@@ -25,10 +28,6 @@ Hlavní zdroj MSNF (mléčné sušiny bez tuku). Dodává proteinovou strukturu,
 
 - **Sušina:** ~96.0 %
 - **Typické dávkování:** 2–6 % m/m
-
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
 
 ## Související knowledge
 

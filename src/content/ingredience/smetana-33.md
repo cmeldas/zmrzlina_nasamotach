@@ -12,7 +12,10 @@ tags:
   - mlecny-tuk
 knowledge_refs:
   - tuky-ve-zmrzline
-eshopy: []
+eshopy:
+  - nazev: "Almeco"
+    url: "https://www.almeco.cz/"
+    poznamka: "Gastro smetana 33 % tuku, bez rostlinných ztužovačů. Alternativně běžná smetana ke šlehání 33 % ze supermarketu (vždy zkontrolovat, že je z pravého mléčného tuku)."
 description: "Hlavní zdroj mléčného tuku. Nepoužívat smetanu s rostlinnými ztužovači — pravá smetana z živočišného tuku tvoří částečnou koalescenci globulí, která drží strukt"
 ---
 
@@ -22,10 +25,6 @@ Hlavní zdroj mléčného tuku. Nepoužívat smetanu s rostlinnými ztužovači 
 
 - **Sušina:** ~38.0 %
 - **Typické dávkování:** 10–30 % m/m
-
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
 
 ## Související knowledge
 

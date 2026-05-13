@@ -166,7 +166,7 @@ pdf: "/pdfs/recept-09-mangovy-sorbet.pdf"
 5. `### Bilance` — tabulka tuk/MSNF/cukry/sušina s výpočtem
 6. PAC tabulka s rozpisem cukrů
 7. `### Logika návrhu` — bullety, proč ty poměry
-8. `### Postup` — číslovaný, kroky včetně pasterace (75 °C / 30 s nebo 82 °C nappe pro custard), aging 4–12 h, šlehání
+8. `### Postup` — číslovaný, kroky včetně pasterace (63 °C / 30 min LTLT, 75 °C / 25 s HTST, nebo 82 °C nappe pro custard), aging 4–12 h. **Postup KONČÍ agingem** — šlehání ve výrobníku a servírování nežpisuj, je to točená zmrzlina a uživatel ví jak nalít směs do stroje.
 9. `### Bezpečnost` — pokud vejce nebo riziková surovina
 10. `### Tipy a varianty` — 3–5 bulletů
 11. `### Co se stane když...` — tabulka problém / příčina / řešení
@@ -180,7 +180,8 @@ Pokud recept odkazuje na slug, který **neexistuje** v `src/content/ingredience/
 ```yaml
 ---
 title: "Mangové pyré"
-kategorie: ovoce                       # cukr | mleko | ovoce | tuk | stabilizator | aromata | vejce
+kategorie: ovoce                       # cukr | tuk-mlecny | protein | stabilizator | emulgator | ovoce | kakao | aroma | sul-mineral | vlaknina | alkohol | baze-komercni | voda
+forma: kapalna                         # kapalna | sypka | pasta | polotuhe (volitelné)
 sucha_latka_pct: 16
 pac: 18                                # ovocný cukr ~ FPDF 1,9 × cca 10 %
 typicke_davkovani: "30–50 % m/m"
@@ -249,6 +250,54 @@ Krátké shrnutí uživateli:
 
 ---
 
+## Pasterační postup (standard pro všechny recepty s ohřevem)
+
+**Sypké NIKDY nepřidávat do studeného mixu před ohřevem** — cukry a SOM se rády připálí na dně hrnce. Standardní pořadí:
+
+1. **Předmíchat sypké za sucha** (sacharóza + dextróza + glukóza prášek + SOM + MEC3 + případně sůl). Připravit stranou.
+2. **Pasterovat jen tekuté složky** — mléko + smetana + případně pyré / pasty / invertní cukr. Zahřát za stálého míchání na cílovou teplotu (63 °C pro LTLT, 75–80 °C pro HTST, 82–84 °C pro custard „nappe").
+3. **Při dosažení teploty vsypat sypké** a okamžitě **rozmixovat tyčovým mixérem** do hladka (1–2 min) bez hrudek.
+4. **Držet pasterační teplotu po požadovanou dobu** (63 °C / 30 min, 75 °C / 25 s, atd.).
+5. Rychlé zchlazení, aging. (Šlehání ve výrobníku již v postupu neuvádíme — všechno je to točená zmrzlina.)
+
+**Výjimky:**
+- **Custard / žloutky:** žloutky se temperují s mlékem v separátní fázi (viz `french-custard-vanilka.md`).
+- **Tvaroh:** **vždy** až do vychlazené směsi (≤ 30 °C), nikdy před pasterací. Tvaroh je už pasterizovaný od výrobce, při ohřevu by koaguloval.
+- **Čerstvé ovoce, kůra citrusů, extrakty, fleur de sel, citronová šťáva:** **vždy po pasteraci** (sekce `**PO PASTERACI**` v tabulce ingrediencí).
+
+---
+
+## Sorbety a sherbety — BEZ pasterace
+
+**Sorbety** (bez mléčné složky) a **sherbety** (s tvarohem nebo lehkou mléčnou složkou) **se NEpasterují**. Chtěli bychom zachovat:
+
+- **Vitamíny** (zvláště C-vitamín z ovoce a citronu) — nad 60 °C rychle degraduje.
+- **Syrovou ovocnou chuť** — ohřevem se chuť posune do „kompotu“.
+- **Živé antokyany** (červené/fialové ovoce) — ohřevem blednou.
+
+**Hygiena je zajištěna:**
+- Nízkým pH (~3,5–4) z citronu a kyselin v ovoci.
+- Vysokou koncentrací cuků (snížená aktivita vody).
+- Tvaroh je výrobcem pasterizovaný.
+- Krátká shelf life ve vitríně (24–48 h).
+
+**Postup sorbet/sherbet:**
+
+1. Předmíchat sypké za sucha (cukry + MEC3 + sůl).
+2. Rozmixovat ovoce na pyré.
+3. Smíchat pyré + sypké → rozmixovat tyčovým mixérem 2–3 min.
+4. (sherbet) Vmíchat prošlehaný tvaroh.
+5. Citronka.
+6. Aging 4–8 h při 4 °C.
+
+**Tvaroh pro sherbet:** pokud je příliš tuhý (hodně odkapaný, „selský“), nahradit **část tvarohu vodou v poměru 1:1** (např. 500 g tvarohu → 250 g tvarohu + 250 g vody). Jinak by se ve studeném pyré špatně rozmíchal a vznikla by zrnitá textura.
+
+**Sekce v tabulce ingrediencí:** použít `**MÍCHÁNÍ ZA STUDENA**` místo `**PO PASTERACI**`.
+
+**Výjimka pro rizikové skupiny** (děti, senioři, těhotné): ovocné pyré lze krátce pasterovat 63 °C / 30 min před smícháním s tvarohem — ale ztratí se vitamíny a svěžest.
+
+---
+
 ## Časté chyby (z předchozích iterací)
 
 | Chyba | Náprava |
@@ -261,6 +310,10 @@ Krátké shrnutí uživateli:
 | Jedlá soda v čokoládě | **Nepoužívat** — narušuje texturu |
 | Žloutky 200 g surové | Použít **pasterované žloutky 1:1**, dávkování 5–8 % pro custard |
 | Stabilizátor 2 g + MEC3 | Buď jedno, nebo druhé — ne oba dohromady |
+| Sypké do studeného mixu | **Pasterovat jen tekuté**, sypké vsypat až při dosažení teploty (riziko připálení) |
+| Tvaroh pasterovat ve směsi | **Vždy do vychlazené směsi** (≤ 30 °C), kasein koaguluje |
+| Pasterace sorbetu / sherbetu | **NEpasterovat** — zničí C-vitamín, vybledne barva, kompotová chuť |
+| Tuhý „selský“ tvaroh v sherbetu | Část tvarohu nahradit vodou 1:1 — jinak se ve studeném pyré nerozmíchá |
 
 ---
 

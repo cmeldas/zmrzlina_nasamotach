@@ -26,10 +26,6 @@ Přírodní emulgátor díky lecitinu. Dodává krémovost, hloubku chuti a stab
 - **Sušina:** ~50.0 %
 - **Typické dávkování:** 2,5–8 % m/m
 
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
-
 ## Související knowledge
 
 - [emulgatory-ve-zmrzline](/knowledge/emulgatory-ve-zmrzline/)

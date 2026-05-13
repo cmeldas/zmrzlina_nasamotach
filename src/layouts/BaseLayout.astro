@@ -40,6 +40,17 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
       href="https://fonts.googleapis.com/css2?family=Sriracha&family=Rubik:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script is:inline>
+      // Anti-flicker: nastav uložené téma před vykreslením
+      (function () {
+        try {
+          const t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body class={customPrint ? "has-custom-print" : ""}>
     <div class="screen-only">

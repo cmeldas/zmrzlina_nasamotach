@@ -13,7 +13,10 @@ tags:
   - raw
 knowledge_refs:
   - chutove-slozky
-eshopy: []
+eshopy:
+  - nazev: "Čokoládovna Troubelice"
+    url: "https://www.cokoladovnatroubelice.cz/kakaovy-prasek/kakaovy-prasek-natural-bio-10-12--cokoladovna-troubelice/"
+    poznamka: "Kakaový prášek natural BIO 10–12 % tuku"
 description: "Nealkalizovaný (přírodní) kakaový prášek z nepražených bobů. pH 5,0–5,8 — kyselejší, ovocnější, světlejší barva výsledku. Vyžaduje delší aging (24 h) pro hloubk"
 ---
 
@@ -23,10 +26,6 @@ Nealkalizovaný (přírodní) kakaový prášek z nepražených bobů. pH 5,0–
 
 - **Sušina:** ~97.0 %
 - **Typické dávkování:** 3–4 % m/m
-
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
 
 ## Související knowledge
 

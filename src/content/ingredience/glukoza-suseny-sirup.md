@@ -15,7 +15,10 @@ tags:
   - sypka-forma
 knowledge_refs:
   - cukry-ve-zmrzline
-eshopy: []
+eshopy:
+  - nazev: "Polmarkus"
+    url: "https://obchod.polmarkus.cz/glukoza-suseny-sirup-gl01934-pytel-25-kg"
+    poznamka: "GL01934, pytel 25 kg"
 description: "Sušená forma standardního glukózového sirupu (~38 DE). Skvělý pro brzdění rekrystalizace při skladování (zejména nanuky). Mírně sladký, dodává sušinu bez přesla"
 ---
 
@@ -26,10 +29,6 @@ Sušená forma standardního glukózového sirupu (~38 DE). Skvělý pro brzděn
 - **Sušina:** ~96.0 %
 - **PAC:** 0.8
 - **Typické dávkování:** 2–7 % m/m
-
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
 
 ## Související knowledge
 

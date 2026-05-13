@@ -15,7 +15,10 @@ tags:
   - anti-krystalizace
 knowledge_refs:
   - cukry-ve-zmrzline
-eshopy: []
+eshopy:
+  - nazev: "Monaco Int."
+    url: "https://www.monacoint.com/eshop/produkt/lapin81-11"
+    poznamka: "Cukr invertní min 80% sirup, 11 kg/kbelík, kód LAPIN81-11"
 description: "Směs glukózy a fruktózy z hydrolýzy sacharózy. Hygroskopický — drží vlhkost, brání oddělování vody na povrchu nanuků (ice burn). Mírně zvyšuje PAC."
 ---
 
@@ -26,10 +29,6 @@ Směs glukózy a fruktózy z hydrolýzy sacharózy. Hygroskopický — drží vl
 - **Sušina:** ~75.0 %
 - **PAC:** 1.9
 - **Typické dávkování:** 0,5–2 % m/m
-
-## Kde koupit
-
-> _Tato sekce je otevřená komunitě. Pošli PR s odkazy na ověřené eshopy v `eshopy:` frontmatter._
 
 ## Související knowledge
 

@@ -25,7 +25,7 @@ ingredience:
   - mec3-natura-50
 description: "Plná čokoládová zmrzlina z přírodního raw kakaa a kakaové hmoty, ~10 % tuku."
 pdf: "/pdfs/recept-08-cokoladova-zmrzlina.pdf"
-stav: testovany
+stav: odladeny
 ---**Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
 
 **Cíl:** Plná, autentická čokoládová chuť díky kombinaci **přírodního nealkalizovaného kakaa z nepražených (raw) bobů** (ovocná, kyselejší aromatika s květinovými/lesními tóny) a **kakaové hmoty** (55 % kakaového másla — máslové aroma, krémovost, hloubka čokoládové chuti). Cílová tučnost ~10 %.
@@ -97,8 +97,6 @@ stav: testovany
 6. **Rychlé zchlazení:** ledová lázeň na 4 °C do 30 minut.
 7. **Aging:** **min. 6 h, ideálně 24 h** při 4 °C — přírodní kakao potřebuje delší hydrataci než alkalizované, kakaové máslo částečně krystalizuje, chuť se prohloubí a počáteční kyselost změkne.
 8. **Promixování:** těsně před zmrazením znovu projet ponornou tyčí (kakao má tendenci sedimentovat).
-9. **Zmrazení ve výrobníku:** 8–12 minut, overrun 30–40 %.
-10. **Servírovat ihned přímo z výrobníku** (točená, −10 až −12 °C).
 
 ### Tipy
 
