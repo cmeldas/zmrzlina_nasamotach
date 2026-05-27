@@ -23,7 +23,7 @@ ingredience:
   - mec3-natura-50
 description: "Univerzální smetanový základ pro točenou zmrzlinu bez vajec, ~9 % tuku."
 pdf: "/pdfs/recept-02-smetanovy-zaklad.pdf"
-stav: navrh
+stav: testovany
 publikovat: false
 ---
 

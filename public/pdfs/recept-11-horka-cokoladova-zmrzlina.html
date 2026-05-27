@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="UTF-8"><title>Recept 11: Hořká čokoládová zmrzlina (intenzivní kakao)</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&family=Rubik:wght@300;400;500;600;700&display=swap");
+
+@page { size: A4 portrait; margin: 11mm 12mm 16mm 12mm; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    font-family: "Rubik", Arial, sans-serif;
+    color: #3d2e1e;
+    background: #fff;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+.page {
+    --body-font: 9.5pt;
+    --body-h3: 10.5pt;
+    --body-table: 8.5pt;
+}
+
+.header {
+    border-bottom: 0.6mm solid #e8a723;
+    padding-bottom: 3mm; margin-bottom: 4mm;
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 6mm;
+    break-inside: avoid; break-after: avoid;
+}
+.header .header-left { flex: 1; min-width: 0; }
+.header .header-right {
+    text-align: right; flex-shrink: 0;
+    max-width: 70mm;
+}
+.header .brand {
+    font-size: 7pt; color: #c47a15;
+    text-transform: uppercase; letter-spacing: 1pt;
+    margin-bottom: 1.5mm;
+}
+.header .brand strong {
+    display: block; font-family: "Sriracha", cursive;
+    font-size: 11pt; color: #3d2e1e; text-transform: none; letter-spacing: 0;
+}
+.header .license-tag {
+    font-size: 6.5pt; color: #3d2e1e; line-height: 1.25;
+    background: #faf6ee; border-left: 0.5mm solid #e8a723;
+    padding: 0.8mm 1.5mm;
+}
+.header .license-tag strong { color: #c47a15; font-weight: 700; }
+
+.recipe-num .stav-pill {
+    display: inline-block;
+    padding: 0.1mm 1.5mm;
+    border-radius: 2mm;
+    font-family: "Rubik", sans-serif;
+    font-size: 7pt;
+    font-weight: 600;
+    letter-spacing: 0.2pt;
+    vertical-align: 0.5mm;
+}
+.recipe-num .stav-pill.stav-navrh { background: #fef3e8; color: #8a4a08; border: 0.1mm solid #f0c177; }
+.recipe-num .stav-pill.stav-testovany { background: #fff7d6; color: #6b4d05; border: 0.1mm solid #e8c34a; }
+.recipe-num .stav-pill.stav-odladeny { background: #e8f4e0; color: #2d5016; border: 0.1mm solid #8ac070; }
+
+.recipe-num {
+    font-family: "Sriracha", cursive;
+    font-size: 11pt; color: #c47a15;
+}
+.recipe-title {
+    font-family: "Sriracha", cursive;
+    font-size: 22pt; color: #3d2e1e; line-height: 1.05;
+}
+
+.meta-pills {
+    display: flex; gap: 4mm; flex-wrap: wrap;
+    font-size: 8pt; color: #c47a15;
+    margin-bottom: 3mm;
+    break-inside: avoid; break-after: avoid;
+}
+.meta-pills span { padding: 0.5mm 2mm; background: #faf6ee; border-radius: 1mm; }
+.meta-pills strong { color: #3d2e1e; }
+
+.body {
+    font-size: var(--body-font); line-height: 1.32;
+    column-count: 2; column-gap: 6mm;
+    column-rule: 0.15mm solid #d8c89a; column-fill: auto;
+}
+
+.body p, .body ul, .body ol, .body table, .body blockquote, .body h3, .body h4 {
+    margin-bottom: 1.6mm; break-inside: avoid;
+}
+.body h3 {
+    font-family: "Rubik", sans-serif;
+    font-size: var(--body-h3); font-weight: 700; color: #c47a15;
+    margin-top: 2.5mm; margin-bottom: 1.2mm;
+    padding-bottom: 0.5mm; border-bottom: 0.15mm dotted #e8a723;
+    break-after: avoid;
+}
+.body h3:first-child { margin-top: 0; }
+.body h4 { font-size: var(--body-font); font-weight: 700; color: #3d2e1e; margin-top: 1.8mm; break-after: avoid; }
+.body strong { color: #3d2e1e; font-weight: 600; }
+.body em { color: #6b5536; }
+.body ul, .body ol { padding-left: 4mm; }
+.body li { margin-bottom: 0.4mm; }
+.body blockquote {
+    border-left: 0.6mm solid #e8a723;
+    padding: 0.8mm 0 0.8mm 2mm; background: #faf6ee;
+    color: #5a4528; font-style: italic;
+}
+.body table {
+    width: 100%; border-collapse: collapse;
+    font-size: var(--body-table); line-height: 1.2;
+}
+.body th, .body td {
+    border: 0.1mm solid #d8c89a; padding: 0.6mm 1.2mm;
+    text-align: left; vertical-align: top;
+}
+.body th { background: #faf6ee; color: #3d2e1e; font-weight: 600; }
+.body tbody tr:nth-child(even) td { background: rgba(232,167,35,0.05); }
+.body td:not(:first-child), .body th:not(:first-child) { text-align: right; }
+</style></head><body>
+<div class="page">
+  <header class="header">
+    <div class="header-left">
+      <div class="recipe-num">Recept č.&nbsp;11 &nbsp;·&nbsp; <span class="stav-pill stav-navrh">Návrh</span></div>
+      <h1 class="recipe-title">Hořká čokoládová zmrzlina (intenzivní kakao)</h1>
+    </div>
+    <div class="header-right">
+      <div class="brand">
+        <strong>Zmrzlina&nbsp;Na&nbsp;Samotách</strong>
+        Otevřená receptura
+      </div>
+      <div class="license-tag">
+        <strong>CC&nbsp;BY-SA&nbsp;4.0</strong> · Sdílej a uprav. Uveď zdroj, zachovej licenci.
+      </div>
+    </div>
+  </header>
+  <div class="meta-pills">
+    <span><strong>Typ:</strong> tocena</span>
+    <span><strong>Tuk:</strong> 10.0 %</span>
+    <span><strong>PAC:</strong> 28</span>
+    <span><strong>Servírování:</strong> −10 až −12 °C</span>
+    <span><strong>Várka:</strong> 10 kg</span>
+  </div>
+  <main class="body"><p><strong>Typ:</strong> točená zmrzlina | <strong>Servírování:</strong> −10 až −12 °C</p>
+<p><strong>Cíl:</strong> Hluboce hořká, kakaem nabitá varianta klasické čokoládové zmrzliny. Více kakaové hmoty (90 g/kg vs. 60 g/kg) a raw kakaa (40 g/kg vs. 35 g/kg), méně sacharózy a více dextrózy — výsledek je výrazně hořčejší, méně sladký, s vyšší kakaovou sušinou (<strong>7,6 %</strong> oproti 5,8 % v základní variantě). Tuk se drží na ~10 % díky vyššímu podílu kakaového másla z kakaové hmoty (snížená smetana).</p>
+<h3>Proč právě tato varianta</h3>
+<ul>
+<li><strong>Spin-off</strong> čokoládové zmrzliny — stejný postup, stejné suroviny, jen jiný poměr.</li>
+<li><strong>Párový partner ke slanému karamelu</strong> v točeném kornoutu: hořkost kakaa krásně vyvažuje sladkost karamelové pasty a podtrhuje slanou notu. Klasická světová dvojka.</li>
+<li><strong>Méně sladká</strong> = lepší pro dospělé zákazníky, kteří chtějí „opravdovou&quot; čokoládu, ne dezert.</li>
+<li><strong>Vyšší podíl dextrózy</strong> (3,5 % vs. 2,5 %) drží PAC ≈ 28 i při snížené sacharóze — zmrzlina zůstává v kornoutu plastická.</li>
+</ul>
+<h3>Receptura</h3>
+<table>
+<thead>
+<tr>
+<th>Ingredience</th>
+<th>g/10 kg</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TEKUTÉ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Plnotučné mléko (3,5 %)</td>
+<td>5 549</td>
+<td>55,49 %</td>
+</tr>
+<tr>
+<td>Smetana 33 %</td>
+<td>800</td>
+<td>8,0 %</td>
+</tr>
+<tr>
+<td>Invertní cukr</td>
+<td>150</td>
+<td>1,5 %</td>
+</tr>
+<tr>
+<td><strong>ROZPUSTIT VE SMETANĚ PŘI 50–60 °C</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Kakaová hmota (55 % tuku)</td>
+<td>900</td>
+<td>9,0 %</td>
+</tr>
+<tr>
+<td><strong>SYPKÉ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Přírodní raw kakao (~11 % tuku)</td>
+<td>400</td>
+<td>4,0 %</td>
+</tr>
+<tr>
+<td>Sacharóza</td>
+<td>1 300</td>
+<td>13,0 %</td>
+</tr>
+<tr>
+<td>Dextróza</td>
+<td>350</td>
+<td>3,5 %</td>
+</tr>
+<tr>
+<td>Glukóza (prášek, sušený sirup)</td>
+<td>200</td>
+<td>2,0 %</td>
+</tr>
+<tr>
+<td>Sušené odtučněné mléko (SOM)</td>
+<td>300</td>
+<td>3,0 %</td>
+</tr>
+<tr>
+<td>MEC3 Natura 50</td>
+<td>50</td>
+<td>0,5 %</td>
+</tr>
+<tr>
+<td>Špetka soli</td>
+<td>1</td>
+<td>0,01 %</td>
+</tr>
+<tr>
+<td><strong>Celkem</strong></td>
+<td><strong>10 000</strong></td>
+<td><strong>100 %</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Bilance</h3>
+<table>
+<thead>
+<tr>
+<th>Složka</th>
+<th>Výpočet</th>
+<th>Hodnota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tuk</strong></td>
+<td>mléko 555×0,035 + smetana 80×0,33 + kak. hmota 90×0,55 + raw kakao 40×0,11</td>
+<td>~100 g → <strong>10,0 %</strong></td>
+</tr>
+<tr>
+<td><strong>MSNF</strong></td>
+<td>mléko ~9 % + smetana (67 %×9 %) + SOM 30</td>
+<td>~84 g → <strong>8,4 %</strong></td>
+</tr>
+<tr>
+<td><strong>Cukry (efektivní)</strong></td>
+<td>130 + 35 + 20 + 15 + laktóza ~44</td>
+<td>~24 % efektivně</td>
+</tr>
+<tr>
+<td><strong>Kakaová sušina</strong></td>
+<td>hmota 90×0,45 + prášek 40×0,89</td>
+<td>~76 g → <strong>7,6 %</strong></td>
+</tr>
+<tr>
+<td><strong>Sušina celkem</strong></td>
+<td>tuk + cukry + MSNF + kakao + stabilizátor</td>
+<td><strong>~45 %</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>PAC výpočet (na 100 g):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Cukr</th>
+<th>g/100 g</th>
+<th>FPDF</th>
+<th>PAC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sacharóza</td>
+<td>13,0</td>
+<td>1,0</td>
+<td>13,0</td>
+</tr>
+<tr>
+<td>Dextróza</td>
+<td>3,5</td>
+<td>1,9</td>
+<td>6,65</td>
+</tr>
+<tr>
+<td>Glukóza (prášek)</td>
+<td>2,0</td>
+<td>0,8</td>
+<td>1,6</td>
+</tr>
+<tr>
+<td>Invertní cukr</td>
+<td>1,5</td>
+<td>1,9</td>
+<td>2,85</td>
+</tr>
+<tr>
+<td>Laktóza</td>
+<td>~4,4</td>
+<td>1,0</td>
+<td>4,4</td>
+</tr>
+<tr>
+<td><strong>Celkem PAC</strong></td>
+<td></td>
+<td></td>
+<td><strong>~28</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>PAC ≈ 28</strong> → drží stejnou konzistenci jako klasická čokoládová zmrzlina při −10 až −12 °C, přestože je hořčejší a má méně sacharózy. Vyšší podíl dextrózy tu funguje dvojím způsobem: snižuje sladkost (~70 % sladkosti sacharózy) a zároveň drží směs měkkou.</p>
+<h3>Postup</h3>
+<p>Postup je shodný s klasickou čokoládovou zmrzlinou — jediný rozdíl je vyšší podíl kakaa, který vyžaduje:</p>
+<ol>
+<li><strong>Hydratace stabilizátoru:</strong> MEC3 Natura 50 předem smíchat s ~3× větším množstvím sacharózy.</li>
+<li><strong>Rozpuštění kakaové hmoty:</strong> 900 g hmoty nasekat na drobné kousky a pomalu rozpouštět ve smetaně + ¼ mléka při 50–60 °C, 8–12 min (déle než u základní varianty kvůli většímu množství). Stále míchat metličkou.</li>
+<li><strong>Smíchání suchých složek:</strong> raw kakao, SOM, dextróza, sacharóza se stabilizátorem, sůl, invertní cukr.</li>
+<li><strong>Spojení:</strong> do horké smetany s rozpuštěnou kakaovou hmotou vmíchat zbylé mléko, přidat sypké složky a ponornou tyčí důkladně promixovat (vyšší podíl kakaového prášku → větší riziko hrudek, mixovat 2–3 min).</li>
+<li><strong>Pasterizace:</strong> <strong>82–85 °C</strong> za stálého míchání. <strong>Pozor:</strong> vyšší podíl kakaa = vyšší riziko připálení. Použij silnostěnný hrnec a neustále stírat dno stěrkou.</li>
+<li><strong>Rychlé zchlazení:</strong> ledová lázeň na 4 °C do 30 minut.</li>
+<li><strong>Aging:</strong> <strong>min. 12 h, ideálně 24 h</strong> při 4 °C — větší množství kakaového másla a polyfenolů potřebuje delší hydrataci, chuť výrazně změkne a zaoblí se.</li>
+<li><strong>Promixování:</strong> těsně před zmrazením znovu projet ponornou tyčí.</li>
+</ol>
+<h3>Servírovací tip — kombinace se slaným karamelem</h3>
+<p>V točeném stroji ve <strong>dvojkomorovém provedení</strong> dát do jedné komory hořkou čokoládu, do druhé slaný karamel. Klasický točený <strong>mix-swirl kornout</strong> (béžová + tmavě hnědá spirála) je vizuálně atraktivní a chuťově harmonický:</p>
+<ul>
+<li><strong>Hořkost kakaa</strong> vyvažuje sladkost karamelu.</li>
+<li><strong>Slaná nota karamelu</strong> podtrhuje kakaovou hloubku (sůl je přirozený zesilovač čokoládové chuti).</li>
+<li><strong>Mléčný profil obou zmrzlin</strong> se prolíná hladce — žádné kontrastní textury.</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Volba kakaové hmoty:</strong> pro tuto variantu preferuj <strong>single-origin Mexiko BIO</strong> z Čokoládovny Troubelice — má intenzivnější, výrazněji hořký profil, který se hodí pro tmavou variantu. Alternativně lze použít i univerzální BIO hmotu (mírnější chuť, vyváženější).</li>
+<li><strong>Pro ještě hořčejší profil</strong> (extra bittersweet): zvýšit kakaovou hmotu na 100 g/kg, snížit sacharózu na 12,0 %, dextrózu zvýšit na 4,0 %. PAC zůstane ~28.</li>
+<li><strong>Pro „mokka&quot; variantu:</strong> přidat 8–10 g instantní kávy / espresso prášku do sypkých složek — zvýrazní kakaové tóny i hořkost.</li>
+<li><strong>Pro „čokoláda s chilli&quot;:</strong> přidat 0,3 g mletého chilli (kayenne nebo ancho) a špetku mleté skořice. Pozor, dávkovat s lihem rozetřeným ve smetaně, aby se rozptýlilo rovnoměrně.</li>
+<li><strong>Pro hladkou tmavší barvu:</strong> krátké opražení raw kakaa na suché pánvi 2–3 min při ~120 °C přidá Maillardové karamelové tóny a tmavší odstín. Pozor — snadno přepálíš.</li>
+<li><strong>Vyvážení sladkosti:</strong> pokud zákazníci hlásí, že je zmrzlina „příliš hořká&quot;, zvýšit sacharózu o 5 g/kg na úkor mléka. Nezvyšovat dextrózu — narostl by PAC a zmrzlina by byla příliš měkká.</li>
+</ul>
+<h3>Časté problémy</h3>
+<table>
+<thead>
+<tr>
+<th>Problém</th>
+<th>Příčina</th>
+<th>Řešení</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hrudky kakaa</td>
+<td>Velké množství raw kakaa špatně vmícháno</td>
+<td>Mixovat ponornou tyčí 2–3 min, kakao vždy do horké tekutiny</td>
+</tr>
+<tr>
+<td>Připálené dno</td>
+<td>9 % kakaové hmoty + 4 % kakaa = vysoká koncentrace pevných látek</td>
+<td>Silnostěnný hrnec, mírnější plamen, neustále stírat dno</td>
+</tr>
+<tr>
+<td>Příliš hořké pro zákazníky</td>
+<td>Cílový profil hořké čokolády</td>
+<td>Snížit kakaovou hmotu na 80 g/kg, zvýšit sacharózu o 5 g/kg</td>
+</tr>
+<tr>
+<td>Pískovitá textura</td>
+<td>Kakaová hmota se nerozpustila</td>
+<td>Nasekat na drobnější kousky, zahřívat déle (10–12 min) při 50–60 °C</td>
+</tr>
+<tr>
+<td>Tvrdá v kornoutu</td>
+<td>PAC se posunul pod 26</td>
+<td>Zvýšit dextrózu o 5 g/kg na úkor sacharózy</td>
+</tr>
+<tr>
+<td>Sedimentace kakaa</td>
+<td>Vyšší podíl kakaa = silnější tendence k sedimentaci</td>
+<td>Aging min. 12 h, povinné promixování před zmrazením</td>
+</tr>
+<tr>
+<td>Příliš tmavá / hořko-zemitá chuť</td>
+<td>Příliš dlouhé / horké pasterování raw kakaa</td>
+<td>Nepřekračovat 85 °C, držet při této teplotě max. 2–3 minuty</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Související: čokoládová zmrzlina (základní), slaný karamel s tvarohem</em></p>
+</main>
+</div></body></html>

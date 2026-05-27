@@ -101,7 +101,7 @@ stav: odladeny
 ### Tipy
 
 
-- **Volba kakaové hmoty:** hledat „pure cocoa mass" / „cocoa liquor" / „kakaová hmota 100%" v cukrářských obchodech (Callebaut, Valrhona, Cacao Barry). Obsah kakaového másla 50–58 %.
+- **Volba kakaové hmoty:** hledat „pure cocoa mass" / „cocoa liquor" / „kakaová hmota 100%" v cukrářských obchodech (Callebaut, Valrhona, Cacao Barry). Obsah kakaového másla 50–58 %. Doporučený zdroj pro tuto klasickou (vyváženější) variantu: [Čokoládovna Troubelice — BIO 100 %](https://www.cokoladovnatroubelice.cz/kakaova-hmota/kakaova-hmota-bio--cokoladovna-troubelice/). Pro hořkou variantu raději volit [BIO Mexiko single-origin](https://www.cokoladovnatroubelice.cz/kakaova-hmota/kakaova-hmota-bio-mexiko--cokoladovna-troubelice/) — viz [hořká čokoládová zmrzlina](/recepty/horka-cokoladova-zmrzlina/).
 - **Pro intenzivnější čokoládovou chuť** přidat 5 g instantní kávy (espresso prášek) — zvýrazní kakaové tóny, není cítit jako káva.
 - **Pro hlubší „pražený" charakter:** můžeš přírodní raw kakao před použitím lehce opražit na suché pánvi 2–3 minuty při ~120 °C za stálého míchání, dokud nezačne intenzivně vonět (pozor, snadno hořkne). Tím získáš více Maillardových karamelových tónů.
 - **Tmavá hořká varianta:** zvýšit kakaovou hmotu na 90 g, snížit smetanu na 60 g (tuk zůstane ~9 %), přidat 10 g sacharózy → výraznější hořko-čokoládový profil.

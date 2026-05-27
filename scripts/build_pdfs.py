@@ -348,10 +348,6 @@ def main() -> int:
     parser.add_argument("--min-font-size", type=float, default=7.5)
     parser.add_argument("--columns", type=int, default=2, choices=[1, 2, 3])
     parser.add_argument("--keep-html", action="store_true")
-    parser.add_argument(
-        "--include-unpublished", action="store_true",
-        help="Generuj PDF i pro recepty s `publikovat: false` (defaultně se přeskakují).",
-    )
     args = parser.parse_args()
 
     if not SRC.exists():
@@ -369,9 +365,8 @@ def main() -> int:
         num = int(fm.get("cislo", 0))
         if args.recipe is not None and num != args.recipe:
             continue
-        if fm.get("publikovat") is False and not args.include_unpublished:
-            print(f"⊘ {num}. {fm.get('title')} — přeskočeno (publikovat: false)")
-            continue
+        # `publikovat: false` = recept se neuveřejňuje na webu, ale PDF generujeme vždy
+        # (offline distribuce, interní použití).
         slug = f.stem
         out_html = OUT / f"recept-{num:02d}-{slug}.html"
         out_pdf = OUT / f"recept-{num:02d}-{slug}.pdf"

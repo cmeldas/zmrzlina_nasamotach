@@ -17,11 +17,13 @@ knowledge_refs:
 eshopy:
   - nazev: "Amvel"
     url: "https://amvel.cz/"
-    poznamka: "Čerstvé / mražené jahody z jižních Čech"
-description: "Čerstvé nebo mražené jahody rozmixované do hladka, případně přepasírované přes síto. Obsahují ~7 % vlastních cukrů (mix sacharóza/glukóza/fruktóza), počítat do "
+    poznamka: "Nejem mražené jahody, ale i jiné ovoce."
+description: "Čerstvé nebo mražené jahody rozmixované do hladka. Obsahují ~7 % vlastních cukrů (mix sacharóza/glukóza/fruktóza), počítat do "
 ---
 
-Čerstvé nebo mražené jahody rozmixované do hladka, případně přepasírované přes síto. Obsahují ~7 % vlastních cukrů (mix sacharóza/glukóza/fruktóza), počítat do bilance.
+Čerstvé nebo mražené jahody rozmixované do hladka. Obsahují ~7 % vlastních cukrů (mix sacharóza/glukóza/fruktóza), počítat do bilance.
+
+>Pozor: nášlehové čerpadlo se nesmí použít, pokud zmrzlina obsahuje semínka.
 
 ## Specifikace
 

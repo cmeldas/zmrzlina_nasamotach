@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="UTF-8"><title>Recept 8: Čokoládová zmrzlina (kakaový prášek + kakaová hmota)</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&family=Rubik:wght@300;400;500;600;700&display=swap");
+
+@page { size: A4 portrait; margin: 11mm 12mm 16mm 12mm; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    font-family: "Rubik", Arial, sans-serif;
+    color: #3d2e1e;
+    background: #fff;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+.page {
+    --body-font: 9.5pt;
+    --body-h3: 10.5pt;
+    --body-table: 8.5pt;
+}
+
+.header {
+    border-bottom: 0.6mm solid #e8a723;
+    padding-bottom: 3mm; margin-bottom: 4mm;
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 6mm;
+    break-inside: avoid; break-after: avoid;
+}
+.header .header-left { flex: 1; min-width: 0; }
+.header .header-right {
+    text-align: right; flex-shrink: 0;
+    max-width: 70mm;
+}
+.header .brand {
+    font-size: 7pt; color: #c47a15;
+    text-transform: uppercase; letter-spacing: 1pt;
+    margin-bottom: 1.5mm;
+}
+.header .brand strong {
+    display: block; font-family: "Sriracha", cursive;
+    font-size: 11pt; color: #3d2e1e; text-transform: none; letter-spacing: 0;
+}
+.header .license-tag {
+    font-size: 6.5pt; color: #3d2e1e; line-height: 1.25;
+    background: #faf6ee; border-left: 0.5mm solid #e8a723;
+    padding: 0.8mm 1.5mm;
+}
+.header .license-tag strong { color: #c47a15; font-weight: 700; }
+
+.recipe-num .stav-pill {
+    display: inline-block;
+    padding: 0.1mm 1.5mm;
+    border-radius: 2mm;
+    font-family: "Rubik", sans-serif;
+    font-size: 7pt;
+    font-weight: 600;
+    letter-spacing: 0.2pt;
+    vertical-align: 0.5mm;
+}
+.recipe-num .stav-pill.stav-navrh { background: #fef3e8; color: #8a4a08; border: 0.1mm solid #f0c177; }
+.recipe-num .stav-pill.stav-testovany { background: #fff7d6; color: #6b4d05; border: 0.1mm solid #e8c34a; }
+.recipe-num .stav-pill.stav-odladeny { background: #e8f4e0; color: #2d5016; border: 0.1mm solid #8ac070; }
+
+.recipe-num {
+    font-family: "Sriracha", cursive;
+    font-size: 11pt; color: #c47a15;
+}
+.recipe-title {
+    font-family: "Sriracha", cursive;
+    font-size: 22pt; color: #3d2e1e; line-height: 1.05;
+}
+
+.meta-pills {
+    display: flex; gap: 4mm; flex-wrap: wrap;
+    font-size: 8pt; color: #c47a15;
+    margin-bottom: 3mm;
+    break-inside: avoid; break-after: avoid;
+}
+.meta-pills span { padding: 0.5mm 2mm; background: #faf6ee; border-radius: 1mm; }
+.meta-pills strong { color: #3d2e1e; }
+
+.body {
+    font-size: var(--body-font); line-height: 1.32;
+    column-count: 2; column-gap: 6mm;
+    column-rule: 0.15mm solid #d8c89a; column-fill: auto;
+}
+
+.body p, .body ul, .body ol, .body table, .body blockquote, .body h3, .body h4 {
+    margin-bottom: 1.6mm; break-inside: avoid;
+}
+.body h3 {
+    font-family: "Rubik", sans-serif;
+    font-size: var(--body-h3); font-weight: 700; color: #c47a15;
+    margin-top: 2.5mm; margin-bottom: 1.2mm;
+    padding-bottom: 0.5mm; border-bottom: 0.15mm dotted #e8a723;
+    break-after: avoid;
+}
+.body h3:first-child { margin-top: 0; }
+.body h4 { font-size: var(--body-font); font-weight: 700; color: #3d2e1e; margin-top: 1.8mm; break-after: avoid; }
+.body strong { color: #3d2e1e; font-weight: 600; }
+.body em { color: #6b5536; }
+.body ul, .body ol { padding-left: 4mm; }
+.body li { margin-bottom: 0.4mm; }
+.body blockquote {
+    border-left: 0.6mm solid #e8a723;
+    padding: 0.8mm 0 0.8mm 2mm; background: #faf6ee;
+    color: #5a4528; font-style: italic;
+}
+.body table {
+    width: 100%; border-collapse: collapse;
+    font-size: var(--body-table); line-height: 1.2;
+}
+.body th, .body td {
+    border: 0.1mm solid #d8c89a; padding: 0.6mm 1.2mm;
+    text-align: left; vertical-align: top;
+}
+.body th { background: #faf6ee; color: #3d2e1e; font-weight: 600; }
+.body tbody tr:nth-child(even) td { background: rgba(232,167,35,0.05); }
+.body td:not(:first-child), .body th:not(:first-child) { text-align: right; }
+</style></head><body>
+<div class="page">
+  <header class="header">
+    <div class="header-left">
+      <div class="recipe-num">Recept č.&nbsp;8 &nbsp;·&nbsp; <span class="stav-pill stav-odladeny">Odladěný</span></div>
+      <h1 class="recipe-title">Čokoládová zmrzlina (kakaový prášek + kakaová hmota)</h1>
+    </div>
+    <div class="header-right">
+      <div class="brand">
+        <strong>Zmrzlina&nbsp;Na&nbsp;Samotách</strong>
+        Otevřená receptura
+      </div>
+      <div class="license-tag">
+        <strong>CC&nbsp;BY-SA&nbsp;4.0</strong> · Sdílej a uprav. Uveď zdroj, zachovej licenci.
+      </div>
+    </div>
+  </header>
+  <div class="meta-pills">
+    <span><strong>Typ:</strong> tocena</span>
+    <span><strong>Tuk:</strong> 10.5 %</span>
+    <span><strong>PAC:</strong> 28</span>
+    <span><strong>Servírování:</strong> −10 až −12 °C</span>
+    <span><strong>Várka:</strong> 10 kg</span>
+  </div>
+  <main class="body"><p><strong>Typ:</strong> točená zmrzlina | <strong>Servírování:</strong> −10 až −12 °C</p>
+<p><strong>Cíl:</strong> Plná, autentická čokoládová chuť díky kombinaci <strong>přírodního nealkalizovaného kakaa z nepražených (raw) bobů</strong> (ovocná, kyselejší aromatika s květinovými/lesními tóny) a <strong>kakaové hmoty</strong> (55 % kakaového másla — máslové aroma, krémovost, hloubka čokoládové chuti). Cílová tučnost ~10 %.</p>
+<h3>Specifika nealkalizovaného raw kakaa</h3>
+<ul>
+<li><strong>pH 5,0–5,8</strong> (vs. 7–8 u alkalizovaného) → <strong>kyselejší</strong>, ovocnější, méně „klasicky čokoládové&quot;</li>
+<li><strong>Světlejší barva</strong> — výsledná zmrzlina bude <strong>světle hnědá / kakaově béžová</strong>, ne tmavá</li>
+<li><strong>Z nepražených bobů</strong> = méně Maillardových karamelových tónů, ale <strong>více polyfenolů a přirozených aromatik</strong> (ovocné, květinové, někdy zemité)</li>
+<li>Kyselost přirozeně posune chuť do „ostrější&quot; linky → kompenzujeme <strong>vyšším podílem kakaové hmoty</strong> pro hloubku + <strong>mírně více cukru</strong></li>
+<li>Přírodní kakao má vyšší obsah škrobu → <strong>silnější vázání vody</strong> (lepší stabilita, ale směs hustší — kompenzujeme vyšším PAC)</li>
+</ul>
+<h3>Proč kombinace kakaa a kakaové hmoty</h3>
+<ul>
+<li><strong>Přírodní raw kakaový prášek (10–12 % tuku)</strong> dodává ovocno-kyselé kakaové tóny, přirozenou stabilizaci (škroby + vláknina vážou vodu → méně ledových krystalů).</li>
+<li><strong>Kakaová hmota (55 % kakaového másla)</strong> je čistá kakaová pasta z mletých kakaových bobů. Přináší celou paletu aromatických olejů, fenolických látek a polotuhého kakaového másla, které <strong>při zmrazení tuhne a podporuje strukturu</strong>. Vyrovnává „prázdnost&quot; samotného přírodního kakaa.</li>
+<li>Kakaová hmota se musí <strong>pomalu rozpustit ve smetaně/mléce při 50–60 °C</strong>, jinak vytvoří hrudky.</li>
+</ul>
+<h3>Receptura</h3>
+<table>
+<thead>
+<tr>
+<th>Ingredience</th>
+<th>g/10 kg</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TEKUTÉ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Plnotučné mléko (3,5 %)</td>
+<td>5 199</td>
+<td>51,99 %</td>
+</tr>
+<tr>
+<td>Smetana 33 %</td>
+<td>1 500</td>
+<td>15,0 %</td>
+</tr>
+<tr>
+<td>Invertní cukr</td>
+<td>150</td>
+<td>1,5 %</td>
+</tr>
+<tr>
+<td><strong>ROZPUSTIT VE SMETANĚ PŘI 50–60 °C</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Kakaová hmota (55 % tuku)</td>
+<td>600</td>
+<td>6,0 %</td>
+</tr>
+<tr>
+<td><strong>SYPKÉ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Přírodní raw kakao (~11 % tuku)</td>
+<td>350</td>
+<td>3,5 %</td>
+</tr>
+<tr>
+<td>Sacharóza</td>
+<td>1 450</td>
+<td>14,5 %</td>
+</tr>
+<tr>
+<td>Dextróza</td>
+<td>250</td>
+<td>2,5 %</td>
+</tr>
+<tr>
+<td>Glukóza (prášek, sušený sirup)</td>
+<td>200</td>
+<td>2,0 %</td>
+</tr>
+<tr>
+<td>Sušené odtučněné mléko (SOM)</td>
+<td>250</td>
+<td>2,5 %</td>
+</tr>
+<tr>
+<td>MEC3 Natura 50</td>
+<td>50</td>
+<td>0,5 %</td>
+</tr>
+<tr>
+<td>Špetka soli</td>
+<td>1</td>
+<td>0,01 %</td>
+</tr>
+<tr>
+<td><strong>Celkem</strong></td>
+<td><strong>10 000</strong></td>
+<td><strong>100 %</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Bilance</h3>
+<table>
+<thead>
+<tr>
+<th>Složka</th>
+<th>Výpočet</th>
+<th>Hodnota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tuk</strong></td>
+<td>mléko 520×0,035 + smetana 150×0,33 + kak. hmota 60×0,55 + kakao 35×0,11</td>
+<td>~105 g → <strong>10,5 %</strong></td>
+</tr>
+<tr>
+<td><strong>MSNF</strong></td>
+<td>mléko ~9 % + smetana (67%×9%) + SOM 25</td>
+<td>~81 g → <strong>8,1 %</strong></td>
+</tr>
+<tr>
+<td><strong>Cukry</strong></td>
+<td>145 + 25 + 20 + 15 + laktóza ~42</td>
+<td>~25 % efektivně</td>
+</tr>
+<tr>
+<td><strong>Kakaová sušina</strong></td>
+<td>hmota 60×0,45 + prášek 35×0,89</td>
+<td>~58 g → <strong>5,8 %</strong></td>
+</tr>
+<tr>
+<td><strong>Sušina</strong></td>
+<td>tuk + cukry + MSNF + kakao + stabilizátor</td>
+<td><strong>~44 %</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>PAC výpočet (na 100 g):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Cukr</th>
+<th>g/100 g</th>
+<th>FPDF</th>
+<th>PAC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sacharóza</td>
+<td>14,5</td>
+<td>1,0</td>
+<td>14,5</td>
+</tr>
+<tr>
+<td>Dextróza</td>
+<td>2,5</td>
+<td>1,9</td>
+<td>4,75</td>
+</tr>
+<tr>
+<td>Glukóza (prášek)</td>
+<td>2,0</td>
+<td>0,8</td>
+<td>1,6</td>
+</tr>
+<tr>
+<td>Invertní cukr</td>
+<td>1,5</td>
+<td>1,9</td>
+<td>2,85</td>
+</tr>
+<tr>
+<td>Laktóza</td>
+<td>~4,2</td>
+<td>1,0</td>
+<td>4,2</td>
+</tr>
+<tr>
+<td><strong>Celkem PAC</strong></td>
+<td></td>
+<td></td>
+<td><strong>~28</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>PAC ≈ 28</strong> → ideální pro točenou při −10 až −12 °C, drží tvar v kornoutu. Vyšší podíl mléka (52 %) a smetany (15 %) dohromady kompenzují silnou váznícosť vody přírodními kakaovými škroby a vytvářejí plnější mléčný profil bez hořkosti.</p>
+<h3>Postup</h3>
+<ol>
+<li><strong>Hydratace stabilizátoru:</strong> stabilizátor smíchat předem s ~3× větším množstvím sacharózy, aby se nezhrudkoval.</li>
+<li><strong>Rozpuštění kakaové hmoty:</strong> kakaovou hmotu nasekat na malé kousky a zahřívat se smetanou + ¼ mléka při 50–60 °C, dokud se zcela nerozpustí (5–10 min, mícháme metličkou).</li>
+<li><strong>Smíchání suchých složek:</strong> v misce smíchat přírodní raw kakao, SOM, dextrózu, sacharózu se stabilizátorem, sůl, invertní cukr.</li>
+<li><strong>Spojení:</strong> do horké směsi smetany s rozpuštěnou kakaovou hmotou postupně vmíchat zbylé mléko, přidat suché složky a ponornou tyčí krátce promixovat — eliminuje hrudky kakaa.</li>
+<li><strong>Pasterizace:</strong> zahřát na <strong>82–85 °C</strong> za stálého míchání (kakaový prášek snadno přihořívá — používat silnostěnný hrnec, neustále stírat dno!). U raw kakaa nepřekračovat 85 °C, abychom neztratili jemné aromatika z nepražených bobů.</li>
+<li><strong>Rychlé zchlazení:</strong> ledová lázeň na 4 °C do 30 minut.</li>
+<li><strong>Aging:</strong> <strong>min. 6 h, ideálně 24 h</strong> při 4 °C — přírodní kakao potřebuje delší hydrataci než alkalizované, kakaové máslo částečně krystalizuje, chuť se prohloubí a počáteční kyselost změkne.</li>
+<li><strong>Promixování:</strong> těsně před zmrazením znovu projet ponornou tyčí (kakao má tendenci sedimentovat).</li>
+</ol>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Volba kakaové hmoty:</strong> hledat „pure cocoa mass&quot; / „cocoa liquor&quot; / „kakaová hmota 100%&quot; v cukrářských obchodech (Callebaut, Valrhona, Cacao Barry). Obsah kakaového másla 50–58 %. Doporučený zdroj pro tuto klasickou (vyváženější) variantu: Čokoládovna Troubelice — BIO 100 %. Pro hořkou variantu raději volit BIO Mexiko single-origin — viz hořká čokoládová zmrzlina.</li>
+<li><strong>Pro intenzivnější čokoládovou chuť</strong> přidat 5 g instantní kávy (espresso prášek) — zvýrazní kakaové tóny, není cítit jako káva.</li>
+<li><strong>Pro hlubší „pražený&quot; charakter:</strong> můžeš přírodní raw kakao před použitím lehce opražit na suché pánvi 2–3 minuty při ~120 °C za stálého míchání, dokud nezačne intenzivně vonět (pozor, snadno hořkne). Tím získáš více Maillardových karamelových tónů.</li>
+<li><strong>Tmavá hořká varianta:</strong> zvýšit kakaovou hmotu na 90 g, snížit smetanu na 60 g (tuk zůstane ~9 %), přidat 10 g sacharózy → výraznější hořko-čokoládový profil.</li>
+<li><strong>Mléčná čokoláda:</strong> snížit raw kakao na 20 g a hmotu na 35 g, přidat 30 g sušeného plnotučného mléka místo SOM.</li>
+</ul>
+<h3>Časté problémy</h3>
+<table>
+<thead>
+<tr>
+<th>Problém</th>
+<th>Příčina</th>
+<th>Řešení</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hrudky kakaa</td>
+<td>Špatné rozpuštění</td>
+<td>Vždy promixovat ponornou tyčí, kakaový prášek vmíchávat do horké tekutiny</td>
+</tr>
+<tr>
+<td>Pískovitá textura</td>
+<td>Kakaová hmota se nerozpustila</td>
+<td>Nasekat jemněji, zahřívat déle při 50–60 °C</td>
+</tr>
+<tr>
+<td>Příliš kyselá / ostrá chuť</td>
+<td>Přírodní kakao je přirozeně kyselejší</td>
+<td>Prodloužit aging na 24 h, přidat 5 g instantní kávy pro hloubku</td>
+</tr>
+<tr>
+<td>Hořká chuť</td>
+<td>Příliš kakaa, málo cukru</td>
+<td>Snížit kakao na 25 g, zvýšit sacharózu o 10 g</td>
+</tr>
+<tr>
+<td>Světlá až béžová barva</td>
+<td>Přírodní (nealkalizované) raw kakao</td>
+<td><strong>Normální stav!</strong> Pro tmavší barvu přidat 5 g instantní kávy</td>
+</tr>
+<tr>
+<td>Tvrdá při skladování</td>
+<td>PAC příliš nízké, kakao váže vodu</td>
+<td>Zvýšit dextrózu o 10 g, snížit sacharózu o 10 g</td>
+</tr>
+<tr>
+<td>Sedimentace kakaa ve směsi</td>
+<td>Nedostatečná hydratace</td>
+<td>Delší aging (24 h), promixovat před zmrazením</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Souhrn — klíčové principy</h2>
+<blockquote>
+<p>Receptury v tomto dokumentu jsou laděny pro <strong>točenou zmrzlinu servírovanou při −10 až −12 °C</strong> (kromě sekce 6 Nanuk).</p>
+</blockquote>
+<h3>Sorbety (bez tuku) — točená</h3>
+<ul>
+<li>Cukry <strong>26–32 %</strong> • <strong>PAC 28–34</strong> pro točenou při −10 až −12 °C</li>
+<li>Více monosachariдů = měkčí • fruktóza = ovocnost</li>
+<li>Sušený glukózový sirup pro stabilitu směsi</li>
+</ul>
+<h3>Smetanové zmrzliny (8 % tuku) — točená</h3>
+<ul>
+<li>Cukry <strong>20–22 %</strong> • <strong>PAC 27–30</strong> pro točenou při −10 až −12 °C</li>
+<li>Tuk přirozeně změkčuje + nese chuť + drží vzduch</li>
+<li><strong>Aging 4–12 h</strong> je zásadní pro správnou strukturu</li>
+</ul>
+<h3>Nanuky</h3>
+<ul>
+<li>Cukry <strong>20–22 %</strong> • PAC <strong>24–30</strong> • servírování <strong>−18 °C</strong></li>
+<li>Vyšší podíl sušeného glukózového sirupu pro skladování</li>
+<li>Bez vzduchu (overrun 0–20 %) → vyšší sušina nutná</li>
+</ul>
+<h3>Univerzální pravidla</h3>
+<ul>
+<li><strong>PAC</strong> je nejdůležitější číslo pro konzistenci</li>
+<li>Vždy testovat při cílové teplotě servírování</li>
+<li><strong>MEC3 Natura 50</strong> (mléčné) / <strong>Natura frutta 50</strong> (sorbety) v dávce 0,5 % nahrazují čistý stabilizátor a zjednodušují recepturu</li>
+<li>Při ovocných variantách počítat se <strong>sušinou a cukrem ovoce</strong> — neignorovat!</li>
+</ul>
+<hr />
+<p><em>Související: cukry-ve-zmrzline.md, tuky-ve-zmrzline.md</em></p>
+</main>
+</div></body></html>
