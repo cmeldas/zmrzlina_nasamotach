@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -40,6 +41,34 @@ GOLD = "#e8a723"
 GOLD_DARK = "#c47a15"
 CREAM = "#faf6ee"
 LINE = "#d8c89a"
+
+
+def git_last_modified(path: Path) -> datetime:
+    """Datum poslední změny souboru.
+
+    Vrací datum posledního commitu, který se souboru dotkl. Pokud má soubor
+    neuložené (necommitnuté) změny, vrací aktuální datum. Když git selže
+    (není repozitář, soubor není verzovaný), spadne na aktuální datum.
+    """
+    try:
+        # Necommitnuté změny? `git status --porcelain` vrátí neprázdný řádek.
+        status = subprocess.run(
+            ["git", "status", "--porcelain", "--", str(path)],
+            cwd=ROOT, capture_output=True, text=True, check=True,
+        ).stdout.strip()
+        if status:
+            return datetime.now()
+
+        out = subprocess.run(
+            ["git", "log", "-1", "--format=%cI", "--", str(path)],
+            cwd=ROOT, capture_output=True, text=True, check=True,
+        ).stdout.strip()
+        if out:
+            # ISO 8601 s časovým posunem, např. 2026-05-27T12:34:56+02:00
+            return datetime.fromisoformat(out)
+    except (subprocess.CalledProcessError, ValueError, OSError):
+        pass
+    return datetime.now()
 
 
 def parse_frontmatter(text: str) -> tuple[dict, str]:
@@ -373,11 +402,12 @@ def main() -> int:
         html = build_html(num, fm, body, fs=args.font_size, cols=args.columns)
         out_html.write_text(html, encoding="utf-8")
         print(f"▸ {num}. {fm.get('title')}")
+        modified = git_last_modified(f)
         used, pages = render_pdf(
             out_html, out_pdf,
             fs=args.font_size, min_fs=args.min_font_size,
             footer_autor=str(fm.get("autor", "Ranč Na Samotách")),
-            footer_date=datetime.now().strftime("%d.\u00a0%m.\u00a0%Y"),
+            footer_date=modified.strftime("%d.\u00a0%m.\u00a0%Y"),
         )
         size_kb = out_pdf.stat().st_size / 1024
         page_info = f"{pages} str." if pages > 1 else "1 str."

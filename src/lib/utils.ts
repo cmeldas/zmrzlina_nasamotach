@@ -12,6 +12,12 @@ export function formatPct(v?: number): string {
   return `${v.toLocaleString("cs-CZ", { maximumFractionDigits: 1 })} %`;
 }
 
+/** Datum v českém formátu, např. "27. 5. 2026". */
+export function formatDateCs(date?: Date | null): string {
+  if (!date) return "—";
+  return date.toLocaleDateString("cs-CZ", { day: "numeric", month: "numeric", year: "numeric" });
+}
+
 export const TYP_LABEL: Record<string, string> = {
   tocena: "Točená",
   sorbet: "Sorbet",
