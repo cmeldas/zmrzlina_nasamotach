@@ -6,6 +6,7 @@ description: Návrh nového receptu zmrzliny pro Ranč na Samotách — od hlavn
 # Skill: Návrh a výpočet nového receptu zmrzliny
 
 Tento skill provede agenta od **vstupu uživatele** (hlavní příchuť + ingredience, které chce použít) k **hotovému receptu**:
+
 1. Markdown soubor v `src/content/recepty/`
 2. A4 PDF v `public/pdfs/`
 
@@ -34,15 +35,15 @@ Pokud uživatel **NEzadal hlavní příchuť** nebo **nezadal základní surovin
 
 **VŽDY** si tyto soubory přečti před návrhem nového receptu:
 
-| Co | Cesta | Proč |
-|---|---|---|
-| Konvence + MEC3 | `src/content/knowledge/konvence-receptu.md` | Várka, PAC cíle, dávkování |
-| Teorie cukrů | `src/content/knowledge/cukry-ve-zmrzline.md` | FPDF, PAC, POD |
-| Teorie tuků | `src/content/knowledge/tuky-ve-zmrzline.md` | Cíle tuku, MFGM |
-| Stabilizátory | `src/content/knowledge/stabilizatory-ve-zmrzline.md` | Dávkování, kombinace |
-| Sušina | `src/content/knowledge/sucha-latka-total-solids.md` | Cíle TS |
-| Existující recepty | `src/content/recepty/*.md` | Vzory frontmatter, struktury |
-| Karty surovin | `src/content/ingredience/*.md` | `pac`, `sucha_latka_pct`, slug pro odkaz |
+| Co                 | Cesta                                                | Proč                                     |
+| ------------------ | ---------------------------------------------------- | ---------------------------------------- |
+| Konvence + MEC3    | `src/content/knowledge/konvence-receptu.md`          | Várka, PAC cíle, dávkování               |
+| Teorie cukrů       | `src/content/knowledge/cukry-ve-zmrzline.md`         | FPDF, PAC, POD                           |
+| Teorie tuků        | `src/content/knowledge/tuky-ve-zmrzline.md`          | Cíle tuku, MFGM                          |
+| Stabilizátory      | `src/content/knowledge/stabilizatory-ve-zmrzline.md` | Dávkování, kombinace                     |
+| Sušina             | `src/content/knowledge/sucha-latka-total-solids.md`  | Cíle TS                                  |
+| Existující recepty | `src/content/recepty/*.md`                           | Vzory frontmatter, struktury             |
+| Karty surovin      | `src/content/ingredience/*.md`                       | `pac`, `sucha_latka_pct`, slug pro odkaz |
 
 ---
 
@@ -61,14 +62,14 @@ Pokud uživatel zmíní surovinu, která **ještě nemá kartu** v `src/content/
 
 ### Krok 2 — Vyber cílový profil
 
-| Typ | Tuk | PAC | Sušina | Servírování | Pozn. |
-|---|---|---|---|---|---|
-| Točená smetanová | 8–10 % | 28–30 | 38–42 % | −10 až −12 °C | Default |
-| Custard (French) | 11–13 % | 28 | 42–44 % | −10 až −12 °C | Žloutky 5–8 % |
-| Tvarohová | 6–8 % | 28–30 | 40–44 % | −10 až −12 °C | Tvaroh 15–25 % |
-| Sorbet (točený) | 0 % | 28–32 | 30–34 % | −10 až −12 °C | Ovoce 30–50 % |
-| Nanuk | 4–8 % | 22–26 | 36–40 % | −18 °C výdej | Vyšší pevnost |
-| Kopečkový gelato | 6–9 % | 24–28 | 38–42 % | −13 °C výdej | Tvrdší |
+| Typ              | Tuk     | PAC   | Sušina  | Servírování   | Pozn.          |
+| ---------------- | ------- | ----- | ------- | ------------- | -------------- |
+| Točená smetanová | 8–10 %  | 28–30 | 38–42 % | −10 až −12 °C | Default        |
+| Custard (French) | 11–13 % | 28    | 42–44 % | −10 až −12 °C | Žloutky 5–8 %  |
+| Tvarohová        | 6–8 %   | 28–30 | 40–44 % | −10 až −12 °C | Tvaroh 15–25 % |
+| Sorbet (točený)  | 0 %     | 28–32 | 30–34 % | −10 až −12 °C | Ovoce 30–50 %  |
+| Nanuk            | 4–8 %   | 22–26 | 36–40 % | −18 °C výdej  | Vyšší pevnost  |
+| Kopečkový gelato | 6–9 %   | 24–28 | 38–42 % | −13 °C výdej  | Tvrdší         |
 
 Zdroj cílů: `src/content/knowledge/konvence-receptu.md` + `cukry-ve-zmrzline.md` (sekce 4).
 
@@ -88,15 +89,15 @@ POD         = Σ (g_cukru × POD_cukru) / 100              # sladivost, cíl ~16
 
 **FPDF přehled** (z `cukry-ve-zmrzline.md`):
 
-| Cukr | FPDF | POD |
-|---|---|---|
-| Sacharóza | 1,0 | 1,0 |
-| Dextróza / glukóza prášek | 1,9 | 0,75 |
-| Fruktóza | 1,9 | 1,7 |
-| Invertní cukr | 1,9 | 1,3 |
-| Glukózový sirup 42 DE / GL01934 | 0,8 | 0,5 |
-| Maltodextrin 18 DE | 0,34 | 0,1 |
-| Laktóza (z mléka, SOM) | 1,0 | 0,16 |
+| Cukr                            | FPDF | POD  |
+| ------------------------------- | ---- | ---- |
+| Sacharóza                       | 1,0  | 1,0  |
+| Dextróza / glukóza prášek       | 1,9  | 0,75 |
+| Fruktóza                        | 1,9  | 1,7  |
+| Invertní cukr                   | 1,9  | 1,3  |
+| Glukózový sirup 42 DE / GL01934 | 0,8  | 0,5  |
+| Maltodextrin 18 DE              | 0,34 | 0,1  |
+| Laktóza (z mléka, SOM)          | 1,0  | 0,16 |
 
 **Provozní defaulty:**
 
@@ -127,9 +128,9 @@ Soubor: `src/content/recepty/{slug}.md`. Slug = příchuť-typ, např. `mangovy-
 ```yaml
 ---
 title: "Mangový sorbet"
-cislo: 9                              # další volné číslo
-typ: "sorbet"                         # tocena | sorbet | nanuk | premium | custard
-obtiznost: "zacatecnik"               # zacatecnik | stredni | pokrocily
+cislo: 9 # další volné číslo
+typ: "sorbet" # tocena | sorbet | nanuk | premium | custard
+obtiznost: "zacatecnik" # zacatecnik | stredni | pokrocily
 tuk_pct: 0
 pac: 30
 serv_teplota: "−10 až −12 °C"
@@ -139,7 +140,7 @@ tags:
   - ovocna
   - mango
 ingredience:
-  - mangove-pyre                      # slug existující karty
+  - mangove-pyre # slug existující karty
   - sacharoza
   - dextroza
   - glukoza-suseny-sirup
@@ -180,10 +181,10 @@ Pokud recept odkazuje na slug, který **neexistuje** v `src/content/ingredience/
 ```yaml
 ---
 title: "Mangové pyré"
-kategorie: ovoce                       # cukr | tuk-mlecny | protein | stabilizator | emulgator | ovoce | kakao | aroma | sul-mineral | vlaknina | alkohol | baze-komercni | voda
-forma: kapalna                         # kapalna | sypka | pasta | polotuhe (volitelné)
+kategorie: ovoce # cukr | tuk-mlecny | protein | stabilizator | emulgator | ovoce | kakao | aroma | sul-mineral | vlaknina | alkohol | baze-komercni | voda
+forma: kapalna # kapalna | sypka | pasta | polotuhe (volitelné)
 sucha_latka_pct: 16
-pac: 18                                # ovocný cukr ~ FPDF 1,9 × cca 10 %
+pac: 18 # ovocný cukr ~ FPDF 1,9 × cca 10 %
 typicke_davkovani: "30–50 % m/m"
 nazev_alt: []
 tags: [ovoce, sorbet, mango]
@@ -191,7 +192,6 @@ knowledge_refs: [cukry-ve-zmrzline]
 eshopy: []
 description: "Stručný 1–2 věty popis."
 ---
-
 Tělo karty: 1–2 odstavce + sekce **Specifikace**, **Kde koupit**, **Související knowledge**.
 ```
 
@@ -205,6 +205,7 @@ python scripts/build_pdfs.py --recipe {cislo}
 Pro `--recipe` použij `cislo` z frontmatter. Bez parametru se přegenerují všechny.
 
 **Důležité:**
+
 - Skript NIKDY nevolá `Stop-Process` na chrome — pokud je PDF zamčené (otevřené v prohlížeči/Acrobatu), skript vypíše hlášku a uživatel ho má sám zavřít.
 - Auto-fit: pokud obsah přetéká A4, font se zmenšuje z 9,5pt po 0,25pt až na 7,0pt. Když ani 7,0pt nestačí, zkrať text v receptu (typicky méně bulletů v sekci „Tipy" nebo „Co se stane když...").
 - Po úspěšném vygenerování ověř, že `public/pdfs/recept-{NN}-{slug}.pdf` existuje.
@@ -261,6 +262,7 @@ Krátké shrnutí uživateli:
 5. Rychlé zchlazení, aging. (Šlehání ve výrobníku již v postupu neuvádíme — všechno je to točená zmrzlina.)
 
 **Výjimky:**
+
 - **Custard / žloutky:** žloutky se temperují s mlékem v separátní fázi (viz `french-custard-vanilka.md`).
 - **Tvaroh:** **vždy** až do vychlazené směsi (≤ 30 °C), nikdy před pasterací. Tvaroh je už pasterizovaný od výrobce, při ohřevu by koaguloval.
 - **Čerstvé ovoce, kůra citrusů, extrakty, fleur de sel, citronová šťáva:** **vždy po pasteraci** (sekce `**PO PASTERACI**` v tabulce ingrediencí).
@@ -276,6 +278,7 @@ Krátké shrnutí uživateli:
 - **Živé antokyany** (červené/fialové ovoce) — ohřevem blednou.
 
 **Hygiena je zajištěna:**
+
 - Nízkým pH (~3,5–4) z citronu a kyselin v ovoci.
 - Vysokou koncentrací cuků (snížená aktivita vody).
 - Tvaroh je výrobcem pasterizovaný.
@@ -300,20 +303,20 @@ Krátké shrnutí uživateli:
 
 ## Časté chyby (z předchozích iterací)
 
-| Chyba | Náprava |
-|---|---|
-| Čokoláda nedrží tvar | Více smetany, méně vody (nebo žádná), `MEC3 Natura 50`, PAC ≤ 28 |
-| Banán/ovoce moc sladké | Odebrat invertní cukr, držet PAC kolem 25 |
-| Sůl 10 g | **Vždy 1 g** — historická chyba v původních receptech |
-| Tekutý glukózový sirup | Pro nanuk používat **GL01934 prášek** |
-| Voda místo mléka | Pokud lze, mléko → lepší MSNF a krémovost |
-| Jedlá soda v čokoládě | **Nepoužívat** — narušuje texturu |
-| Žloutky 200 g surové | Použít **pasterované žloutky 1:1**, dávkování 5–8 % pro custard |
-| Stabilizátor 2 g + MEC3 | Buď jedno, nebo druhé — ne oba dohromady |
-| Sypké do studeného mixu | **Pasterovat jen tekuté**, sypké vsypat až při dosažení teploty (riziko připálení) |
-| Tvaroh pasterovat ve směsi | **Vždy do vychlazené směsi** (≤ 30 °C), kasein koaguluje |
-| Pasterace sorbetu / sherbetu | **NEpasterovat** — zničí C-vitamín, vybledne barva, kompotová chuť |
-| Tuhý „selský“ tvaroh v sherbetu | Část tvarohu nahradit vodou 1:1 — jinak se ve studeném pyré nerozmíchá |
+| Chyba                           | Náprava                                                                            |
+| ------------------------------- | ---------------------------------------------------------------------------------- |
+| Čokoláda nedrží tvar            | Více smetany, méně vody (nebo žádná), `MEC3 Natura 50`, PAC ≤ 28                   |
+| Banán/ovoce moc sladké          | Odebrat invertní cukr, držet PAC kolem 25                                          |
+| Sůl 10 g                        | **Vždy 1 g** — historická chyba v původních receptech                              |
+| Tekutý glukózový sirup          | Pro nanuk používat **GL01934 prášek**                                              |
+| Voda místo mléka                | Pokud lze, mléko → lepší MSNF a krémovost                                          |
+| Jedlá soda v čokoládě           | **Nepoužívat** — narušuje texturu                                                  |
+| Žloutky 200 g surové            | Použít **pasterované žloutky 1:1**, dávkování 5–8 % pro custard                    |
+| Stabilizátor 2 g + MEC3         | Buď jedno, nebo druhé — ne oba dohromady                                           |
+| Sypké do studeného mixu         | **Pasterovat jen tekuté**, sypké vsypat až při dosažení teploty (riziko připálení) |
+| Tvaroh pasterovat ve směsi      | **Vždy do vychlazené směsi** (≤ 30 °C), kasein koaguluje                           |
+| Pasterace sorbetu / sherbetu    | **NEpasterovat** — zničí C-vitamín, vybledne barva, kompotová chuť                 |
+| Tuhý „selský“ tvaroh v sherbetu | Část tvarohu nahradit vodou — pokud je potřeba řidčí směs                          |
 
 ---
 

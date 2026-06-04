@@ -5,9 +5,30 @@
 
 Sourozenec hlavního webu [nasamotach.cz](https://nasamotach.cz) — všechno o jedné konkrétní věci, do které jsme se na ranči zamilovali: o zmrzlině.
 
-## Proč to existuje
+## O nás
 
-V češtině neexistuje použitelná, otevřená a do hloubky jdoucí knowledge base o točené zmrzlině. Posbíral jsem to z desítek zdrojů, knih, vlastních pokusů a omylů. Sdílím dál, ať to ostatní mají snadnější.
+Provozujeme [Ranč Na Samotách](https://nasamotach.cz) v jižních Čechách — rodinný statek s vlastní mlékárnou, sýrárnou, syrovým obchůdkem a od jara 2025 i s točenou zmrzlinou. Tohle je dílčí projekt o jedné z věcí, do které jsme se zamilovali.
+
+## Proč to děláme
+
+Když jsem začínal s točenou zmrzlinou, nenašel jsem žádné použitelné recepty. Zaplatil jsem si drahý kurz a vlastně se moc nedozvěděl. Po roce vlastních zkušeností jsem zapojil i AI — udělala si research a dnes toho ví víc než já. Výsledek teď dávám k dispozici ostatním.
+
+V češtině totiž neexistuje použitelná, otevřená a do hloubky jdoucí knowledge base o točené zmrzlině. Sdílím dál, ať to ostatní mají snadnější.
+
+## Co tu najdeš
+
+- **[Recepty](https://zmrzlina.nasamotach.cz/recepty/)** — provozní receptury pro várku 10 kg, každý ke stažení jako A4 PDF pro tisk a offline použití.
+- **[Knowledge base](https://zmrzlina.nasamotach.cz/knowledge/)** — fyzikální chemie složek a procesů.
+- **[Databáze ingrediencí](https://zmrzlina.nasamotach.cz/ingredience/)** — specifikace surovin, dávkování, kde koupit.
+- **Fulltextové hledání** napříč vším.
+- **[AI Skill](/skills/zmrzlina-recept/SKILL.md)** pro návrh receptů.
+
+## Komu je to určeno
+
+- Začínajícím výrobcům točené zmrzliny (penziony, kavárny, statky).
+- Cukrářům, kteří chtějí pochopit, proč dělají to, co dělají.
+- Domácím nadšencům.
+- Komukoliv, kdo má rád dobrou zmrzlinu a chce vědět víc.
 
 ## Stack
 
@@ -74,4 +95,4 @@ Vítáme pull requesty s novými recepty, lepšími variantami, eshop linky k in
 
 ## Deploy
 
-Web se automaticky deployuje na Vercel přes GitHub Action při pushi do `main`. Tajemství (`VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`) jsou v repo Settings → Secrets.
+Web se automaticky deployuje na Vercel.
