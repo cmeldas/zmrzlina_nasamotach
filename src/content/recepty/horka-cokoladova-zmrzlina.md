@@ -25,11 +25,12 @@ ingredience:
   - mec3-natura-50
 souvisejici:
   - cokoladova-zmrzlina
-  - slany-karamel-tvarohova
-description: "Hořká čokoládová zmrzlina s vysokým podílem kakaové hmoty (9 %) a raw kakaa (4 %). Spin-off klasické čokolády — méně cukru, více kakaa, hlubší hořko-čokoládový profil. Ideální párovaná kombinace ke slanému karamelu."
+  - french-custard-vanilka
+  - tvarohova-zmrzlina
+description: "Hořká čokoládová zmrzlina s vysokým podílem kakaové hmoty (9 %) a raw kakaa (4 %). Spin-off klasické čokolády — méně cukru, více kakaa, hlubší hořko-čokoládový profil. Tak silná, že ji nejlépe vyváží lehká zmrzlina — vanilka nebo tvaroh."
 pdf: "/pdfs/recept-11-horka-cokoladova-zmrzlina.pdf"
-stav: navrh
-publikovat: false
+stav: testovany
+publikovat: true
 ---
 
 **Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
@@ -39,7 +40,7 @@ publikovat: false
 ### Proč právě tato varianta
 
 - **Spin-off** [čokoládové zmrzliny](/recepty/cokoladova-zmrzlina/) — stejný postup, stejné suroviny, jen jiný poměr.
-- **Párový partner ke [slanému karamelu](/recepty/slany-karamel-tvarohova/)** v točeném kornoutu: hořkost kakaa krásně vyvažuje sladkost karamelové pasty a podtrhuje slanou notu. Klasická světová dvojka.
+- **Tak silná, že volá po lehkém protějšku** v točeném kornoutu: intenzivní hořké kakao nejlépe vyváží lehká, decentní zmrzlina — [vanilka](/recepty/french-custard-vanilka/) nebo [tvaroh](/recepty/tvarohova-zmrzlina/). Sólo působí pro mnoho zákazníků až příliš tvrdě.
 - **Méně sladká** = lepší pro dospělé zákazníky, kteří chtějí „opravdovou" čokoládu, ne dezert.
 - **Vyšší podíl dextrózy** (3,5 % vs. 2,5 %) drží PAC ≈ 26 i při snížené sacharóze — zmrzlina zůstává v kornoutu plastická.
 
@@ -97,12 +98,12 @@ Tato varianta používá **nízkoteplotní pasterizaci (63 °C / 30 min)** a [ka
 8. **Aging:** **min. 12 h, ideálně 24 h** při 4 °C — větší množství kakaového másla a polyfenolů potřebuje delší hydrataci, chuť výrazně změkne a zaoblí se.
 9. **Promixování:** těsně před zmrazením znovu projet ponornou tyčí.
 
-### Servírovací tip — kombinace se slaným karamelem
+### Servírovací tip — kombinace s lehkou zmrzlinou
 
-V točeném stroji ve **dvojkomorovém provedení** dát do jedné komory hořkou čokoládu, do druhé [slaný karamel](/recepty/slany-karamel-tvarohova/). Klasický točený **mix-swirl kornout** (béžová + tmavě hnědá spirála) je vizuálně atraktivní a chuťově harmonický:
+Hořká čokoláda je tak intenzivní, že **sólo bývá pro většinu zákazníků příliš silná**. Nejlépe vynikne ve dvojici s lehkou, decentní zmrzlinou. V točeném stroji ve **dvojkomorovém provedení** dát do jedné komory hořkou čokoládu, do druhé [vanilku](/recepty/french-custard-vanilka/) nebo [tvarohovou zmrzlinu](/recepty/tvarohova-zmrzlina/). Točený **mix-swirl kornout** (světlá + tmavě hnědá spirála) je vizuálně atraktivní a chuťově harmonický:
 
-- **Hořkost kakaa** vyvažuje sladkost karamelu.
-- **Slaná nota karamelu** podtrhuje kakaovou hloubku (sůl je přirozený zesilovač čokoládové chuti).
+- **Hořkost kakaa** vyvažuje jemná sladkost vanilky, případně svěží mléčná kyselost tvarohu.
+- **Lehká zmrzlina „zředí"** intenzivní kakaovou hloubku do příjemné, vyvážené chuti.
 - **Mléčný profil obou zmrzlin** se prolíná hladce — žádné kontrastní textury.
 
 ### Tipy
@@ -128,4 +129,4 @@ V točeném stroji ve **dvojkomorovém provedení** dát do jedné komory hořko
 
 ---
 
-_Související: [čokoládová zmrzlina (základní)](/recepty/cokoladova-zmrzlina/), [slaný karamel s tvarohem](/recepty/slany-karamel-tvarohova/)_
+_Související: [čokoládová zmrzlina (základní)](/recepty/cokoladova-zmrzlina/), [vanilková zmrzlina (French custard)](/recepty/french-custard-vanilka/), [tvarohová zmrzlina](/recepty/tvarohova-zmrzlina/)_
