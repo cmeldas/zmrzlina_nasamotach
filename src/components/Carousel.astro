@@ -8,9 +8,11 @@ interface Props {
   label?: string;
   /** Kliknutím na obrázek se otevře celá neoříznutá fotka. */
   lightbox?: boolean;
+  /** Zamíchat pořadí slidů v prohlížeči při každém načtení stránky. */
+  shuffle?: boolean;
 }
 
-const { fotky, label, lightbox = false } = Astro.props;
+const { fotky, label, lightbox = false, shuffle = false } = Astro.props;
 
 // Plné (neoříznuté) verze fotek pro lightbox.
 const fullSrcs = lightbox
@@ -22,7 +24,12 @@ const fullSrcs = lightbox
 
 {
   fotky.length > 0 && (
-    <div class="carousel no-print" data-carousel data-lightbox={lightbox ? "true" : undefined}>
+    <div
+      class="carousel no-print"
+      data-carousel
+      data-lightbox={lightbox ? "true" : undefined}
+      data-shuffle={shuffle ? "true" : undefined}
+    >
       {label && <p class="carousel-label">{label}</p>}
       <div class="carousel-viewport">
         <div class="carousel-track" data-track>
@@ -312,10 +319,20 @@ const fullSrcs = lightbox
 </style>
 
 <script>
+  function shuffleSlides(track: HTMLElement) {
+    const slides = Array.from(track.children);
+    for (let i = slides.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      track.insertBefore(slides[j], slides[i].nextSibling);
+      [slides[i], slides[j]] = [slides[j], slides[i]];
+    }
+  }
+
   function initCarousels() {
     document.querySelectorAll<HTMLElement>("[data-carousel]").forEach((c) => {
       const track = c.querySelector<HTMLElement>("[data-track]");
       if (!track) return;
+      if (c.dataset.shuffle === "true") shuffleSlides(track);
       const move = (dir: number) => {
         const slide = track.querySelector<HTMLElement>(".carousel-slide");
         const step = slide ? slide.getBoundingClientRect().width : track.clientWidth;
