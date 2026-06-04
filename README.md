@@ -89,6 +89,12 @@ public/
 
 Komerční použití je vítané. Stačí uvést zdroj a remixy zachovat pod stejnou licencí.
 
+## Podpoř projekt
+
+Líbí se ti, co tu vzniká? Můžeš mě pozvat na kafe ☕ — díky tomu vznikne víc receptů a článků.
+
+<a href="https://www.buymeacoffee.com/cmeldas" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50" width="210"></a>
+
 ## Přispívání
 
 Vítáme pull requesty s novými recepty, lepšími variantami, eshop linky k ingrediencím a opravami. Viz [CONTRIBUTING.md](CONTRIBUTING.md) nebo stránku [Přispět](https://zmrzlina.nasamotach.cz/prispivat/) na webu.
