@@ -2,12 +2,32 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import { filterPublished } from "../lib/utils";
+import Carousel from "../components/Carousel.astro";
+import { resolveFotky, shuffle } from "../lib/fotky";
 
 const recepty = filterPublished(await getCollection("recepty")).sort(
   (a, b) => (a.data.cislo ?? 999) - (b.data.cislo ?? 999)
 );
 const knowledgeCount = (await getCollection("knowledge")).length;
 const ingredienceCount = (await getCollection("ingredience")).length;
+
+// Všechny fotky ze všech publikovaných receptů, v náhodném pořadí.
+// Pokud stejná fotka patří k více receptům, odkazy se vypíšou za sebou.
+const fotkaToRecipes = new Map<string, { foto: ReturnType<typeof resolveFotky>[number]; recipes: { title: string; href: string }[] }>();
+for (const r of recepty) {
+  for (const foto of resolveFotky(r.data.fotky)) {
+    const entry = fotkaToRecipes.get(foto.filename);
+    const recipe = { title: r.data.title, href: `/recepty/${r.id}/` };
+    if (entry) {
+      entry.recipes.push(recipe);
+    } else {
+      fotkaToRecipes.set(foto.filename, { foto, recipes: [recipe] });
+    }
+  }
+}
+const vsechnyFotky = shuffle(
+  [...fotkaToRecipes.values()].map(({ foto, recipes }) => ({ ...foto, recipes }))
+);
 ---
 
 <BaseLayout title="Zmrzlina Na Samotách" description="Otevřená knowledge base a receptury na točenou zmrzlinu — sdílíme vše, co jsme se naučili.">
@@ -46,6 +66,13 @@ const ingredienceCount = (await getCollection("ingredience")).length;
       </div>
     </div>
   </section>
+
+  {vsechnyFotky.length > 0 && (
+    <section>
+      <h2>Z naší výroby</h2>
+      <Carousel fotky={vsechnyFotky} />
+    </section>
+  )}
 
   <section>
     <h2>Proč tenhle web vznikl</h2>

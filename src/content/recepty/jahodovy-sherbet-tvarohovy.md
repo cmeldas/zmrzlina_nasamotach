@@ -27,6 +27,8 @@ ingredience:
 description: "Jahodový sherbet — mezi sorbetem a tvarohovou zmrzlinou. 50 % ovoce + 25 % tvarohu, bez smetany, jen ~1 % tuku, výrazně osvěžující."
 pdf: "/pdfs/recept-10-jahodovy-sherbet-tvarohovy.pdf"
 stav: odladeny
+fotky:
+  - Lesní směs.jpg
 publikovat: true
 ---
 

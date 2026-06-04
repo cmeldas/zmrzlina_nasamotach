@@ -3,9 +3,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import TagList from "../../components/TagList.astro";
 import PrintRecipe from "../../components/PrintRecipe.astro";
 import StavBadge from "../../components/StavBadge.astro";
+import Carousel from "../../components/Carousel.astro";
 import { getCollection, render } from "astro:content";
 import { TYP_LABEL, OBTIZNOST_LABEL, STAV_LABEL, STAV_POPIS, filterPublished, formatDateCs } from "../../lib/utils";
 import { getFileGitInfo } from "../../lib/git";
+import { resolveFotky } from "../../lib/fotky";
 
 export async function getStaticPaths() {
   const recepty = filterPublished(await getCollection("recepty"));
@@ -14,6 +16,7 @@ export async function getStaticPaths() {
 
 const { recipe } = Astro.props;
 const { Content } = await render(recipe);
+const fotky = resolveFotky(recipe.data.fotky);
 
 // Datum poslední úpravy + odkaz na commit z gitu (zjištěno během buildu).
 const gitInfo = getFileGitInfo(`src/content/recepty/${recipe.id}.md`);
@@ -49,6 +52,8 @@ const gitInfo = getFileGitInfo(`src/content/recepty/${recipe.id}.md`);
     </dl>
 
     <TagList tags={recipe.data.tags} />
+
+    <Carousel fotky={fotky} lightbox={true} />
 
     {recipe.data.pdf && (
       <div class="actions no-print">

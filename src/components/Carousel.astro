@@ -1,0 +1,389 @@
+---
+import { Image, getImage } from "astro:assets";
+import type { Foto } from "../lib/fotky";
+
+interface Props {
+  fotky: Foto[];
+  /** Volitelný popisek nad carouselem. */
+  label?: string;
+  /** Kliknutím na obrázek se otevře celá neoříznutá fotka. */
+  lightbox?: boolean;
+}
+
+const { fotky, label, lightbox = false } = Astro.props;
+
+// Plné (neoříznuté) verze fotek pro lightbox.
+const fullSrcs = lightbox
+  ? await Promise.all(
+      fotky.map((f) => getImage({ src: f.src, width: f.src.width, format: "webp" }))
+    )
+  : [];
+---
+
+{
+  fotky.length > 0 && (
+    <div class="carousel no-print" data-carousel data-lightbox={lightbox ? "true" : undefined}>
+      {label && <p class="carousel-label">{label}</p>}
+      <div class="carousel-viewport">
+        <div class="carousel-track" data-track>
+          {fotky.map((f, i) => (
+            <figure class="carousel-slide">
+              {lightbox ? (
+                <button
+                  type="button"
+                  class="carousel-img-btn"
+                  data-full={fullSrcs[i].src}
+                  data-caption={f.caption}
+                  aria-label={`Zobrazit celou fotku: ${f.caption}`}
+                >
+                  <Image
+                    src={f.src}
+                    alt={f.caption}
+                    widths={[480, 800, 1200]}
+                    sizes="(max-width: 760px) 100vw, 720px"
+                    class="carousel-img"
+                    loading="lazy"
+                  />
+                  <span class="carousel-zoom-hint" aria-hidden="true">⤢</span>
+                </button>
+              ) : (
+                <Image
+                  src={f.src}
+                  alt={f.caption}
+                  widths={[480, 800, 1200]}
+                  sizes="(max-width: 760px) 100vw, 720px"
+                  class="carousel-img"
+                  loading="lazy"
+                />
+              )}
+              <figcaption>
+                {f.caption}
+                {f.recipes && f.recipes.length > 0 && (
+                  <span class="carousel-recipe-links">
+                    {f.recipes.map((r) => (
+                      <a class="carousel-recipe-link" href={r.href}>
+                        {r.title}
+                      </a>
+                    ))}
+                  </span>
+                )}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        {fotky.length > 1 && (
+          <>
+            <button class="carousel-btn prev" data-prev aria-label="Předchozí fotka">
+              ‹
+            </button>
+            <button class="carousel-btn next" data-next aria-label="Další fotka">
+              ›
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  )
+}
+
+{
+  lightbox && (
+    <div class="lightbox no-print" data-lightbox-overlay hidden>
+      <button class="lightbox-close" data-lightbox-close aria-label="Zavřít">×</button>
+      {fotky.length > 1 && (
+        <button class="lightbox-nav prev" data-lightbox-prev aria-label="Předchozí fotka">
+          ‹
+        </button>
+      )}
+      <figure class="lightbox-figure">
+        <img class="lightbox-img" data-lightbox-img src="" alt="" />
+        <figcaption class="lightbox-caption" data-lightbox-caption />
+      </figure>
+      {fotky.length > 1 && (
+        <button class="lightbox-nav next" data-lightbox-next aria-label="Další fotka">
+          ›
+        </button>
+      )}
+    </div>
+  )
+}
+
+<style>
+  .carousel {
+    margin: 1.5rem 0;
+  }
+  .carousel-label {
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .carousel-viewport {
+    position: relative;
+  }
+  .carousel-track {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    margin: 0;
+    position: relative;
+  }
+  .carousel-img {
+    width: 100%;
+    height: clamp(240px, 42vw, 460px);
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+  }
+  .carousel-img-btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+    position: relative;
+    border-radius: 12px;
+  }
+  .carousel-zoom-hint {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 1.1rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  .carousel-img-btn:hover .carousel-zoom-hint,
+  .carousel-img-btn:focus-visible .carousel-zoom-hint {
+    opacity: 1;
+  }
+  .carousel-slide figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    border-radius: 0 0 12px 12px;
+  }
+  .carousel-recipe-link {
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .carousel-recipe-link::before {
+    content: "→ ";
+  }
+  .carousel-recipe-link:hover {
+    color: var(--accent, #ffdd00);
+  }
+  .carousel-recipe-links {
+    display: inline;
+  }
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.4rem;
+    height: 2.4rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease;
+  }
+  .carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .carousel-btn.prev {
+    left: 0.6rem;
+  }
+  .carousel-btn.next {
+    right: 0.6rem;
+  }
+
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.88);
+  }
+  .lightbox[hidden] {
+    display: none;
+  }
+  .lightbox-figure {
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .lightbox-img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  .lightbox-caption {
+    color: #fff;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .lightbox-nav.prev {
+    left: 1rem;
+  }
+  .lightbox-nav.next {
+    right: 1rem;
+  }
+</style>
+
+<script>
+  function initCarousels() {
+    document.querySelectorAll<HTMLElement>("[data-carousel]").forEach((c) => {
+      const track = c.querySelector<HTMLElement>("[data-track]");
+      if (!track) return;
+      const move = (dir: number) => {
+        const slide = track.querySelector<HTMLElement>(".carousel-slide");
+        const step = slide ? slide.getBoundingClientRect().width : track.clientWidth;
+        track.scrollBy({ left: dir * step, behavior: "smooth" });
+      };
+      c.querySelector("[data-prev]")?.addEventListener("click", () => move(-1));
+      c.querySelector("[data-next]")?.addEventListener("click", () => move(1));
+    });
+  }
+
+  function initLightbox() {
+    const overlay = document.querySelector<HTMLElement>("[data-lightbox-overlay]");
+    if (!overlay) return;
+    const imgEl = overlay.querySelector<HTMLImageElement>("[data-lightbox-img]");
+    const capEl = overlay.querySelector<HTMLElement>("[data-lightbox-caption]");
+
+    // Seznam všech fotek (zachová pořadí carouselu) pro navigaci v lightboxu.
+    const triggers = Array.from(document.querySelectorAll<HTMLElement>("[data-full]"));
+    const slides = triggers.map((t) => ({
+      full: t.dataset.full || "",
+      caption: t.dataset.caption || "",
+    }));
+    let current = 0;
+
+    const render = () => {
+      if (!imgEl) return;
+      const s = slides[current];
+      imgEl.src = s.full;
+      imgEl.alt = s.caption;
+      if (capEl) capEl.textContent = s.caption;
+    };
+    const open = (index: number) => {
+      current = index;
+      render();
+      overlay.hidden = false;
+      document.body.style.overflow = "hidden";
+    };
+    const close = () => {
+      overlay.hidden = true;
+      if (imgEl) imgEl.src = "";
+      document.body.style.overflow = "";
+    };
+    const step = (dir: number) => {
+      current = (current + dir + slides.length) % slides.length;
+      render();
+    };
+
+    triggers.forEach((btn, i) => {
+      btn.addEventListener("click", () => open(i));
+    });
+    overlay.querySelector("[data-lightbox-close]")?.addEventListener("click", close);
+    overlay.querySelector("[data-lightbox-prev]")?.addEventListener("click", () => step(-1));
+    overlay.querySelector("[data-lightbox-next]")?.addEventListener("click", () => step(1));
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (overlay.hidden) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowLeft") step(-1);
+      else if (e.key === "ArrowRight") step(1);
+    });
+  }
+
+  initCarousels();
+  initLightbox();
+  document.addEventListener("astro:page-load", () => {
+    initCarousels();
+    initLightbox();
+  });
+</script>

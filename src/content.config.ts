@@ -18,8 +18,9 @@ const recepty = defineCollection({
     souvisejici: z.array(z.string()).default([]),
     description: z.string().optional(),
     pdf: z.string().optional(),
-    autor: z.string().default("Ranč Na Samotách"),
-    licence: z.string().default("CC BY-SA 4.0"),
+    /** Fotky receptu (jen na webu, ne v PDF). Názvy souborů z src/content/recepty/pics/. */
+    fotky: z.array(z.string()).default([]),
+    autor: z.string().default("Ranč Na Samotách"),    licence: z.string().default("CC BY-SA 4.0"),
     aktualizovano: z.coerce.date().optional(),
     /** Stav vývoje receptu:
      *  - navrh:    teoretický návrh, nevyzkoušený

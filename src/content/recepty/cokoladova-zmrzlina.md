@@ -24,6 +24,8 @@ ingredience:
   - mec3-natura-50
 description: "Plná čokoládová zmrzlina z přírodního raw kakaa a kakaové hmoty, ~10 % tuku."
 pdf: "/pdfs/recept-08-cokoladova-zmrzlina.pdf"
+fotky:
+  - Banánová - Čokoládová.jpg
 stav: odladeny
 ---**Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
 

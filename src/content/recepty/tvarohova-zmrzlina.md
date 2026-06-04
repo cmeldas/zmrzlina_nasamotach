@@ -22,6 +22,9 @@ ingredience:
   - mec3-natura-50
 description: "Lehčí tvarohová zmrzlina s výrazným cheesecake profilem, bez vajec a bez sušeného mléka, ~3,6 % tuku."
 pdf: "/pdfs/recept-04-tvarohova-zmrzlina.pdf"
+fotky:
+  - tvarohová_s_vanilkou_1.jpg
+  - tvarohová_s_vanilkou_2.jpg
 stav: odladeny
 publikovat: true
 ---

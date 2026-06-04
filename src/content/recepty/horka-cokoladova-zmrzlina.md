@@ -29,6 +29,9 @@ souvisejici:
   - tvarohova-zmrzlina
 description: "Hořká čokoládová zmrzlina s vysokým podílem kakaové hmoty (9 %) a raw kakaa (4 %). Spin-off klasické čokolády — méně cukru, více kakaa, hlubší hořko-čokoládový profil. Tak silná, že ji nejlépe vyváží lehká zmrzlina — vanilka nebo tvaroh."
 pdf: "/pdfs/recept-11-horka-cokoladova-zmrzlina.pdf"
+fotky:
+  - hořká_čokoláda_1.jpg
+  - hořká_čokoláda_2.jpg
 stav: testovany
 publikovat: true
 ---

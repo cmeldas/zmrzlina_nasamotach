@@ -22,6 +22,8 @@ ingredience:
   - mec3-natura-50
 description: "Banánová zmrzlina ze zralých banánů, mléka a smetany, bez vajec, ~7,5 % tuku."
 pdf: "/pdfs/recept-05-bananova-zmrzlina.pdf"
+fotky:
+  - Banánová - Čokoládová.jpg
 stav: odladeny
 ---**Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
 
