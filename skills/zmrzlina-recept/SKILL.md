@@ -207,7 +207,7 @@ Pro `--recipe` použij `cislo` z frontmatter. Bez parametru se přegenerují vš
 **Důležité:**
 
 - Skript NIKDY nevolá `Stop-Process` na chrome — pokud je PDF zamčené (otevřené v prohlížeči/Acrobatu), skript vypíše hlášku a uživatel ho má sám zavřít.
-- Auto-fit: pokud obsah přetéká A4, font se zmenšuje z 9,5pt po 0,25pt až na 7,0pt. Když ani 7,0pt nestačí, zkrať text v receptu (typicky méně bulletů v sekci „Tipy" nebo „Co se stane když...").
+- Recept může mít **více stránek** — není potřeba ho cpát na jednu A4. Piš tak, aby byl obsah úplný a čitelný; text kvůli délce nezkracuj.
 - Po úspěšném vygenerování ověř, že `public/pdfs/recept-{NN}-{slug}.pdf` existuje.
 
 Pokud uživatel chce i sloučený `recepty-vse.pdf`, spusť skript bez `--recipe`.
@@ -247,7 +247,7 @@ Krátké shrnutí uživateli:
 - [ ] Všechny slug-y ingrediencí existují (nebo jsou založeny)
 - [ ] Frontmatter validní YAML, schema dle `src/content.config.ts`
 - [ ] `cislo` ve frontmatter je další volné (zkontroluj existující recepty)
-- [ ] PDF se vygenerovalo bez overflow varování
+- [ ] PDF se vygenerovalo (může mít více stránek)
 
 ---
 

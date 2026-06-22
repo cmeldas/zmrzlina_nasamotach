@@ -4,7 +4,7 @@ cislo: 8
 typ: "tocena"
 obtiznost: "pokrocily"
 tuk_pct: 10.5
-pac: 25
+pac: 28
 serv_teplota: "−10 až −12 °C"
 varka_kg: 10
 tags:
@@ -15,6 +15,7 @@ tags:
 ingredience:
   - plnotucne-mleko
   - smetana-33
+  - invertni-cukr
   - kakaova-hmota
   - raw-kakao
   - sacharoza
@@ -24,8 +25,6 @@ ingredience:
   - mec3-natura-50
 description: "Plná čokoládová zmrzlina z přírodního raw kakaa a kakaové hmoty, ~10 % tuku."
 pdf: "/pdfs/recept-08-cokoladova-zmrzlina.pdf"
-fotky:
-  - Banánová - Čokoládová.jpg
 stav: odladeny
 ---**Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
 
@@ -43,33 +42,35 @@ stav: odladeny
 
 - **Přírodní raw kakaový prášek (10–12 % tuku)** dodává ovocno-kyselé kakaové tóny, přirozenou stabilizaci (škroby + vláknina vážou vodu → méně ledových krystalů).
 - **Kakaová hmota (55 % kakaového másla)** je čistá kakaová pasta z mletých kakaových bobů. Přináší celou paletu aromatických olejů, fenolických látek a polotuhého kakaového másla, které **při zmrazení tuhne a podporuje strukturu**. Vyrovnává „prázdnost" samotného přírodního kakaa.
-- Kakaová hmota se přidává až při chlazení na **40 °C** — pro zachování enzymů a antioxidantů (polyfenolů). Při 40 °C je kakaové máslo roztavené, takže se hmota rozpustí snadno bez hrudek.
+- Kakaová hmota se musí **pomalu rozpustit ve smetaně/mléce při 50–60 °C**, jinak vytvoří hrudky.
 
 ### Receptura
 
 | Ingredience                     | g/10 kg    | %         |
 | ------------------------------- | ---------- | --------- |
 | **TEKUTÉ**                      |            |           |
-| [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)         | 5 350      | 53,5 %    |
+| [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)         | 5 199      | 51,99 %   |
 | [Smetana 33 %](/ingredience/smetana-33/)                    | 1 500      | 15,0 %    |
-| **SYPKÉ (smíchat předem dohromady)** |     |        |
+| [Invertní cukr](/ingredience/invertni-cukr/)                   | 150        | 1,5 %     |
+| **ROZPUSTIT VE SMETANĚ PŘI 50–60 °C** |     |        |
+| [Kakaová hmota (55 % tuku)](/ingredience/kakaova-hmota/)       | 600        | 6,0 %     |
+| **SYPKÉ**                       |            |           |
 | [Přírodní raw kakao (~11 % tuku)](/ingredience/raw-kakao/) | 350        | 3,5 %     |
 | [Sacharóza](/ingredience/sacharoza/)                       | 1 450      | 14,5 %    |
 | [Dextróza](/ingredience/dextroza/)                        | 250        | 2,5 %     |
 | [Glukóza (prášek, sušený sirup)](/ingredience/dextroza/)  | 200        | 2,0 %     |
 | [Sušené odtučněné mléko (SOM)](/ingredience/som/)    | 250        | 2,5 %     |
 | [MEC3 Natura 50](/ingredience/mec3-natura-50/)                  | 50         | 0,5 %     |
-| **PŘIDAT AŽ PŘI CHLAZENÍ NA 40 °C** |     |        |
-| [Kakaová hmota (55 % tuku)](/ingredience/kakaova-hmota/)       | 600        | 6,0 %     |
+| Špetka soli                     | 1          | 0,01 %    |
 | **Celkem**                      | **10 000** | **100 %** |
 
 ### Bilance
 
 | Složka       | Výpočet                                                            | Hodnota             |
 | ------------ | ------------------------------------------------------------------ | ------------------- |
-| **Tuk**      | mléko 535×0,035 + smetana 150×0,33 + kak. hmota 60×0,55 + kakao 35×0,11 | ~105 g → **10,5 %** |
-| **MSNF**     | mléko ~9 % + smetana (67%×9%) + SOM 25                             | ~82 g → **8,2 %**   |
-| **Cukry**    | 145 + 25 + 20 + laktóza ~42                                        | ~24 % efektivně     |
+| **Tuk**      | mléko 520×0,035 + smetana 150×0,33 + kak. hmota 60×0,55 + kakao 35×0,11 | ~105 g → **10,5 %** |
+| **MSNF**     | mléko ~9 % + smetana (67%×9%) + SOM 25                             | ~81 g → **8,1 %**   |
+| **Cukry**    | 145 + 25 + 20 + 15 + laktóza ~42                                   | ~25 % efektivně     |
 | [**Kakaová sušina**](/ingredience/kakaova-hmota/) | hmota 60×0,45 + prášek 35×0,89                               | ~58 g → **5,8 %**   |
 | **Sušina**   | tuk + cukry + MSNF + kakao + stabilizátor                          | **~44 %**           |
 
@@ -80,24 +81,22 @@ stav: odladeny
 | Sacharóza        | 14,5    | 1,0  | 14,5     |
 | Dextróza         | 2,5     | 1,9  | 4,75     |
 | Glukóza (prášek) | 2,0     | 0,8  | 1,6      |
+| [Invertní cukr](/ingredience/invertni-cukr/)    | 1,5     | 1,9  | 2,85     |
 | Laktóza          | ~4,2    | 1,0  | 4,2      |
-| **Celkem PAC**   |         |      | **~25**  |
+| **Celkem PAC**   |         |      | **~28**  |
 
-**PAC ≈ 25** → ideální pro točenou při −10 až −12 °C, drží tvar v kornoutu. Vyšší podíl mléka (53,5 %) a smetany (15 %) dohromady kompenzují silnou váznícosť vody přírodními kakaovými škroby a vytvářejí plnější mléčný profil bez hořkosti.
+**PAC ≈ 28** → ideální pro točenou při −10 až −12 °C, drží tvar v kornoutu. Vyšší podíl mléka (52 %) a smetany (15 %) dohromady kompenzují silnou váznícosť vody přírodními kakaovými škroby a vytvářejí plnější mléčný profil bez hořkosti.
 
 ### Postup
 
-Tato varianta používá **nízkoteplotní pasterizaci (63 °C / 30 min)** a [kakaovou hmotu](/ingredience/kakaova-hmota/) přidává až při chlazení na 40 °C — pro zachování enzymů a antioxidantů (polyfenolů) kakaa.
-
-1. **Příprava sypké směsi:** Předem smíchat všechny sypké složky dohromady — přírodní raw kakao, sacharózu, dextrózu, glukózu, SOM a MEC3 Natura 50. Stabilizátor předem promíchat s ~3× větším množstvím sacharózy, aby se netvořily hrudky.
-2. **Ohřev mléka:** Plnotučné mléko a smetanu nalít do silnostěnného hrnce a za stálého míchání ohřát na **63 °C**.
-3. **Vsypání sypkých složek:** Po dosažení 63 °C vsypat předem smíchanou sypkou směs a ponornou tyčí důkladně rozmixovat (2–3 min), aby nevznikly hrudky.
-4. **Pasterizace 63 °C / 30 min:** Udržovat směs na **63 °C po dobu 30 minut** (nízkoteplotní pasterizace LTLT) za občasného míchání. Stírat dno stěrkou, aby se nepřipálila.
-5. **Začít chladit:** Po 30 minutách přesunout hrnec do ledové lázně a chladit za míchání.
-6. **Přidání kakaové hmoty při 40 °C:** Jakmile směs klesne na **40 °C**, vložit na drobné kousky nasekanou kakaovou hmotu a ponornou tyčí důkladně rozmixovat, dokud se úplně nerozpustí. Nižší teplota zachová enzymy a antioxidanty kakaa; kakaové máslo je při 40 °C roztavené, takže se hmota rozpustí snadno.
-7. **Rychlé zchlazení:** pokračovat v chlazení na 4 °C do 30 minut.
-8. **Aging:** **min. 6 h, ideálně 24 h** při 4 °C — přírodní kakao potřebuje delší hydrataci než alkalizované, kakaové máslo částečně krystalizuje, chuť se prohloubí a počáteční kyselost změkne.
-9. **Promixování:** těsně před zmrazením znovu projet ponornou tyčí (kakao má tendenci sedimentovat).
+1. **Hydratace stabilizátoru:** stabilizátor smíchat předem s ~3× větším množstvím sacharózy, aby se nezhrudkoval.
+2. **Rozpuštění kakaové hmoty:** kakaovou hmotu nasekat na malé kousky a zahřívat se smetanou + ¼ mléka při 50–60 °C, dokud se zcela nerozpustí (5–10 min, mícháme metličkou).
+3. **Smíchání suchých složek:** v misce smíchat přírodní raw kakao, SOM, dextrózu, sacharózu se stabilizátorem, sůl, invertní cukr.
+4. **Spojení:** do horké směsi smetany s rozpuštěnou kakaovou hmotou postupně vmíchat zbylé mléko, přidat suché složky a ponornou tyčí krátce promixovat — eliminuje hrudky kakaa.
+5. **Pasterizace:** zahřát na **82–85 °C** za stálého míchání (kakaový prášek snadno přihořívá — používat silnostěnný hrnec, neustále stírat dno!). U raw kakaa nepřekračovat 85 °C, abychom neztratili jemné aromatika z nepražených bobů.
+6. **Rychlé zchlazení:** ledová lázeň na 4 °C do 30 minut.
+7. **Aging:** **min. 6 h, ideálně 24 h** při 4 °C — přírodní kakao potřebuje delší hydrataci než alkalizované, kakaové máslo částečně krystalizuje, chuť se prohloubí a počáteční kyselost změkne.
+8. **Promixování:** těsně před zmrazením znovu projet ponornou tyčí (kakao má tendenci sedimentovat).
 
 ### Tipy
 
@@ -112,8 +111,8 @@ Tato varianta používá **nízkoteplotní pasterizaci (63 °C / 30 min)** a [ka
 
 | Problém                      | Příčina                              | Řešení                                       |
 | ---------------------------- | ------------------------------------ | -------------------------------------------- |
-| Hrudky kakaa                 | Špatné rozpuštění                    | Vždy promixovat ponornou tyčí, sypkou směs vmíchávat do horké tekutiny |
-| Pískovitá textura            | Kakaová hmota se nerozpustila        | Nasekat jemněji, přidávat při 40 °C a mixovat ponornou tyčí, dokud se úplně nerozpustí  |
+| Hrudky kakaa                 | Špatné rozpuštění                    | Vždy promixovat ponornou tyčí, kakaový prášek vmíchávat do horké tekutiny |
+| Pískovitá textura            | Kakaová hmota se nerozpustila        | Nasekat jemněji, zahřívat déle při 50–60 °C  |
 | Příliš kyselá / ostrá chuť   | Přírodní kakao je přirozeně kyselejší | Prodloužit aging na 24 h, přidat 5 g instantní kávy pro hloubku |
 | Hořká chuť                   | Příliš kakaa, málo cukru             | Snížit kakao na 25 g, zvýšit sacharózu o 10 g |
 | Světlá až béžová barva       | Přírodní (nealkalizované) raw kakao  | **Normální stav!** Pro tmavší barvu přidat 5 g instantní kávy |
