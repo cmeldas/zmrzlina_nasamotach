@@ -1,0 +1,153 @@
+---
+// Cookie lišta + GA4 (Google Analytics 4).
+// Měřicí ID se bere z env proměnné PUBLIC_GA_ID (např. "G-XXXXXXXXXX").
+// GA4 se načte teprve po odsouhlasení — bez souhlasu se nic netrackuje.
+const gaId = import.meta.env.PUBLIC_GA_ID;
+---
+
+{gaId && (
+  <>
+    <div id="cookie-bar" class="cookie-bar" hidden>
+      <p class="cookie-text">
+        Ahoj! Rád bych věděl, jestli sem vůbec někdo chodí a tyhle recepty
+        využívá — tak si jednoduše počítám, kdo se na web podívá. Žádné
+        sledování napříč internetem, jen návštěvnost přes Google Analytics.
+        Díky za pochopení. 🍦
+      </p>
+      <div class="cookie-actions">
+        <button type="button" id="cookie-decline" class="cookie-btn cookie-btn--ghost">
+          Nechci
+        </button>
+        <button type="button" id="cookie-accept" class="cookie-btn">
+          Rozumím
+        </button>
+      </div>
+    </div>
+
+    <script is:inline define:vars={{ gaId }}>
+      (function () {
+        var KEY = "cookie-consent";
+
+        function loadGA() {
+          if (window.__gaLoaded) return;
+          window.__gaLoaded = true;
+
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=" + gaId;
+          document.head.appendChild(s);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            window.dataLayer.push(arguments);
+          }
+          window.gtag = gtag;
+          gtag("js", new Date());
+          gtag("config", gaId, { anonymize_ip: true });
+        }
+
+        function hideBar() {
+          var bar = document.getElementById("cookie-bar");
+          if (bar) bar.hidden = true;
+        }
+
+        var consent = null;
+        try {
+          consent = localStorage.getItem(KEY);
+        } catch (e) {}
+
+        if (consent === "granted") {
+          loadGA();
+        } else if (consent === "denied") {
+          // nic nenačítáme
+        } else {
+          var bar = document.getElementById("cookie-bar");
+          if (bar) bar.hidden = false;
+        }
+
+        var accept = document.getElementById("cookie-accept");
+        var decline = document.getElementById("cookie-decline");
+
+        if (accept) {
+          accept.addEventListener("click", function () {
+            try {
+              localStorage.setItem(KEY, "granted");
+            } catch (e) {}
+            hideBar();
+            loadGA();
+          });
+        }
+
+        if (decline) {
+          decline.addEventListener("click", function () {
+            try {
+              localStorage.setItem(KEY, "denied");
+            } catch (e) {}
+            hideBar();
+          });
+        }
+      })();
+    </script>
+
+    <style>
+      .cookie-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem 1.2rem;
+        padding: 0.9rem 1.2rem;
+        background: var(--accent-dark);
+        color: #fff;
+        box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.18);
+        font-size: 0.9rem;
+        line-height: 1.45;
+      }
+      .cookie-text {
+        margin: 0;
+        max-width: 720px;
+        flex: 1 1 320px;
+      }
+      .cookie-actions {
+        display: flex;
+        gap: 0.6rem;
+        flex: 0 0 auto;
+      }
+      .cookie-btn {
+        border: 1px solid #fff;
+        background: var(--accent-3);
+        color: #2b2117;
+        font-weight: 600;
+        padding: 0.45rem 1.1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.9rem;
+      }
+      .cookie-btn:hover {
+        filter: brightness(1.05);
+      }
+      .cookie-btn--ghost {
+        background: transparent;
+        color: #fff;
+      }
+      .cookie-btn--ghost:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+      @media (max-width: 560px) {
+        .cookie-bar {
+          flex-direction: column;
+          align-items: stretch;
+          text-align: center;
+        }
+        .cookie-actions {
+          justify-content: center;
+        }
+      }
+    </style>
+  </>
+)}

@@ -3,6 +3,7 @@ import "../styles/global.css";
 import "../styles/print.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CookieConsent from "../components/CookieConsent.astro";
 
 interface Props {
   title: string;
@@ -65,6 +66,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
       <div class="print-footer">
         Zmrzlina Na Samotách · zmrzlina.nasamotach.cz · Recepty pod licencí CC BY-SA 4.0
       </div>
+      <CookieConsent />
     </div>
     {customPrint && (
       <div class="print-only">
