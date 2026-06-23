@@ -5,8 +5,8 @@ name: Deploy to Vercel
 # v repo Settings → Secrets and variables → Actions.
 #
 # Provoz:
-#   - push do master → produkční deploy (--prod)
-#   - PR z forku   → preview deploy (komentář s URL)
+#   - push do master / ruční spuštění → produkční deploy (--prod)
+#   - PR z forku                      → preview deploy (komentář s URL)
 
 on:
   push:
@@ -56,20 +56,20 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
-            vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
-          else
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
             vercel pull --yes --environment=preview --token="$VERCEL_TOKEN"
+          else
+            vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
           fi
 
       - name: Build with Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
-            vercel build --prod --token="$VERCEL_TOKEN"
-          else
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
             vercel build --token="$VERCEL_TOKEN"
+          else
+            vercel build --prod --token="$VERCEL_TOKEN"
           fi
 
       - name: Deploy to Vercel
@@ -77,10 +77,10 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
-            URL=$(vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN")
-          else
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
             URL=$(vercel deploy --prebuilt --token="$VERCEL_TOKEN")
+          else
+            URL=$(vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN")
           fi
           echo "url=$URL" >> "$GITHUB_OUTPUT"
           echo "Deployed to $URL"
