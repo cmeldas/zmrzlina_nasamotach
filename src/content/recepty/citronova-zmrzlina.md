@@ -26,7 +26,7 @@ ingredience:
   - mec3-natura-50
 description: "Svěží citronovo-tvarohová zmrzlina bez vajec, s louhovanou citronovou kůrou a šťávou přidanou za studena."
 pdf: "/pdfs/recept-03-citronova-zmrzlina.pdf"
-stav: testovany
+stav: odladeny
 publikovat: true
 ---
 
