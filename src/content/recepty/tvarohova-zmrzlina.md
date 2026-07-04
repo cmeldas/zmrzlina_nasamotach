@@ -62,7 +62,7 @@ publikovat: true
 | Cukr / složka            | g/100 g | FPDF | PAC       |
 | ------------------------ | ------- | ---- | --------- |
 | Sacharóza                | 10,0    | 1,0  | 10,0      |
-| Dextróza                 | 4,0     | 1,9  | 7,6       |
+| [Dextróza](/ingredience/dextroza/)                 | 4,0     | 1,9  | 7,6       |
 | Glukóza sušený sirup     | 6,0     | 0,8  | 4,8       |
 | Laktóza (mléko + tvaroh) | ~3,1    | 1,0  | 3,1       |
 | Sůl (NaCl)               | 0,01    | 5,9  | 0,06      |

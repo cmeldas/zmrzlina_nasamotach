@@ -56,8 +56,8 @@ publikovat: true
 | Cukr                   | g/10 kg | FPDF | PAC příspěvek |
 | ---------------------- | ------- | ---- | ------------- |
 | Sacharóza              | 1 000   | 1,0  | 10,0          |
-| Glukóza (sušený sirup) | 600     | 0,8  | 4,8           |
-| Dextróza               | 400     | 1,9  | 7,6           |
+| [Glukóza (sušený sirup)](/ingredience/glukoza-suseny-sirup/) | 600     | 0,8  | 4,8           |
+| [Dextróza](/ingredience/dextroza/)               | 400     | 1,9  | 7,6           |
 | Laktóza (mléko + SOM)   | ~780    | 1,0  | 7,8           |
 | **Celkem**             |         |      | **≈ 30**       |
 

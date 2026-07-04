@@ -68,12 +68,12 @@ Nanuk se konzumuje při **−18 °C**, takže potřebuje **vyšší PAC než kop
 
 | [Cukr](/ingredience/sacharoza/)                | g/100 g | FPDF | PAC      |
 | ------------------- | ------- | ---- | -------- |
-| Sacharóza (přidaná) | 13,0    | 1,0  | 13,0     |
-| Glukóza – sušený sirup (DE ~38) | 4,0 | 0,8 | 3,2  |
+| [Sacharóza (přidaná)](/ingredience/sacharoza/) | 13,0    | 1,0  | 13,0     |
+| [Glukóza – sušený sirup (DE ~38)](/ingredience/glukoza-suseny-sirup/) | 4,0 | 0,8 | 3,2  |
 | Dextróza            | 2,5     | 1,9  | 4,75     |
 | [Invertní cukr](/ingredience/invertni-cukr/)       | 1,0     | 1,9  | 1,9      |
 | Cukry z jahod*      | 3,5     | ~1,4 | ~4,9     |
-| [Laktóza (tvaroh)](/ingredience/tvaroh/)    | 0,55    | 1,0  | 0,55     |
+| Laktóza (tvaroh)    | 0,55    | 1,0  | 0,55     |
 | **Celkem PAC**      |         |      | **~28**  |
 
 *Jahody: ~50 % sacharóza, ~25 % glukóza, ~25 % fruktóza → vážený FPDF ≈ 1,4
@@ -89,7 +89,7 @@ Cíl: **nepřesáhnout 21 % přidaných cukrů**, aby nanuk nebyl „jen sladká
 | **Sacharóza 13 %**    | Základ sladivosti. FPDF jen 1,0 → drží PAC v rozumných mezích    |
 | **Glukóza – sušený sirup GL01934 4 %** | Klíčová ingredience pro nanuk! Zvyšuje sušinu, brzdí rekrystalizaci při dlouhém skladování (nanuky jsou v mrazu týdny), nepřidává moc sladivosti — jahodová chuť vystoupí. Sušená forma standardního glukózového sirupu (~38 DE) — rozpouští se v horké vodě stejně jako ostatní cukry |
 | **Dextróza 2,5 %**    | Drobný posun PAC nahoru pro měkkost a krémovost. Více by udělalo nanuk příliš měkký v kornoutku |
-| **Invertní cukr 1 %** | Hygroskopicita — drží vlhkost, brání oddělení vody (ice burn na povrchu) |
+| [**Invertní cukr 1 %**](/ingredience/invertni-cukr/) | Hygroskopicita — drží vlhkost, brání oddělení vody (ice burn na povrchu) |
 
 **Proč ne víc dextrózy/fruktózy?** Pro točenou zmrzlinu by se hodilo, ale nanuk při −18 °C s vysokým PAC začne tahat se z kornoutku a rychle se roztéká v ruce. PAC > 32 = nanuk je příliš měkký a málo „kouslatelný“.
 
@@ -100,7 +100,7 @@ Cíl: **nepřesáhnout 21 % přidaných cukrů**, aby nanuk nebyl „jen sladká
 | Složka                   | Sušina (g)                       |
 | ------------------------ | -------------------------------- |
 | [Jahody (10 % sušiny)](/ingredience/jahodove-pyre/)     | 5 000 × 0,10 = 500               |
-| Tvaroh (~25 % sušiny)    | 2 200 × 0,25 = 550                |
+| [Tvaroh (~25 % sušiny)](/ingredience/tvaroh/)    | 2 200 × 0,25 = 550                |
 | Cukry (přidané)          | 2 050                            |
 | **Celk. sušina**         | **~3 100 g (31 %)**              |
 

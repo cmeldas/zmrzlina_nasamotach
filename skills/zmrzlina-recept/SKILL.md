@@ -54,7 +54,7 @@ Pokud uživatel **NEzadal hlavní příchuť** nebo **nezadal základní surovin
 Z požadavku uživatele vytáhni:
 
 - `flavor` — hlavní příchuť (slug, např. „pistacie")
-- `typ` — `tocena` | `sorbet` | `nanuk` | `custard` | `philadelphia`
+- `typ` — profil receptu; mapuje se na schema `typ` (`tocena` | `sorbet` | `nanuk` | `kopeckova` | `premium`) — viz mapovací tabulka v Kroku 2
 - `pozadovane_ingredience` — výpis surovin uživatele
 - (volitelně) cílový tuk, cílový PAC, obtížnost
 
@@ -62,14 +62,17 @@ Pokud uživatel zmíní surovinu, která **ještě nemá kartu** v `src/content/
 
 ### Krok 2 — Vyber cílový profil
 
-| Typ              | Tuk     | PAC   | Sušina  | Servírování   | Pozn.          |
-| ---------------- | ------- | ----- | ------- | ------------- | -------------- |
-| Točená smetanová | 8–10 %  | 28–30 | 38–42 % | −10 až −12 °C | Default        |
-| Custard (French) | 11–13 % | 28    | 42–44 % | −10 až −12 °C | Žloutky 5–8 %  |
-| Tvarohová        | 6–8 %   | 28–30 | 40–44 % | −10 až −12 °C | Tvaroh 15–25 % |
-| Sorbet (točený)  | 0 %     | 28–32 | 30–34 % | −10 až −12 °C | Ovoce 30–50 %  |
-| Nanuk            | 4–8 %   | 22–26 | 36–40 % | −18 °C výdej  | Vyšší pevnost  |
-| Kopečkový gelato | 6–9 %   | 24–28 | 38–42 % | −13 °C výdej  | Tvrdší         |
+| Profil                   | `typ` (schema)        | Tuk     | PAC   | Sušina  | Servírování   | Pozn.          |
+| ------------------------ | --------------------- | ------- | ----- | ------- | ------------- | -------------- |
+| Točená smetanová         | `tocena`              | 8–10 %  | 28–30 | 38–42 % | −10 až −12 °C | Default        |
+| Custard (French)         | `premium`             | 11–13 % | 28    | 42–44 % | −10 až −12 °C | Žloutky 5–8 %  |
+| Tvarohová                | `tocena`              | 6–8 %   | 28–30 | 40–44 % | −10 až −12 °C | Tvaroh 15–25 % |
+| Philadelphia (bez vajec) | `tocena` \| `premium` | 8–12 %  | 28–30 | 38–42 % | −10 až −12 °C | Bez žloutků    |
+| Sorbet (točený)          | `sorbet`              | 0 %     | 28–32 | 30–34 % | −10 až −12 °C | Ovoce 30–50 %  |
+| Nanuk                    | `nanuk`               | 4–8 %   | 22–26 | 36–40 % | −18 °C výdej  | Vyšší pevnost  |
+| Kopečkové gelato         | `kopeckova`           | 6–9 %   | 24–28 | 38–42 % | −13 °C výdej  | Tvrdší         |
+
+> **Pozor na schema:** pole `typ` smí být jen `tocena | sorbet | nanuk | kopeckova | premium` (viz `src/content.config.ts`). „Custard", „Philadelphia" a „Tvarohová" **nejsou** samostatné hodnoty `typ` — ukládají se jako `premium` / `tocena` a rozlišují se přes `tags` (např. `custard`, `philadelphia`, `tvarohova`). Vzor: [french-custard-vanilka.md](../../src/content/recepty/french-custard-vanilka.md) má `typ: premium` + tag `custard`.
 
 Zdroj cílů: `src/content/knowledge/konvence-receptu.md` + `cukry-ve-zmrzline.md` (sekce 4).
 
@@ -129,8 +132,9 @@ Soubor: `src/content/recepty/{slug}.md`. Slug = příchuť-typ, např. `mangovy-
 ---
 title: "Mangový sorbet"
 cislo: 9 # další volné číslo
-typ: "sorbet" # tocena | sorbet | nanuk | premium | custard
-obtiznost: "zacatecnik" # zacatecnik | stredni | pokrocily
+typ: "sorbet" # tocena | sorbet | nanuk | kopeckova | premium
+obtiznost: "zacatecnik" # zacatecnik | stredne-pokrocily | pokrocily
+stav: "navrh" # navrh | testovany | odladeny — nově navržený recept je vždy navrh
 tuk_pct: 0
 pac: 30
 serv_teplota: "−10 až −12 °C"
@@ -185,6 +189,7 @@ kategorie: ovoce # cukr | tuk-mlecny | protein | stabilizator | emulgator | ovoc
 forma: kapalna # kapalna | sypka | pasta | polotuhe (volitelné)
 sucha_latka_pct: 16
 pac: 18 # ovocný cukr ~ FPDF 1,9 × cca 10 %
+pod: 10 # sladivost vůči sacharóze (ovoce ~ 8–12; sacharóza = 100 → poměrově)
 typicke_davkovani: "30–50 % m/m"
 nazev_alt: []
 tags: [ovoce, sorbet, mango]
@@ -246,6 +251,7 @@ Krátké shrnutí uživateli:
 - [ ] Čerstvé ovoce/kůra/extrakty v sekci **PO PASTERACI**
 - [ ] Všechny slug-y ingrediencí existují (nebo jsou založeny)
 - [ ] Frontmatter validní YAML, schema dle `src/content.config.ts`
+- [ ] `typ` je jen `tocena|sorbet|nanuk|kopeckova|premium`, `obtiznost` jen `zacatecnik|stredne-pokrocily|pokrocily`, `stav: navrh`
 - [ ] `cislo` ve frontmatter je další volné (zkontroluj existující recepty)
 - [ ] PDF se vygenerovalo (může mít více stránek)
 

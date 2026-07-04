@@ -60,7 +60,7 @@ Plná banánová chuť bez umělých příchutí, ~7,5 % tuku.
 
 | [Cukr](/ingredience/sacharoza/)                | g/100 g | FPDF | PAC   |
 | ------------------- | ------- | ---- | ----- |
-| Sacharóza (přidaná) | 8,0     | 1,0  | 8,0   |
+| [Sacharóza (přidaná)](/ingredience/sacharoza/) | 8,0     | 1,0  | 8,0   |
 | [Dextróza](/ingredience/dextroza/)            | 3,0     | 1,9  | 5,7   |
 | Banánový cukr*      | 5,1     | ~1,5 | ~7,7  |
 | Laktóza (z mléka + SOM) | ~4,2 | 1,0  | 4,2   |

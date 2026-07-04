@@ -66,7 +66,11 @@ Mírné množství soli (0,05–0,15 %) **zvýrazňuje sladkost**, **moderuje ho
 
 ### 3.2 Vliv na FPD
 
-Sůl má FPDF **= 11,1** (vůči sacharóze 1,0) — extrémně silný efekt na FPD. Teoreticky by 1 % soli mělo stejnou FPD jako 11 % cukru.
+Sůl má FPDF **= 5,9** (vůči sacharóze 1,0) podle běžné oborové konvence (poměr molekulových hmotností, 342 / 58,4 ≈ 5,9; Smith & Bradley 1983) — extrémně silný efekt na FPD. Teoreticky by 1 % soli mělo podobnou FPD jako ~6 % cukru.
+
+> **Pozn.:** NaCl v roztoku disociuje na dva ionty (Na⁺ + Cl⁻), takže jeho *skutečná* koligativní deprese bodu tuhnutí je zhruba dvojnásobná (efektivně ~11–12). Oborová tabulka FPDF ale disociaci nezapočítává a používá čistý poměr hmotností, proto se všude v této knowledge base drží hodnota **5,9** (viz [cukry-ve-zmrzline.md](/knowledge/cukry-ve-zmrzline/)).
+>
+> Zdroj: [Mullan, W.M.A. (2013) — dairyscience.info](https://www.dairyscience.info/cheese-dairy/ice-cream/228-ice-cream-hardness.html)
 
 **Praktické: nelze použít solná řešení k snížení teploty tuhnutí** kvůli chuti — již 0,3 % soli je výrazně cítit.
 

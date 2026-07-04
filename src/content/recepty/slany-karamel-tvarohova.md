@@ -3,8 +3,8 @@ title: "Slaný karamel s tvarohem"
 cislo: 9
 typ: "tocena"
 obtiznost: "stredne-pokrocily"
-tuk_pct: 8.6
-pac: 29
+tuk_pct: 8.8
+pac: 28
 serv_teplota: "−10 až −12 °C"
 varka_kg: 10
 tags:
@@ -25,15 +25,16 @@ ingredience:
   - dextroza
   - glukoza-suseny-sirup
   - mec3-natura-50
-description: "Slaný karamel postavený na karamelové pastě Agrimontana a tvarohu — kompromis mezi smetanovým základem a tvarohovou zmrzlinou, ~8,6 % tuku."
+  - fleur-de-sel
+description: "Slaný karamel postavený na karamelové pastě Agrimontana a tvarohu — kompromis mezi smetanovým základem a tvarohovou zmrzlinou, ~8,8 % tuku."
 pdf: "/pdfs/recept-09-slany-karamel-tvarohova.pdf"
 stav: navrh
-publikovat: false
+publikovat: true
 ---
 
 **Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
 
-**Cíl:** Plně karamelová chuť s lehkou kyselou notou tvarohu („cheesecake meets dulce de leche"). Senzorický kompromis mezi klasickým [smetanovým základem](/recepty/smetanovy-zaklad/) (tuk 9 %, bez tvarohu) a [tvarohovou zmrzlinou](/recepty/tvarohova-zmrzlina/) (25 % tvarohu, tuk 7,8 %). Karamel přichází hotový z Agrimontana pasty — nemusíš variť cukr.
+**Cíl:** Plně karamelová chuť s lehkou kyselou notou tvarohu („cheesecake meets dulce de leche"). Senzorický kompromis mezi klasickým [smetanovým základem](/recepty/smetanovy-zaklad/) (tuk 9 %, bez tvarohu) a [tvarohovou zmrzlinou](/recepty/tvarohova-zmrzlina/) (25 % tvarohu, tuk 7,8 %). Karamel přichází hotový z Agrimontana pasty — nemusíš vařit cukr.
 
 ### Proč tvaroh + karamel
 
@@ -60,13 +61,13 @@ publikovat: false
 | [Pasta karamel Agrimontana](/ingredience/pasta-karamel-agrimontana/)   | 750        | 7,5 %     |
 | [Invertní cukr](/ingredience/invertni-cukr/)                           | 100        | 1,0 %     |
 | **SYPKÉ**                                                              |            |           |
-| [Sacharóza](/ingredience/sacharoza/)                                   | 800        | 8,0 %     |
-| [Dextróza](/ingredience/dextroza/)                                     | 200        | 2,0 %     |
+| [Sacharóza](/ingredience/sacharoza/)                                   | 700        | 7,0 %     |
+| [Dextróza](/ingredience/dextroza/)                                     | 300        | 3,0 %     |
 | [Glukóza (sušený sirup, prášek)](/ingredience/glukoza-suseny-sirup/)   | 200        | 2,0 %     |
 | [Sušené odtučněné mléko (SOM)](/ingredience/som/)                      | 250        | 2,5 %     |
 | [MEC3 Natura 50](/ingredience/mec3-natura-50/)                         | 50         | 0,5 %     |
-| Fleur de sel (jemná mořská sůl)                                        | 30         | 0,3 %     |
 | **PO PASTERACI**                                                       |            |           |
+| [Fleur de sel (jemná mořská sůl)](/ingredience/fleur-de-sel/)          | 30         | 0,3 %     |
 | [Citronová šťáva](/ingredience/citronova-stava/)                       | 30         | 0,3 %     |
 | **Celkem**                                                             | **10 000** | **100 %** |
 
@@ -74,7 +75,7 @@ publikovat: false
 
 | Složka       | Výpočet                                                                              | Hodnota             |
 | ------------ | ------------------------------------------------------------------------------------ | ------------------- |
-| **Tuk**      | mléko 409×0,035 + smetana 200×0,33 + tvaroh 150×0,04 + pasta 75×0,02                 | ~86 g → **8,6 %**   |
+| **Tuk**      | mléko 409×0,035 + smetana 200×0,33 + tvaroh 150×0,04 + pasta 75×0,02                 | ~88 g → **8,8 %**   |
 | **MSNF**     | mléko ~37 + smetana (67%×9%) ~12 + tvaroh ~32 + SOM 24 + pasta ~8                    | ~113 g → **11,3 %** |
 | **Sušina**   | tuk + cukry + MSNF + tvarohová bílkovina + pasta sušina + stabilizátor               | **~38 %**           |
 | **Kasein**   | tvaroh (~10 % bílkovin) + SOM (~37 % kaseinu z 250 g)                                | ~24 g → **2,4 %**   |
@@ -83,24 +84,24 @@ publikovat: false
 
 | Cukr / složka            | g/100 g | FPDF | PAC     |
 | ------------------------ | ------- | ---- | ------- |
-| Sacharóza (přidaná)      | 8,0     | 1,0  | 8,0     |
+| Sacharóza (přidaná)      | 7,0     | 1,0  | 7,0     |
 | Pasta karamel (cukry)    | ~4,9    | 1,2  | 5,9     |
-| Dextróza                 | 2,0     | 1,9  | 3,8     |
+| Dextróza                 | 3,0     | 1,9  | 5,7     |
 | Glukóza sušený sirup     | 2,0     | 0,8  | 1,6     |
 | Invertní cukr            | 1,0     | 1,9  | 1,9     |
-| Laktóza (mléko+SOM+tvaroh) | ~5,8 | 1,0  | 5,8     |
+| Laktóza (mléko+SOM+tvaroh) | ~4,4 | 1,0  | 4,4     |
 | Sůl (NaCl)               | 0,3     | 5,9  | 1,8     |
-| **Celkem PAC**           |         |      | **~29** |
+| **Celkem PAC**           |         |      | **~28** |
 
-**PAC ≈ 29** → točená zmrzlina při −10 až −12 °C, drží tvar v kornoutu, krémově nabíratelná. Tučnost 8,6 % maskuje sladkost (cukrů ~21 % efektivně).
+**PAC ≈ 28** → točená zmrzlina při −10 až −12 °C, drží tvar v kornoutu, krémově nabíratelná. Tučnost 8,8 % maskuje sladkost (~18 % přidaných cukrů + laktóza).
 
 ### Logika návrhu
 
-- **Mléko 41 % + smetana 20 % + tvaroh 15 %** → tuk 8,6 %, MSNF 11,3 %. To je „mezistupeň" mezi smetanovým základem (mléko 50, smetana 22, bez tvarohu) a tvarohovou (mléko 28, smetana 18, tvaroh 25).
+- **Mléko 41 % + smetana 20 % + tvaroh 15 %** → tuk 8,8 %, MSNF 11,3 %. To je „mezistupeň" mezi smetanovým základem (mléko 50, smetana 22, bez tvarohu) a tvarohovou (mléko 28, smetana 18, tvaroh 25).
 - **Pasta 750 g (7,5 %)** = středové dávkování doporučené výrobcem. Méně by chuť ztratila, více by udělalo zmrzlinu přesycenou.
-- **Sacharóza 8 %** je nižší než u běžných receptů (10–12 %) — pasta sama dodává sladkost.
-- **Dextróza jen 2 %** + glukóza sušený sirup 2 % — kombinace, která posune PAC na 29 bez přetížení rekrystalizací (glukóza sušený sirup brzdí Ostwaldovo zrání).
-- **Fleur de sel 30 g (0,3 %)** = 6 g na kornout, citelná slaná stopa. Použít **až po pasteraci**, aby krystaly ještě nesoftly úplně rozpustily a daly punktovou slanou nuanci. Pokud chceš čistě „rozpuštěnou" sůl, vmíchej do pasty na začátku.
+- **Sacharóza 7 %** je nižší než u běžných receptů (10–12 %) — pasta sama dodává sladkost.
+- **Dextróza 3 %** + glukóza sušený sirup 2 % — kombinace, která posune PAC na 28 bez přetížení rekrystalizací (glukóza sušený sirup brzdí Ostwaldovo zrání).
+- **Fleur de sel 30 g (0,3 %)** = citelná slaná stopa (~0,25 g na kornout). Použít **až po pasteraci**, aby se krystalky nerozpustily úplně a daly bodovou slanou nuanci. Pokud chceš čistě „rozpuštěnou" sůl, vmíchej ji do mixu před pasterací.
 - **Citronová šťáva 30 g** dorovná lehkou kyselost tvarohu — minimální, jen „k snadnějšímu polknutí".
 - **MEC3 Natura 50 v 0,5 %** standard. Žádný extra stabilizátor — tvaroh + SOM dodávají dost proteinu.
 
@@ -137,9 +138,9 @@ publikovat: false
 | ----------------------------- | --------------------------------------------- | ----------------------------------------------------- |
 | Hrudky tvarohu ve zmrzlině    | Nedostatečně rozmixovaný tvaroh               | Tyčový mixér 2 min, případně přepasírovat přes síto   |
 | Zrnitá textura, „tvarohové“ zrno | Tvaroh přidán před pasterací nebo do teplé směsi | Tvaroh vždy až do **vychlazené** směsi (≤ 30 °C), pasterace bez něj |
-| Příliš sladké, „lepivé"       | Pasta dávkovaná nad 800 g + plná sacharóza    | Snížit sacharózu na 600 g, zachovat pastu             |
+| Příliš sladké, „lepivé"       | Pasta dávkovaná nad 800 g + plná sacharóza    | Snížit sacharózu na 500 g, zachovat pastu             |
 | Málo karamelové chuti         | Pasta < 600 g nebo příliš studená při míchání | Pastu vmíchat při 40–50 °C, dávkovat 750 g            |
 | Slanost se „ztratila"         | Sůl rozpuštěná v pasterizaci, není fleur     | Sůl přidat **až po pasteraci**, jemně promíchat       |
-| Rychlá rekrystalizace ve vitríně | PAC > 32, nebo příliš dextrózy             | Snížit dextrózu na 100 g, navýšit sacharózu o 100 g   |
+| Rychlá rekrystalizace ve vitríně | PAC > 32, nebo příliš dextrózy             | Snížit dextrózu na 200 g, navýšit sacharózu o 100 g   |
 | Plochá chuť                   | Chybí kyselá protiváha                        | Zvýšit citronovou šťávu na 50 g (0,5 %)               |
 | Zmrzlina příliš měkká         | Vyšší PAC z karamelizovaných cukrů           | Více sacharózy / méně dextrózy, servírovat při −12 °C |

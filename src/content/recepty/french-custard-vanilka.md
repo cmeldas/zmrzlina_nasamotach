@@ -74,7 +74,7 @@ publikovat: false
 
 | [Cukr](/ingredience/sacharoza/)             | g/100 g | FPDF | PAC      |
 | ---------------- | ------- | ---- | -------- |
-| Sacharóza        | 12,0    | 1,0  | 12,0     |
+| [Sacharóza](/ingredience/sacharoza/)        | 12,0    | 1,0  | 12,0     |
 | [Dextróza](/ingredience/dextroza/)         | 5,0     | 1,9  | 9,5      |
 | [Invertní cukr](/ingredience/invertni-cukr/)    | 1,5     | 1,9  | 2,85     |
 | Laktóza          | ~3,7    | 1,0  | 3,7      |

@@ -92,7 +92,7 @@ Kakaový prášek = mletý kakaový koláč (po extrakci části kakaového más
 - Snížit ostatní tuk (smetanu) o cca 4 % — kakaové máslo zaplní tukovou kvótu
 - Snížit cukr o 4 % — čokoláda obsahuje cca 30 % sacharózy
 
-### 5.5 Stracciatella
+### 2.5 Stracciatella
 
 Tekutá tmavá čokoláda (rozehřátá, ~ 45 °C) se po výstupu zmrzliny ze strojku **lije v tenkém proudu** do nádoby a zatahuje špachtlí. Vznikají tenké čokoládové lupínky, které **prasknou** v ústech (kakaové máslo zatuhne na chladné zmrzlině).
 

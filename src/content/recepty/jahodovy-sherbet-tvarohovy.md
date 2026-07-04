@@ -86,7 +86,7 @@ Recept počítá se **smíšeným lesním ovocem**, můžeš libovolně kombinov
 | Cukr / složka                                | g/100 g | FPDF | PAC     |
 | -------------------------------------------- | ------- | ---- | ------- |
 | Sacharóza                                    | 11,0    | 1,0  | 11,0    |
-| Dextróza                                     | 4,5     | 1,9  | 8,6     |
+| [Dextróza](/ingredience/dextroza/)                                     | 4,5     | 1,9  | 8,6     |
 | Glukóza sušený sirup                         | 2,49    | 0,8  | 2,0     |
 | Ovocné cukry (fruktóza+glukóza, ~8 % × 50 %) | 4,0     | 1,9  | 7,6     |
 | Laktóza (tvaroh ~3 % × 25 %)                 | ~0,75   | 1,0  | 0,75    |

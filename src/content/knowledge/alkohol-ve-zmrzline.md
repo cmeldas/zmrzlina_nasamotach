@@ -17,7 +17,7 @@ description: "Mechanismus deprese bodu tuhnutí (FPD), maximální dávka než z
 Etanol má **extrémně vysokou depresi bodu tuhnutí**:
 
 - Molekulová hmotnost = 46 g/mol (sacharóza = 342 g/mol)
-- **FPDF (etanol) ≈ 7,5** vůči sacharóze (= 1,0)
+- **FPDF (etanol) ≈ 7,4** vůči sacharóze (= 1,0) — 342 / 46 ≈ 7,4
 
 **Důsledek:** přidání alkoholu výrazně **měkkčí** zmrzlinu. Při překročení limitu zmrzlina **nezamrzne** vůbec.
 

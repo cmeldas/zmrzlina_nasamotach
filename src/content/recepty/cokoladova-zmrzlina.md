@@ -78,8 +78,8 @@ stav: odladeny
 
 | [Cukr](/ingredience/sacharoza/)             | g/100 g | FPDF | PAC      |
 | ---------------- | ------- | ---- | -------- |
-| Sacharóza        | 14,5    | 1,0  | 14,5     |
-| Dextróza         | 2,5     | 1,9  | 4,75     |
+| [Sacharóza](/ingredience/sacharoza/)        | 14,5    | 1,0  | 14,5     |
+| [Dextróza](/ingredience/dextroza/)         | 2,5     | 1,9  | 4,75     |
 | Glukóza (prášek) | 2,0     | 0,8  | 1,6      |
 | [Invertní cukr](/ingredience/invertni-cukr/)    | 1,5     | 1,9  | 2,85     |
 | Laktóza          | ~4,2    | 1,0  | 4,2      |
