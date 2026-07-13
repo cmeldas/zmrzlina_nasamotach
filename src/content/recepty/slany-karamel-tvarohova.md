@@ -57,7 +57,6 @@ publikovat: true
 | **TEKUTÉ**                                                             |            |           |
 | [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)               | 4 090      | 40,9 %    |
 | [Smetana 33 %](/ingredience/smetana-33/)                               | 2 000      | 20,0 %    |
-| [Tvaroh polotučný (4 %)](/ingredience/tvaroh/)                         | 1 500      | 15,0 %    |
 | [Pasta karamel Agrimontana](/ingredience/pasta-karamel-agrimontana/)   | 750        | 7,5 %     |
 | [Invertní cukr](/ingredience/invertni-cukr/)                           | 100        | 1,0 %     |
 | **SYPKÉ**                                                              |            |           |
@@ -67,6 +66,7 @@ publikovat: true
 | [Sušené odtučněné mléko (SOM)](/ingredience/som/)                      | 250        | 2,5 %     |
 | [MEC3 Natura 50](/ingredience/mec3-natura-50/)                         | 50         | 0,5 %     |
 | **PO PASTERACI**                                                       |            |           |
+| [Tvaroh polotučný (4 %)](/ingredience/tvaroh/)                         | 1 500      | 15,0 %    |
 | [Fleur de sel (jemná mořská sůl)](/ingredience/fleur-de-sel/)          | 30         | 0,3 %     |
 | [Citronová šťáva](/ingredience/citronova-stava/)                       | 30         | 0,3 %     |
 | **Celkem**                                                             | **10 000** | **100 %** |

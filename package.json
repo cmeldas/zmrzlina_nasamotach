@@ -16,7 +16,10 @@
     "@astrojs/mdx": "^4.0.0",
     "@astrojs/sitemap": "^3.2.1",
     "astro": "^5.0.0",
-    "pagefind": "^1.2.0"
+    "katex": "^0.17.0",
+    "pagefind": "^1.2.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0"
   },
   "license": "MIT"
 }

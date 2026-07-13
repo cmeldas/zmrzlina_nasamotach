@@ -20,6 +20,7 @@ Velmi zralé banány („tygří“ se skvrnami) — nezralé jsou škrobnaté, 
 ## Specifikace
 
 - **Sušina:** ~25.0 %
+- **Cukry:** ~18 % (velmi zralé „tygří" banány; nezralé ~10–12 %)
 - **Typické dávkování:** 25–35 % m/m
 
 ## Související knowledge
