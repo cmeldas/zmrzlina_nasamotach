@@ -1,9 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-import { filterPublished } from "../lib/utils";
+import { filterPublished, formatDateCs, NOVINKA_LABEL, sortNovinky, type Novinka } from "../lib/utils";
 import Carousel from "../components/Carousel.astro";
 import { resolveFotky, shuffle } from "../lib/fotky";
+import novinkyData from "../data/novinky.json";
+
+const novinky = sortNovinky(novinkyData as Novinka[]).slice(0, 3);
+const buildDate = new Date();
 
 const recepty = filterPublished(await getCollection("recepty")).sort(
   (a, b) => (a.data.cislo ?? 999) - (b.data.cislo ?? 999)
@@ -92,6 +96,26 @@ const vsechnyFotky = shuffle(
     </p>
   </section>
 
+  <section class="novinky-home">
+    <div class="novinky-home-head">
+      <h2>Novinky</h2>
+      <a class="vse-link" href="/novinky/">Všechny novinky →</a>
+    </div>
+    <p class="build-info">Poslední změna na webu: <strong>{formatDateCs(buildDate)}</strong></p>
+    <ul class="novinky-list">
+      {novinky.map((n) => (
+        <li class="novinka">
+          <span class={`tag tag-${n.typ}`}>{NOVINKA_LABEL[n.typ]}</span>
+          <time datetime={n.datum} class="datum">{formatDateCs(new Date(n.datum))}</time>
+          <span class="popis">
+            {n.popis}
+            {n.odkaz && (<> <a href={n.odkaz}>Otevřít →</a></>)}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
   <section>
     <h2>Začni tady</h2>
     <div class="cards">
@@ -129,6 +153,82 @@ const vsechnyFotky = shuffle(
 </BaseLayout>
 
 <style>
+  .novinky-home {
+    background: var(--card-bg);
+    border: 1px solid var(--accent-soft);
+    border-radius: 10px;
+    padding: 1.3rem 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .novinky-home-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .novinky-home-head h2 {
+    margin: 0;
+  }
+
+  .vse-link {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .build-info {
+    color: var(--muted);
+    margin: 0.3rem 0 1rem;
+    font-size: 0.95rem;
+  }
+
+  .novinky-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .novinka {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 0.12rem 0.5rem;
+    border-radius: 999px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .tag-nove {
+    background: var(--accent);
+  }
+
+  .tag-zmena {
+    background: color-mix(in srgb, var(--accent) 55%, #7a5c2e);
+  }
+
+  .datum {
+    font-size: 0.85rem;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  .popis {
+    flex: 1 1 60%;
+  }
+
   .about-ranch {
     display: grid;
     grid-template-columns: minmax(180px, 260px) 1fr;

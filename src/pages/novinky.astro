@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import novinkyData from "../data/novinky.json";
+import {
+  formatDateCs,
+  NOVINKA_LABEL,
+  sortNovinky,
+  type Novinka,
+} from "../lib/utils";
+
+const novinky = sortNovinky(novinkyData as Novinka[]);
+const buildDate = new Date();
+---
+
+<BaseLayout
+  title="Novinky"
+  description="Changelog webu Zmrzlina Na Samotách — přehled úprav receptů a nových přírůstků."
+>
+  <h1>Novinky</h1>
+
+  <p style="font-size:1.1rem;color:var(--muted)">
+    Přehled změn a přírůstků — co jsme upravili v receptech a co je nového.
+  </p>
+
+  <p class="build-info">
+    Poslední změna na webu: <strong>{formatDateCs(buildDate)}</strong>
+  </p>
+
+  <ul class="novinky-list">
+    {novinky.map((n) => (
+      <li class="novinka">
+        <div class="novinka-head">
+          <span class={`tag tag-${n.typ}`}>{NOVINKA_LABEL[n.typ]}</span>
+          <time datetime={n.datum} class="datum">{formatDateCs(new Date(n.datum))}</time>
+        </div>
+        <p class="popis">
+          {n.popis}
+          {n.odkaz && (
+            <>
+              {" "}
+              <a href={n.odkaz}>Otevřít →</a>
+            </>
+          )}
+        </p>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
+
+<style>
+  .build-info {
+    color: var(--muted);
+    margin: 0.5rem 0 2rem;
+  }
+
+  .novinky-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .novinka {
+    background: var(--card-bg);
+    border: 1px solid var(--accent-soft);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+  }
+
+  .novinka-head {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    color: #fff;
+  }
+
+  .tag-nove {
+    background: var(--accent);
+  }
+
+  .tag-zmena {
+    background: color-mix(in srgb, var(--accent) 55%, #7a5c2e);
+  }
+
+  .datum {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  .popis {
+    margin: 0;
+  }
+</style>

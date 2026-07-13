@@ -227,7 +227,29 @@ python scripts/autolink_ingredience.py
 
 Skript projde nové recepty a doplní odkazy na karty surovin, pokud něco chybí.
 
-### Krok 8 — Reportuj výsledek
+### Krok 8 — Zapiš changelog (novinku)
+
+**Vždy** při **přidání nového receptu** nebo **významné změně existujícího receptu** přidej záznam na **začátek** pole v `src/data/novinky.json` (nejnovější nahoře):
+
+```json
+{
+  "datum": "RRRR-MM-DD",
+  "typ": "nove",
+  "popis": "Nový recept — pistáciová zmrzlina.",
+  "odkaz": "/recepty/pistaciova-zmrzlina/"
+}
+```
+
+- `datum` — dnešní datum ve formátu `RRRR-MM-DD`.
+- `typ` — `nove` pro nový recept/obsah, `zmena` pro úpravu.
+- `popis` — jedna věta česky, co se stalo a proč (např. „Upraven poměr cukrů v banánové zmrzlině, aby lépe držela.“).
+- `odkaz` — volitelný, interní cesta na recept (`/recepty/{slug}/`).
+
+Příklad záznamů:
+- **Změna [datum]** — Upraven poměr cukrů v banánové zmrzlině, aby lépe držela.
+- **Nové [datum]** — Nový recept + odkaz.
+
+### Krok 9 — Reportuj výsledek
 
 Krátké shrnutí uživateli:
 
@@ -254,6 +276,7 @@ Krátké shrnutí uživateli:
 - [ ] `typ` je jen `tocena|sorbet|nanuk|kopeckova|premium`, `obtiznost` jen `zacatecnik|stredne-pokrocily|pokrocily`, `stav: navrh`
 - [ ] `cislo` ve frontmatter je další volné (zkontroluj existující recepty)
 - [ ] PDF se vygenerovalo (může mít více stránek)
+- [ ] Changelog doplněn v `src/data/novinky.json` (nový recept = `nove`, úprava = `zmena`)
 
 ---
 

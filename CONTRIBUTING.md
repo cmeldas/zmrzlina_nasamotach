@@ -14,6 +14,19 @@ Plná příručka je na webu: <https://zmrzlina.nasamotach.cz/prispivat/>.
 6. `npm run build` — ověř, že schema validace projde.
 7. Otevři PR.
 
+## Changelog (novinky)
+
+Při **přidání** nebo **změně receptu** přidej záznam na začátek `src/data/novinky.json`
+(nejnovější nahoře). Zobrazí se na stránce [Novinky](https://zmrzlina.nasamotach.cz/novinky/)
+i na úvodní stránce.
+
+```json
+{ "datum": "RRRR-MM-DD", "typ": "zmena", "popis": "Upraven poměr cukrů v banánové zmrzlině, aby lépe držela.", "odkaz": "/recepty/bananova-zmrzlina/" }
+```
+
+- `typ`: `nove` (nový recept/obsah) nebo `zmena` (úprava).
+- `odkaz` je volitelný (interní cesta na recept).
+
 ## Co posíláme zpátky
 
 Otevřením PR souhlasíš, že tvůj příspěvek bude uvolněn pod licencí

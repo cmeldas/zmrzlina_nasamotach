@@ -77,3 +77,25 @@ export function filterPublished<T extends { data: { publikovat?: boolean } }>(it
   if (!import.meta.env.PROD) return items;
   return items.filter((it) => it.data.publikovat !== false);
 }
+
+/** Typ novinky v changelogu (`src/data/novinky.json`). */
+export type NovinkaTyp = "zmena" | "nove";
+
+export interface Novinka {
+  /** Datum ve formátu ISO, např. "2026-07-13". */
+  datum: string;
+  typ: NovinkaTyp;
+  popis: string;
+  /** Volitelný odkaz (např. na recept), interní cesta začínající "/". */
+  odkaz?: string;
+}
+
+export const NOVINKA_LABEL: Record<NovinkaTyp, string> = {
+  zmena: "Změna",
+  nove: "Nové",
+};
+
+/** Novinky seřazené od nejnovější po nejstarší. */
+export function sortNovinky(items: Novinka[]): Novinka[] {
+  return [...items].sort((a, b) => b.datum.localeCompare(a.datum));
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "datum": "2026-07-13",
+    "typ": "zmena",
+    "popis": "Upraven poměr cukrů v banánové zmrzlině, aby lépe držela tvar v kornoutu.",
+    "odkaz": "/recepty/bananova-zmrzlina/"
+  },
+  {
+    "datum": "2026-07-13",
+    "typ": "zmena",
+    "popis": "Web nově renderuje matematické vzorce (KaTeX) v receptech a knowledge base."
+  },
+  {
+    "datum": "2026-06-01",
+    "typ": "nove",
+    "popis": "Spuštění webu Zmrzlina Na Samotách — první sada receptů a knowledge base."
+  }
+]
