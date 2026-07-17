@@ -26,7 +26,7 @@ ingredience:
   - som
 description: "Nugátová (gianduia) zmrzlina ze 100% lískové pasty a kakaa se SOM, ~10,6 % tuku, PAC 24."
 pdf: "/pdfs/recept-13-nugatova-zmrzlina.pdf"
-stav: navrh
+stav: testovany
 ---
 
 **Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
