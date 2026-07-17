@@ -64,13 +64,13 @@ publikovat: true
 
 **PAC výpočet (na 100 g):**
 
-| Cukr / složka                  | g/100 g | FPDF | PAC       |
-| ------------------------------ | ------- | ---- | --------- |
-| Sacharóza                      | 4,5     | 1,0  | 4,5       |
-| [Dextróza](/ingredience/dextroza/)                       | 8,5     | 1,9  | 16,2      |
-| Glukóza sušený sirup           | 1,5     | 0,8  | 1,2       |
-| Laktóza (mléko + SOM + tvaroh) | ~5,2    | 1,0  | ~5,2      |
-| **Celkem PAC**                 |         |      | **~27,1** |
+| [Cukr / složka](/ingredience/sacharoza/)               | g/100 g | FPDF | PAC       |
+| ------------------------------------------------------ | ------- | ---- | --------- |
+| Sacharóza                                              | 4,5     | 1,0  | 4,5       |
+| [Dextróza](/ingredience/dextroza/)                     | 8,5     | 1,9  | 16,2      |
+| [Glukóza sušený sirup](/ingredience/dextroza/)         | 1,5     | 0,8  | 1,2       |
+| [Laktóza (mléko + SOM + tvaroh)](/ingredience/tvaroh/) | ~5,2    | 1,0  | ~5,2      |
+| **Celkem PAC**                                         |         |      | **~27,1** |
 
 ### Logika návrhu
 

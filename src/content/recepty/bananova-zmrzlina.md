@@ -50,13 +50,13 @@ Plná banánová chuť bez umělých příchutí, ~7,5 % tuku.
 
 **Bilance:**
 
-| Složka             | Výpočet                                         | Hodnota           |
-| ------------------ | ----------------------------------------------- | ----------------- |
-| **Tuk**            | mléko 345×0,035 + smetana 203×0,33              | ~79 g → **7,9 %** |
-| **MSNF**           | mléko (345×0,09) + smetana (203×0,067) + SOM 35 | ~80 g → ~8,0 %    |
-| **Cukry z banánu** | 320 × 0,18 (cca 18 % cukru ve velmi zralém banánu) | ~58 g          |
-| **Cukry přidané**  | sacharóza 50 + dextróza 30                       | 80 g              |
-| **Cukry celkem**   | (přidané + banán)                               | ~13,8 % (efektivní) |
+| Složka             | Výpočet                                            | Hodnota             |
+| ------------------ | -------------------------------------------------- | ------------------- |
+| **Tuk**            | mléko 345×0,035 + smetana 203×0,33                 | ~79 g → **7,9 %**   |
+| **MSNF**           | mléko (345×0,09) + smetana (203×0,067) + SOM 35    | ~80 g → ~8,0 %      |
+| **Cukry z banánu** | 320 × 0,18 (cca 18 % cukru ve velmi zralém banánu) | ~58 g               |
+| **Cukry přidané**  | sacharóza 50 + dextróza 30                         | 80 g                |
+| **Cukry celkem**   | (přidané + banán)                                  | ~13,8 % (efektivní) |
 
 **PAC výpočet (na 100 g):**
 
@@ -64,7 +64,7 @@ Plná banánová chuť bez umělých příchutí, ~7,5 % tuku.
 | ---------------------------------------------- | ------- | ---- | --------- |
 | [Sacharóza (přidaná)](/ingredience/sacharoza/) | 5,0     | 1,0  | 5,0       |
 | [Dextróza](/ingredience/dextroza/)             | 3,0     | 1,9  | 5,7       |
-| Banánový cukr\*                                | 5,8     | ~1,5 | ~8,7      |
+| [Banánový cukr\*](/ingredience/sacharoza/)     | 5,8     | ~1,5 | ~8,7      |
 | Laktóza (z mléka + SOM)                        | ~4,3    | 1,0  | 4,3       |
 | **Celkem PAC**                                 |         |      | **~23,7** |
 

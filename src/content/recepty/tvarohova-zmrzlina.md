@@ -59,14 +59,14 @@ publikovat: true
 
 **PAC výpočet (na 100 g):**
 
-| Cukr / složka            | g/100 g | FPDF | PAC       |
-| ------------------------ | ------- | ---- | --------- |
-| Sacharóza                | 10,0    | 1,0  | 10,0      |
-| [Dextróza](/ingredience/dextroza/)                 | 4,0     | 1,9  | 7,6       |
-| Glukóza sušený sirup     | 6,0     | 0,8  | 4,8       |
-| Laktóza (mléko + tvaroh) | ~3,1    | 1,0  | 3,1       |
-| Sůl (NaCl)               | 0,01    | 5,9  | 0,06      |
-| **Celkem PAC**           |         |      | **~25,6** |
+| [Cukr / složka](/ingredience/sacharoza/)         | g/100 g | FPDF | PAC       |
+| ------------------------------------------------ | ------- | ---- | --------- |
+| Sacharóza                                        | 10,0    | 1,0  | 10,0      |
+| [Dextróza](/ingredience/dextroza/)               | 4,0     | 1,9  | 7,6       |
+| [Glukóza sušený sirup](/ingredience/dextroza/)   | 6,0     | 0,8  | 4,8       |
+| [Laktóza (mléko + tvaroh)](/ingredience/tvaroh/) | ~3,1    | 1,0  | 3,1       |
+| Sůl (NaCl)                                       | 0,01    | 5,9  | 0,06      |
+| **Celkem PAC**                                   |         |      | **~25,6** |
 
 **PAC ≈ 26** → točená zmrzlina při −8 až −10 °C, drží tvar v kornoutu.
 
@@ -103,7 +103,7 @@ publikovat: true
 - **S vanilkou:** přidej 50 g vanilkového extraktu po pasteraci (a sniž mléko o 50 g). Posune chuť do „cheesecake".
 - **Vyšší tuk:** smetanu zvedni na 1 000 g (a uber mléko o 750 g) → tuk ~6 %, klasická tvarohová s plnější texturou.
 - **Bez stabilizátoru:** pokud spotřebuješ várku do 24 h, lze MEC3 vynechat. Aging stejný, krátká shelf life.
-- ***Přidej kakaový prášek** pro chuť čokoládového termixu.
+- **\*Přidej kakaový prášek** pro chuť čokoládového termixu.
 
 ### Co se stane když...
 

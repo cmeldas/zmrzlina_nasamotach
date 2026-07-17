@@ -30,18 +30,18 @@ publikovat: true
 
 **Cíl:** Hladká, krémová zmrzlina s plnou mléčnou chutí, lehká verze s ~3,7 % tuku.
 
-| Ingredience                                              | g/10 kg    | %         |
-| -------------------------------------------------------- | ---------- | --------- |
-| **TEKUTÉ**                                               |            |           |
-| [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/) | 6 700      | 67,0 %    |
-| [Smetana 33 %](/ingredience/smetana-33/)                 | 400        | 4,0 %     |
-| **SYPKÉ**                                                |            |           |
-| [Sušené odtučněné mléko (SOM)](/ingredience/som/)        | 850        | 8,5 %     |
-| [Sacharóza](/ingredience/sacharoza/)                     | 1 000      | 10,0 %    |
+| Ingredience                                                  | g/10 kg    | %         |
+| ------------------------------------------------------------ | ---------- | --------- |
+| **TEKUTÉ**                                                   |            |           |
+| [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)     | 6 700      | 67,0 %    |
+| [Smetana 33 %](/ingredience/smetana-33/)                     | 400        | 4,0 %     |
+| **SYPKÉ**                                                    |            |           |
+| [Sušené odtučněné mléko (SOM)](/ingredience/som/)            | 850        | 8,5 %     |
+| [Sacharóza](/ingredience/sacharoza/)                         | 1 000      | 10,0 %    |
 | [Glukóza (sušený sirup)](/ingredience/glukoza-suseny-sirup/) | 600        | 6,0 %     |
-| [Dextróza](/ingredience/dextroza/)                       | 400        | 4,0 %     |
-| [MEC3 Natura 50](/ingredience/mec3-natura-50/)           | 50         | 0,5 %     |
-| **Celkem**                                               | **10 000** | **100 %** |
+| [Dextróza](/ingredience/dextroza/)                           | 400        | 4,0 %     |
+| [MEC3 Natura 50](/ingredience/mec3-natura-50/)               | 50         | 0,5 %     |
+| **Celkem**                                                   | **10 000** | **100 %** |
 
 **Bilance:**
 
@@ -53,13 +53,13 @@ publikovat: true
 
 **Rozpis cuků a PAC:**
 
-| Cukr                   | g/10 kg | FPDF | PAC příspěvek |
-| ---------------------- | ------- | ---- | ------------- |
-| Sacharóza              | 1 000   | 1,0  | 10,0          |
+| [Cukr](/ingredience/sacharoza/)                              | g/10 kg | FPDF | PAC příspěvek |
+| ------------------------------------------------------------ | ------- | ---- | ------------- |
+| Sacharóza                                                    | 1 000   | 1,0  | 10,0          |
 | [Glukóza (sušený sirup)](/ingredience/glukoza-suseny-sirup/) | 600     | 0,8  | 4,8           |
-| [Dextróza](/ingredience/dextroza/)               | 400     | 1,9  | 7,6           |
-| Laktóza (mléko + SOM)   | ~780    | 1,0  | 7,8           |
-| **Celkem**             |         |      | **≈ 30**       |
+| [Dextróza](/ingredience/dextroza/)                           | 400     | 1,9  | 7,6           |
+| Laktóza (mléko + SOM)                                        | ~780    | 1,0  | 7,8           |
+| **Celkem**                                                   |         |      | **≈ 30**      |
 
 **Postup:**
 

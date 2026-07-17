@@ -49,41 +49,41 @@ publikovat: true
 
 ### Receptura
 
-| Ingredience                                                | g/10 kg    | %         |
-| ---------------------------------------------------------- | ---------- | --------- |
-| **TEKUTÉ**                                                 |            |           |
-| [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)   | 5 700      | 57,0 %    |
-| [Smetana 33 %](/ingredience/smetana-33/)                   | 800        | 8,0 %     |
-| **SYPKÉ (smíchat předem dohromady)**                       |            |           |
-| [Přírodní raw kakao (~11 % tuku)](/ingredience/raw-kakao/) | 400        | 4,0 %     |
-| [Sacharóza](/ingredience/sacharoza/)                       | 1 300      | 13,0 %    |
-| [Dextróza](/ingredience/dextroza/)                         | 350        | 3,5 %     |
-| [Glukóza (prášek, sušený sirup)](/ingredience/glukoza-suseny-sirup/) | 200 | 2,0 %     |
-| [Sušené odtučněné mléko (SOM)](/ingredience/som/)          | 300        | 3,0 %     |
-| [MEC3 Natura 50](/ingredience/mec3-natura-50/)             | 50         | 0,5 %     |
-| **PŘIDAT AŽ PŘI CHLAZENÍ NA 40 °C**                        |            |           |
-| [Kakaová hmota (55 % tuku)](/ingredience/kakaova-hmota/)   | 900        | 9,0 %     |
-| **Celkem**                                                 | **10 000** | **100 %** |
+| Ingredience                                                          | g/10 kg    | %         |
+| -------------------------------------------------------------------- | ---------- | --------- |
+| **TEKUTÉ**                                                           |            |           |
+| [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)             | 5 700      | 57,0 %    |
+| [Smetana 33 %](/ingredience/smetana-33/)                             | 800        | 8,0 %     |
+| **SYPKÉ (smíchat předem dohromady)**                                 |            |           |
+| [Přírodní raw kakao (~11 % tuku)](/ingredience/raw-kakao/)           | 400        | 4,0 %     |
+| [Sacharóza](/ingredience/sacharoza/)                                 | 1 300      | 13,0 %    |
+| [Dextróza](/ingredience/dextroza/)                                   | 350        | 3,5 %     |
+| [Glukóza (prášek, sušený sirup)](/ingredience/glukoza-suseny-sirup/) | 200        | 2,0 %     |
+| [Sušené odtučněné mléko (SOM)](/ingredience/som/)                    | 300        | 3,0 %     |
+| [MEC3 Natura 50](/ingredience/mec3-natura-50/)                       | 50         | 0,5 %     |
+| **PŘIDAT AŽ PŘI CHLAZENÍ NA 40 °C**                                  |            |           |
+| [Kakaová hmota (55 % tuku)](/ingredience/kakaova-hmota/)             | 900        | 9,0 %     |
+| **Celkem**                                                           | **10 000** | **100 %** |
 
 ### Bilance
 
-| Složka                                            | Výpočet                                                  | Hodnota             |
-| ------------------------------------------------- | -------------------------------------------------------- | ------------------- |
+| Složka                                            | Výpočet                                                                    | Hodnota             |
+| ------------------------------------------------- | -------------------------------------------------------------------------- | ------------------- |
 | **Tuk**                                           | mléko 570×0,035 + smetana 80×0,33 + kak. hmota 90×0,55 + raw kakao 40×0,11 | ~100 g → **10,0 %** |
-| **MSNF**                                          | mléko ~9 % + smetana (67 %×9 %) + SOM 30                 | ~85 g → **8,5 %**   |
-| **Cukry (efektivní)**                             | 130 + 35 + 20 + laktóza ~44                              | ~23 % efektivně     |
-| [**Kakaová sušina**](/ingredience/kakaova-hmota/) | hmota 90×0,45 + prášek 40×0,89                           | ~76 g → **7,6 %**   |
-| **Sušina celkem**                                 | tuk + cukry + MSNF + kakao + stabilizátor                | **~44 %**           |
+| **MSNF**                                          | mléko ~9 % + smetana (67 %×9 %) + SOM 30                                   | ~85 g → **8,5 %**   |
+| **Cukry (efektivní)**                             | 130 + 35 + 20 + laktóza ~44                                                | ~23 % efektivně     |
+| [**Kakaová sušina**](/ingredience/kakaova-hmota/) | hmota 90×0,45 + prášek 40×0,89                                             | ~76 g → **7,6 %**   |
+| **Sušina celkem**                                 | tuk + cukry + MSNF + kakao + stabilizátor                                  | **~44 %**           |
 
 **PAC výpočet (na 100 g):**
 
-| Cukr                                          | g/100 g | FPDF | PAC     |
-| --------------------------------------------- | ------- | ---- | ------- |
-| [Sacharóza](/ingredience/sacharoza/)          | 13,0    | 1,0  | 13,0    |
-| [Dextróza](/ingredience/dextroza/)            | 3,5     | 1,9  | 6,65    |
-| [Glukóza (prášek)](/ingredience/glukoza-suseny-sirup/) | 2,0 | 0,8 | 1,6     |
-| Laktóza                                       | ~4,4    | 1,0  | 4,4     |
-| **Celkem PAC**                                |         |      | **~26** |
+| [Cukr](/ingredience/sacharoza/)                        | g/100 g | FPDF | PAC     |
+| ------------------------------------------------------ | ------- | ---- | ------- |
+| [Sacharóza](/ingredience/sacharoza/)                   | 13,0    | 1,0  | 13,0    |
+| [Dextróza](/ingredience/dextroza/)                     | 3,5     | 1,9  | 6,65    |
+| [Glukóza (prášek)](/ingredience/glukoza-suseny-sirup/) | 2,0     | 0,8  | 1,6     |
+| Laktóza                                                | ~4,4    | 1,0  | 4,4     |
+| **Celkem PAC**                                         |         |      | **~26** |
 
 **PAC ≈ 26** → drží konzistenci blízkou klasické [čokoládové zmrzlině](/recepty/cokoladova-zmrzlina/) při −10 až −12 °C, přestože je hořčejší a má méně sacharózy. Vyšší podíl [dextrózy](/ingredience/dextroza/) tu funguje dvojím způsobem: snižuje sladkost (~70 % sladkosti sacharózy) a zároveň drží směs měkkou.
 
@@ -120,15 +120,15 @@ Hořká čokoláda je tak intenzivní, že **sólo bývá pro většinu zákazn�
 
 ### Časté problémy
 
-| Problém                              | Příčina                                        | Řešení                                                            |
-| ------------------------------------ | ---------------------------------------------- | ----------------------------------------------------------------- |
-| Hrudky kakaa                         | Velké množství raw kakaa špatně vmícháno       | Mixovat ponornou tyčí 2–3 min, sypkou směs vždy do horké tekutiny |
-| Připálené dno                        | 4 % raw kakaa + sušina = koncentrace pevných látek na dně | Silnostěnný hrnec, mírnější plamen, neustále stírat dno |
-| Příliš hořké pro zákazníky           | Cílový profil hořké čokolády                   | Snížit kakaovou hmotu na 80 g/kg, zvýšit sacharózu o 5 g/kg       |
-| Pískovitá textura                    | Kakaová hmota se nerozpustila                  | Nasekat na drobnější kousky, přidávat při 40 °C a mixovat ponornou tyčí, dokud se úplně nerozpustí |
-| Tvrdá v kornoutu                     | PAC se posunul pod 24                          | Zvýšit dextrózu o 5 g/kg na úkor sacharózy                        |
-| Sedimentace kakaa                    | Vyšší podíl kakaa = silnější tendence k sedimentaci | Aging min. 12 h, povinné promixování před zmrazením          |
-| Příliš tmavá / hořko-zemitá chuť     | Příliš dlouhé pasterování raw kakaa            | Nepřekračovat 63 °C, nepasterovat déle než 30 minut              |
+| Problém                          | Příčina                                                   | Řešení                                                                                             |
+| -------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Hrudky kakaa                     | Velké množství raw kakaa špatně vmícháno                  | Mixovat ponornou tyčí 2–3 min, sypkou směs vždy do horké tekutiny                                  |
+| Připálené dno                    | 4 % raw kakaa + sušina = koncentrace pevných látek na dně | Silnostěnný hrnec, mírnější plamen, neustále stírat dno                                            |
+| Příliš hořké pro zákazníky       | Cílový profil hořké čokolády                              | Snížit kakaovou hmotu na 80 g/kg, zvýšit sacharózu o 5 g/kg                                        |
+| Pískovitá textura                | Kakaová hmota se nerozpustila                             | Nasekat na drobnější kousky, přidávat při 40 °C a mixovat ponornou tyčí, dokud se úplně nerozpustí |
+| Tvrdá v kornoutu                 | PAC se posunul pod 24                                     | Zvýšit dextrózu o 5 g/kg na úkor sacharózy                                                         |
+| Sedimentace kakaa                | Vyšší podíl kakaa = silnější tendence k sedimentaci       | Aging min. 12 h, povinné promixování před zmrazením                                                |
+| Příliš tmavá / hořko-zemitá chuť | Příliš dlouhé pasterování raw kakaa                       | Nepřekračovat 63 °C, nepasterovat déle než 30 minut                                                |
 
 ---
 

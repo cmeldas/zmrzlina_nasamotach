@@ -83,14 +83,14 @@ Recept počítá se **smíšeným lesním ovocem**, můžeš libovolně kombinov
 
 **PAC výpočet (na 100 g):**
 
-| Cukr / složka                                | g/100 g | FPDF | PAC     |
-| -------------------------------------------- | ------- | ---- | ------- |
-| Sacharóza                                    | 11,0    | 1,0  | 11,0    |
-| [Dextróza](/ingredience/dextroza/)                                     | 4,5     | 1,9  | 8,6     |
-| Glukóza sušený sirup                         | 2,49    | 0,8  | 2,0     |
-| Ovocné cukry (fruktóza+glukóza, ~8 % × 50 %) | 4,0     | 1,9  | 7,6     |
-| Laktóza (tvaroh ~3 % × 25 %)                 | ~0,75   | 1,0  | 0,75    |
-| **Celkem PAC**                               |         |      | **~30** |
+| [Cukr / složka](/ingredience/sacharoza/)             | g/100 g | FPDF | PAC     |
+| ---------------------------------------------------- | ------- | ---- | ------- |
+| Sacharóza                                            | 11,0    | 1,0  | 11,0    |
+| [Dextróza](/ingredience/dextroza/)                   | 4,5     | 1,9  | 8,6     |
+| [Glukóza sušený sirup](/ingredience/dextroza/)       | 2,49    | 0,8  | 2,0     |
+| Ovocné cukry (fruktóza+glukóza, ~8 % × 50 %)         | 4,0     | 1,9  | 7,6     |
+| [Laktóza (tvaroh ~3 % × 25 %)](/ingredience/tvaroh/) | ~0,75   | 1,0  | 0,75    |
+| **Celkem PAC**                                       |         |      | **~30** |
 
 **PAC ≈ 30** → méně sladká točená zmrzlina, stále servírovatelná při −10 až −12 °C. Nízký tuk znamená pevnější tělo než u původní sladší verze, ale dextróza s glukózou drží směs rozumně měkkou.
 
@@ -133,13 +133,13 @@ Recept počítá se **smíšeným lesním ovocem**, můžeš libovolně kombinov
 
 ### Co se stane když...
 
-| Problém                          | Příčina                                       | Řešení                                                        |
-| -------------------------------- | --------------------------------------------- | ------------------------------------------------------------- |
-| Zrnitá textura, „tvarohové" zrno | Tvaroh moc tuhý nebo nedostatečně rozmixovaný | Část tvarohu nahradit vodou (1:1), tyčový mixér 2 min         |
-| Tvaroh se po aging „srazí"       | pH < 4 (příliš citronu/ovoce), aging > 8 h    | Aging max. 8 h; pokud pyré velmi kyselé, sniž citron na 150 g |
-| „Kompotová" chuť, ne svěží       | Sherbet omylem pasterovali (přehřáli)         | NEpasterovat — zachovat syrové ovoce a citron                 |
-| Zmrzlina jak kámen z vitríny     | PAC < 30 a tuk 1 % → málo měkčidla            | Zvedni dextrózu na 600 g (sniž sacharózu o 150 g)             |
-| Příliš měkká, „nedrží tvar"      | PAC > 36                                      | Sniž dextrózu na 350 g, zvedni sacharózu o 100 g              |
-| Bledá / vybledlá barva (jahody)  | pH > 4 (málo citronu) — antokyany blednou     | Citronka min. 250 g, přidat při míchání                       |
-| Ledové krystaly při skladování   | Málo MEC3 nebo nedostatečné rozmixování       | MEC3 nesmí udělat hrudky — vždy nejdřív s cukrem nasucho      |
-| Hrubá zrnitá pyré chuť           | Jahody nepřepasírovány, semínka rušivá        | Přepasírovat jahodové/malinové pyré přes střední síto         |
+| Problém                                                        | Příčina                                       | Řešení                                                        |
+| -------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------- |
+| Zrnitá textura, „tvarohové" zrno                               | Tvaroh moc tuhý nebo nedostatečně rozmixovaný | Část tvarohu nahradit vodou (1:1), tyčový mixér 2 min         |
+| Tvaroh se po aging „srazí"                                     | pH < 4 (příliš citronu/ovoce), aging > 8 h    | Aging max. 8 h; pokud pyré velmi kyselé, sniž citron na 150 g |
+| „Kompotová" chuť, ne svěží                                     | Sherbet omylem pasterovali (přehřáli)         | NEpasterovat — zachovat syrové ovoce a citron                 |
+| Zmrzlina jak kámen z vitríny                                   | PAC < 30 a tuk 1 % → málo měkčidla            | Zvedni dextrózu na 600 g (sniž sacharózu o 150 g)             |
+| Příliš měkká, „nedrží tvar"                                    | PAC > 36                                      | Sniž dextrózu na 350 g, zvedni sacharózu o 100 g              |
+| [Bledá / vybledlá barva (jahody)](/ingredience/jahodove-pyre/) | pH > 4 (málo citronu) — antokyany blednou     | Citronka min. 250 g, přidat při míchání                       |
+| Ledové krystaly při skladování                                 | Málo MEC3 nebo nedostatečné rozmixování       | MEC3 nesmí udělat hrudky — vždy nejdřív s cukrem nasucho      |
+| Hrubá zrnitá pyré chuť                                         | Jahody nepřepasírovány, semínka rušivá        | Přepasírovat jahodové/malinové pyré přes střední síto         |

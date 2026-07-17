@@ -1,6 +1,12 @@
 [
   {
     "datum": "2026-07-13",
+    "typ": "nove",
+    "popis": "Nový recept — nugátová (gianduia) zmrzlina z lískové pasty a kakaa.",
+    "odkaz": "/recepty/nugatova-zmrzlina/"
+  },
+  {
+    "datum": "2026-07-13",
     "typ": "zmena",
     "popis": "Upraven poměr cukrů v banánové zmrzlině, aby lépe držela tvar v kornoutu.",
     "odkaz": "/recepty/bananova-zmrzlina/"

@@ -27,7 +27,7 @@ pdf: "/pdfs/recept-12-mangovy-sorbet.pdf"
 stav: odladeny
 publikovat: true
 fotky:
-    - "mango_sorbet.jpg"
+  - "mango_sorbet.jpg"
 ---
 
 **Typ:** točená zmrzlina (sorbet) | **Servírování:** −10 až −12 °C
@@ -59,13 +59,13 @@ fotky:
 
 **Rozpis cukrů a PAC:**
 
-| Cukr                      | g/10 kg | FPDF | PAC příspěvek |
-| ------------------------- | ------- | ---- | ------------- |
-| Sacharóza                 | 792     | 1,0  | 7,9           |
-| [Glukóza (sušený sirup)](/ingredience/glukoza-suseny-sirup/)    | 792     | 0,8  | 6,3           |
-| [Dextróza](/ingredience/dextroza/)                  | 396     | 1,9  | 7,5           |
-| Vlastní cukry manga (~12 %) | 720     | ~1,35 | 9,7         |
-| **Celkem**                |         |      | **≈ 31**      |
+| [Cukr](/ingredience/sacharoza/)                              | g/10 kg | FPDF  | PAC příspěvek |
+| ------------------------------------------------------------ | ------- | ----- | ------------- |
+| Sacharóza                                                    | 792     | 1,0   | 7,9           |
+| [Glukóza (sušený sirup)](/ingredience/glukoza-suseny-sirup/) | 792     | 0,8   | 6,3           |
+| [Dextróza](/ingredience/dextroza/)                           | 396     | 1,9   | 7,5           |
+| Vlastní cukry manga (~12 %)                                  | 720     | ~1,35 | 9,7           |
+| **Celkem**                                                   |         |       | **≈ 31**      |
 
 **Proč tento poměr:**
 
