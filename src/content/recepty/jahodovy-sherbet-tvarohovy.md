@@ -29,6 +29,7 @@ pdf: "/pdfs/recept-10-jahodovy-sherbet-tvarohovy.pdf"
 stav: odladeny
 fotky:
   - Lesní směs.jpg
+  - Malina - Jahoda.jpg
 publikovat: true
 ---
 

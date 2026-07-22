@@ -27,6 +27,8 @@ description: "Sytě modrá kokosová zmrzlina pro děti — přírodní modř z 
 pdf: "/pdfs/recept-14-smoulova-zmrzlina.pdf"
 stav: navrh
 publikovat: true
+fotky:
+  - Šmoulová.jpg
 ---
 
 **Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C

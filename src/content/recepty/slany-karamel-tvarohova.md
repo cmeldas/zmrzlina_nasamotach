@@ -30,6 +30,8 @@ description: "Slaný karamel postavený na karamelové pastě Agrimontana a tvar
 pdf: "/pdfs/recept-09-slany-karamel-tvarohova.pdf"
 stav: navrh
 publikovat: true
+fotky:
+  - Slaný karamel.jpg
 ---
 
 **Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
