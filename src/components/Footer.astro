@@ -1,5 +1,6 @@
 ---
 const year = new Date().getFullYear();
+const gaId = import.meta.env.PUBLIC_GA_ID;
 ---
 
 <footer class="site-footer">
@@ -17,31 +18,17 @@ const year = new Date().getFullYear();
     <div>
       <strong>Komunita</strong><br />
       <a href="https://github.com/cmeldas/zmrzlina_nasamotach" target="_blank" rel="noopener">Repozitář na GitHubu</a><br />
-      <a href="https://nasamotach.cz" target="_blank" rel="noopener">nasamotach.cz</a>
+      <a href="https://nasamotach.cz" target="_blank" rel="noopener">nasamotach.cz</a><br />
+      {gaId && <button type="button" id="cookie-settings" class="footer-link">Nastavení analytiky</button>}
       <div class="bmc-wrap">
-        <noscript>
-          <a
-            href="https://www.buymeacoffee.com/cmeldas"
-            target="_blank"
-            rel="noopener"
-            class="bmc-link"
-          >
-            ☕ Buy me a coffee
-          </a>
-        </noscript>
-        <script
-          is:inline
-          type="text/javascript"
-          src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-          data-name="bmc-button"
-          data-slug="cmeldas"
-          data-color="#FF5F5F"
-          data-emoji=""
-          data-font="Cookie"
-          data-text="Buy me a coffee"
-          data-outline-color="#000000"
-          data-font-color="#ffffff"
-          data-coffee-color="#FFDD00"></script>
+        <a
+          href="https://www.buymeacoffee.com/cmeldas"
+          target="_blank"
+          rel="noopener"
+          class="bmc-link"
+        >
+          Podpořit přes Buy Me a Coffee
+        </a>
       </div>
     </div>
   </div>
@@ -64,6 +51,19 @@ const year = new Date().getFullYear();
   .poc-note p { margin: 0; }
   .bmc-wrap {
     margin-top: 0.8rem;
+  }
+  .footer-link {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .footer-link:hover {
+    color: var(--accent-dark);
   }
   .bmc-link {
     display: inline-block;
