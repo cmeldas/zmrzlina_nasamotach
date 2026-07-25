@@ -21,6 +21,8 @@ description: "Alkoholická vinná tříšť z Frankovky — jen víno a cukr. Ne
 pdf: "/pdfs/recept-15-frankovka-vinna-triest.pdf"
 stav: odladeny
 publikovat: true
+fotky:
+ - Frankovka.jpg
 ---
 
 **Typ:** vinná tříšť (sorbet) | **Servírování:** do skleniček, −18 až −20 °C
