@@ -15,7 +15,7 @@ tags:
   - letni
 ingredience:
   - plnotucne-mleko
-  - smetana-33
+  - smetana
   - tvaroh
   - citronova-stava
   - citronova-kura
@@ -40,7 +40,7 @@ publikovat: true
 | ------------------------------------------------------------------------------------------- | ---------- | --------- |
 | **PASTEROVAT NA 63 °C**                                                                     |            |           |
 | [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)                                    | 5 800      | 58,0 %    |
-| [Smetana 33 %](/ingredience/smetana-33/)                                                    | 500        | 5,0 %     |
+| [Smetana 33 %](/ingredience/smetana/)                                                    | 500        | 5,0 %     |
 | [Sušené odtučněné mléko (SOM)](/ingredience/som/)                                           | 400        | 4,0 %     |
 | [Sacharóza](/ingredience/sacharoza/)                                                        | 450        | 4,5 %     |
 | [Dextróza](/ingredience/dextroza/)                                                          | 850        | 8,5 %     |
@@ -66,9 +66,9 @@ publikovat: true
 
 | [Cukr / složka](/ingredience/sacharoza/)               | g/100 g | FPDF | PAC       |
 | ------------------------------------------------------ | ------- | ---- | --------- |
-| Sacharóza                                              | 4,5     | 1,0  | 4,5       |
+| [Sacharóza](/ingredience/sacharoza/)                                              | 4,5     | 1,0  | 4,5       |
 | [Dextróza](/ingredience/dextroza/)                     | 8,5     | 1,9  | 16,2      |
-| [Glukóza sušený sirup](/ingredience/dextroza/)         | 1,5     | 0,8  | 1,2       |
+| [Glukóza sušený sirup](/ingredience/glukoza-suseny-sirup/)         | 1,5     | 0,8  | 1,2       |
 | [Laktóza (mléko + SOM + tvaroh)](/ingredience/tvaroh/) | ~5,2    | 1,0  | ~5,2      |
 | **Celkem PAC**                                         |         |      | **~27,1** |
 

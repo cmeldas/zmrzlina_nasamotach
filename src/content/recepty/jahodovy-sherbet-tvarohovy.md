@@ -19,7 +19,6 @@ ingredience:
   - tvaroh
   - voda
   - citronova-stava
-  - citronova-kura
   - sacharoza
   - dextroza
   - glukoza-suseny-sirup
@@ -62,16 +61,13 @@ Recept počítá se **smíšeným lesním ovocem**, můžeš libovolně kombinov
 | [Jahody (nebo lesní směs)](/ingredience/jahodove-pyre/)              | 5 000      | 50,0 %    |
 | [Tvaroh polotučný (4 %)](/ingredience/tvaroh/)                       | 2 500      | 25,0 %    |
 | [Voda](/ingredience/voda/)                                           | 401        | 4,01 %    |
+| [Citronová šťáva](/ingredience/citronova-stava/)                     | 250        | 2,5 %     |
 | **SYPKÉ**                                                            |            |           |
 | [Sacharóza](/ingredience/sacharoza/)                                 | 1 100      | 11,0 %    |
 | [Dextróza](/ingredience/dextroza/)                                   | 450        | 4,5 %     |
 | [Glukóza (sušený sirup, prášek)](/ingredience/glukoza-suseny-sirup/) | 249        | 2,49 %    |
 | [MEC3 Natura frutta 50](/ingredience/mec3-natura-frutta-50/)         | 50         | 0,5 %     |
-| **MÍCHÁNÍ ZA STUDENA**                                               |            |           |
-| [Citronová šťáva](/ingredience/citronova-stava/)                     | 250        | 2,5 %     |
-| **LOUHOVÁNÍ PŘI PASTERACI (scedit)**                                 |            |           |
-| [Citronová kůra (strouhaná)](/ingredience/citronova-kura/)           | 200        | —         |
-| **Celkem finální směs (bez kůry)**                                   | **10 000** | **100 %** |
+| **Celkem**                                                           | **10 000** | **100 %** |
 
 ### Bilance
 
@@ -86,10 +82,10 @@ Recept počítá se **smíšeným lesním ovocem**, můžeš libovolně kombinov
 
 | [Cukr / složka](/ingredience/sacharoza/)             | g/100 g | FPDF | PAC     |
 | ---------------------------------------------------- | ------- | ---- | ------- |
-| Sacharóza                                            | 11,0    | 1,0  | 11,0    |
+| [Sacharóza](/ingredience/sacharoza/)                                            | 11,0    | 1,0  | 11,0    |
 | [Dextróza](/ingredience/dextroza/)                   | 4,5     | 1,9  | 8,6     |
-| [Glukóza sušený sirup](/ingredience/dextroza/)       | 2,49    | 0,8  | 2,0     |
-| Ovocné cukry (fruktóza+glukóza, ~8 % × 50 %)         | 4,0     | 1,9  | 7,6     |
+| [Glukóza sušený sirup](/ingredience/glukoza-suseny-sirup/)       | 2,49    | 0,8  | 2,0     |
+| [Ovocné cukry (fruktóza+glukóza, ~8 % × 50 %)](/ingredience/jahodove-pyre/) | 4,0     | 1,9  | 7,6     |
 | [Laktóza (tvaroh ~3 % × 25 %)](/ingredience/tvaroh/) | ~0,75   | 1,0  | 0,75    |
 | **Celkem PAC**                                       |         |      | **~30** |
 
@@ -127,6 +123,7 @@ Recept počítá se **smíšeným lesním ovocem**, můžeš libovolně kombinov
 - **Méně tvarohu (2 000 g):** lehčí, blíž k sorbetu. Doplnit 500 g ovocem nebo 500 g vodou. Při ovoci nezapomeň přepočítat cukry (jahody přidají dalších ~40 g cukru).
 - **S vanilkou:** 50 g vanilkového extraktu přidat se sypkými pro „smetanovo-jahodový“ profil (sniž jahody o 50 g).
 - **S bazaličkou:** 20 g čerstvé bazalky rozmixované do citronové šťávy → jahoda + bazalka klasika.
+- **S citronovou kůrou:** nastrouhej najemno kůru z 2–3 neošetřených citronů (~10 g) do sacharózy a nech 30 min odstát — cukr z ní vytáhne éterické oleje (*oleo saccharum*). Pak vsyp se sypkými. Kůra ve směsi zůstane, tak strouhej opravdu najemno, ať v hotové zmrzlině nejsou cítit kousky. Louhovat kůru v horkém základu a scedit tady nejde — sherbet se nepasteruje.
 - **S balsamikem:** 30 g kvalitního aged balsamic vinegar místo poloviny citronky → italský dezertní profil.
 - **Lesní směs „divočina“:** 40 % jahoda + 30 % malina + 20 % borůvka + 10 % ostružina. Tmavě fialová, antokyanová.
 - **S rumem nebo vodkou (alkohol):** 50 g rumu/vodky při smíchání → snižuje bod tuhnutí (etanol FPDF 7,4), textura ještě měkčí.
@@ -137,7 +134,7 @@ Recept počítá se **smíšeným lesním ovocem**, můžeš libovolně kombinov
 | Problém                                                        | Příčina                                       | Řešení                                                        |
 | -------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------- |
 | Zrnitá textura, „tvarohové" zrno                               | Tvaroh moc tuhý nebo nedostatečně rozmixovaný | Část tvarohu nahradit vodou (1:1), tyčový mixér 2 min         |
-| Tvaroh se po aging „srazí"                                     | pH < 4 (příliš citronu/ovoce), aging > 8 h    | Aging max. 8 h; pokud pyré velmi kyselé, sniž citron na 150 g |
+| [Tvaroh se po aging „srazí"](/ingredience/tvaroh/)                                     | pH < 4 (příliš citronu/ovoce), aging > 8 h    | Aging max. 8 h; pokud pyré velmi kyselé, sniž citron na 150 g |
 | „Kompotová" chuť, ne svěží                                     | Sherbet omylem pasterovali (přehřáli)         | NEpasterovat — zachovat syrové ovoce a citron                 |
 | Zmrzlina jak kámen z vitríny                                   | PAC < 30 a tuk 1 % → málo měkčidla            | Zvedni dextrózu na 600 g (sniž sacharózu o 150 g)             |
 | Příliš měkká, „nedrží tvar"                                    | PAC > 36                                      | Sniž dextrózu na 350 g, zvedni sacharózu o 100 g              |

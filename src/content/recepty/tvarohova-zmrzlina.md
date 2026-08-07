@@ -14,7 +14,7 @@ tags:
 ingredience:
   - tvaroh
   - plnotucne-mleko
-  - smetana-33
+  - smetana
   - citronova-stava
   - sacharoza
   - dextroza
@@ -40,7 +40,7 @@ publikovat: true
 | **TEKUTÉ**                                                           |            |           |
 | [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)             | 5 000      | 50 %      |
 | [Tvaroh (polotučný, 4 %)](/ingredience/tvaroh/)                      | 2 700      | 27,0 %    |
-| [Smetana 33 %](/ingredience/smetana-33/)                             | 250        | 2,5 %     |
+| [Smetana 33 %](/ingredience/smetana/)                                | 250        | 2,5 %     |
 | **SYPKÉ**                                                            |            |           |
 | [Sacharóza](/ingredience/sacharoza/)                                 | 1 000      | 10,0 %    |
 | [Dextróza](/ingredience/dextroza/)                                   | 400        | 4,0 %     |
@@ -59,14 +59,13 @@ publikovat: true
 
 **PAC výpočet (na 100 g):**
 
-| [Cukr / složka](/ingredience/sacharoza/)         | g/100 g | FPDF | PAC       |
-| ------------------------------------------------ | ------- | ---- | --------- |
-| Sacharóza                                        | 10,0    | 1,0  | 10,0      |
-| [Dextróza](/ingredience/dextroza/)               | 4,0     | 1,9  | 7,6       |
-| [Glukóza sušený sirup](/ingredience/dextroza/)   | 6,0     | 0,8  | 4,8       |
-| [Laktóza (mléko + tvaroh)](/ingredience/tvaroh/) | ~3,1    | 1,0  | 3,1       |
-| Sůl (NaCl)                                       | 0,01    | 5,9  | 0,06      |
-| **Celkem PAC**                                   |         |      | **~25,6** |
+| [Cukr / složka](/ingredience/sacharoza/)                   | g/100 g | FPDF | PAC       |
+| ---------------------------------------------------------- | ------- | ---- | --------- |
+| [Sacharóza](/ingredience/sacharoza/)                       | 10,0    | 1,0  | 10,0      |
+| [Dextróza](/ingredience/dextroza/)                         | 4,0     | 1,9  | 7,6       |
+| [Glukóza sušený sirup](/ingredience/glukoza-suseny-sirup/) | 6,0     | 0,8  | 4,8       |
+| [Laktóza (mléko + tvaroh)](/ingredience/tvaroh/)           | ~3,1    | 1,0  | 3,1       |
+| **Celkem PAC**                                             |         |      | **~25,6** |
 
 **PAC ≈ 26** → točená zmrzlina při −8 až −10 °C, drží tvar v kornoutu.
 
@@ -82,7 +81,7 @@ publikovat: true
 
 ### Postup
 
-1. **Předmíchat sypké za sucha:** sacharózu, dextrózu, glukózu sušený sirup, MEC3 Natura 50 a sůl. Připravit stranou (zatím NEvmíchávat).
+1. **Předmíchat sypké za sucha:** sacharózu, dextrózu, glukózu sušený sirup, MEC3 Natura 50. Připravit stranou (zatím NEvmíchávat).
 2. **Pasterace — jen tekuté složky:** v kastrolu zahřát **pouze mléko + smetanu** za stálého míchání na **63 °C**. **Tvaroh ani sypké zatím NEpřidávat** — sypké cukry by se mohly na dně připálit, tvaroh by koaguloval.
 3. **Při dosažení 63 °C** vsypat sypkou směs (krok 1) a **rozmixovat tyčovým mixérem** do rozpuštění bez hrudek (1–2 min).
 4. **Držet 63 °C / 30 min** (LTLT — low temperature long time) za občasného míchání. Tento postup minimalizuje riziko připálení cukrů při ohřevu.

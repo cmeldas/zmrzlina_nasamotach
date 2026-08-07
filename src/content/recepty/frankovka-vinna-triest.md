@@ -46,14 +46,14 @@ fotky:
 | Složka                | Výpočet                                      | Hodnota       |
 | --------------------- | -------------------------------------------- | ------------- |
 | **Alkohol**           | 5 000 ml × 12 % × 0,789 g/ml ≈ 473 g etanolu | ~7,8 % hmotn. |
-| **Cukr**              | sacharóza 1 100 g + zbytkový cukr vína ~12 g | ~18,2 %       |
+| [**Cukr**](/ingredience/sacharoza/)              | sacharóza 1 100 g + zbytkový cukr vína ~12 g | ~18,2 %       |
 | **Sušina (netěkavá)** | cukr ~18 % + extrakt/glycerol z vína ~2,5 %  | **~20,5 %**   |
 
 **PAC výpočet (na 100 g):**
 
 | Složka             | g/100 g | FPDF | PAC     |
 | ------------------ | ------- | ---- | ------- |
-| Sacharóza          | 18,0    | 1,0  | 18,0    |
+| [Sacharóza](/ingredience/sacharoza/)          | 18,0    | 1,0  | 18,0    |
 | Etanol             | 7,8     | 7,4  | 57,4    |
 | Zbytkový cukr vína | ~0,2    | 1,5  | ~0,3    |
 | **Celkem PAC**     |         |      | **~75** |

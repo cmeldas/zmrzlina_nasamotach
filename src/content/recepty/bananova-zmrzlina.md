@@ -14,12 +14,13 @@ tags:
 ingredience:
   - banan
   - plnotucne-mleko
-  - smetana-33
+  - smetana
   - citronova-stava
   - som
   - sacharoza
   - dextroza
   - mec3-natura-50
+  - sol
 description: "Banánová zmrzlina ze zralých banánů, mléka a smetany, bez vajec, ~7,5 % tuku."
 pdf: "/pdfs/recept-05-bananova-zmrzlina.pdf"
 fotky:
@@ -36,13 +37,13 @@ Plná banánová chuť bez umělých příchutí, ~7,5 % tuku.
 | -------------------------------------------------------- | ---------- | --------- |
 | **TEKUTÉ** (základ k pasteraci)                          |            |           |
 | [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/) | 3 449      | 34,49 %   |
-| [Smetana 33 %](/ingredience/smetana-33/)                 | 2 030      | 20,3 %    |
+| [Smetana 33 %](/ingredience/smetana/)                 | 2 030      | 20,3 %    |
 | **SYPKÉ**                                                |            |           |
 | SOM                                                      | 350        | 3,5 %     |
 | [Sacharóza](/ingredience/sacharoza/)                     | 500        | 5,0 %     |
 | [Dextróza](/ingredience/dextroza/)                       | 300        | 3,0 %     |
 | [MEC3 Natura 50](/ingredience/mec3-natura-50/)           | 50         | 0,5 %     |
-| Špetka soli                                              | 1          | 0,01 %    |
+| [Špetka soli](/ingredience/sol/)                                              | 1          | 0,01 %    |
 | **PO PASTERACI** (do vychlazeného základu)               |            |           |
 | [Banánové pyré (zralé)](/ingredience/banan/)             | 3 200      | 32,0 %    |
 | [Citronová šťáva](/ingredience/citronova-stava/)         | 120        | 1,2 %     |

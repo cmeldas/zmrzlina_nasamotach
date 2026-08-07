@@ -14,7 +14,7 @@ tags:
   - premium
 ingredience:
   - plnotucne-mleko
-  - smetana-33
+  - smetana
   - invertni-cukr
   - kakaova-hmota
   - raw-kakao
@@ -23,6 +23,7 @@ ingredience:
   - glukoza-suseny-sirup
   - som
   - mec3-natura-50
+  - sol
 description: "Plná čokoládová zmrzlina z přírodního raw kakaa a kakaové hmoty, ~10 % tuku."
 pdf: "/pdfs/recept-08-cokoladova-zmrzlina.pdf"
 stav: odladeny
@@ -52,7 +53,7 @@ stav: odladeny
 | ---------------------------------------------------------- | ---------- | --------- |
 | **TEKUTÉ**                                                 |            |           |
 | [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)   | 5 199      | 51,99 %   |
-| [Smetana 33 %](/ingredience/smetana-33/)                   | 1 500      | 15,0 %    |
+| [Smetana 33 %](/ingredience/smetana/)                   | 1 500      | 15,0 %    |
 | [Invertní cukr](/ingredience/invertni-cukr/)               | 150        | 1,5 %     |
 | **ROZPUSTIT VE SMETANĚ PŘI 50–60 °C**                      |            |           |
 | [Kakaová hmota (55 % tuku)](/ingredience/kakaova-hmota/)   | 600        | 6,0 %     |
@@ -60,10 +61,10 @@ stav: odladeny
 | [Přírodní raw kakao (~11 % tuku)](/ingredience/raw-kakao/) | 350        | 3,5 %     |
 | [Sacharóza](/ingredience/sacharoza/)                       | 1 450      | 14,5 %    |
 | [Dextróza](/ingredience/dextroza/)                         | 250        | 2,5 %     |
-| [Glukóza (prášek, sušený sirup)](/ingredience/dextroza/)   | 200        | 2,0 %     |
+| [Glukóza (prášek, sušený sirup)](/ingredience/glukoza-suseny-sirup/)   | 200        | 2,0 %     |
 | [Sušené odtučněné mléko (SOM)](/ingredience/som/)          | 250        | 2,5 %     |
 | [MEC3 Natura 50](/ingredience/mec3-natura-50/)             | 50         | 0,5 %     |
-| Špetka soli                                                | 1          | 0,01 %    |
+| [Špetka soli](/ingredience/sol/)                                                | 1          | 0,01 %    |
 | **Celkem**                                                 | **10 000** | **100 %** |
 
 ### Bilance
@@ -82,7 +83,7 @@ stav: odladeny
 | -------------------------------------------- | ------- | ---- | ------- |
 | [Sacharóza](/ingredience/sacharoza/)         | 14,5    | 1,0  | 14,5    |
 | [Dextróza](/ingredience/dextroza/)           | 2,5     | 1,9  | 4,75    |
-| [Glukóza (prášek)](/ingredience/dextroza/)   | 2,0     | 0,8  | 1,6     |
+| [Glukóza (prášek)](/ingredience/glukoza-suseny-sirup/)   | 2,0     | 0,8  | 1,6     |
 | [Invertní cukr](/ingredience/invertni-cukr/) | 1,5     | 1,9  | 2,85    |
 | Laktóza                                      | ~4,2    | 1,0  | 4,2     |
 | **Celkem PAC**                               |         |      | **~28** |

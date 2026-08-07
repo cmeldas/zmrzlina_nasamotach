@@ -63,9 +63,11 @@ def load_ingredience_map() -> dict[str, dict]:
         terms.append(first_significant_word(title))
         # plný normalizovaný titulek
         terms.append(norm(title))
+        # Aliasy jen jako celek — první slovo víceslovného aliasu je často
+        # obecné přídavné jméno a chytalo by cizí řádky („mořská sůl" vs.
+        # „Řasová mořská pachuť"). U jednoslovných aliasů je to totéž.
         for a in aliases:
             terms.append(norm(a))
-            terms.append(first_significant_word(a))
         terms = [t for t in terms if t and len(t) >= 4]
         out[f.stem] = {"title": title, "terms": list(dict.fromkeys(terms))}
     return out
@@ -84,20 +86,28 @@ def cell_already_linked(cell: str) -> bool:
 
 
 def find_matching_slug(cell_text: str, recipe_slugs: list[str], ing_map: dict) -> str | None:
-    """Vrátí slug ingredience, jejíž název je v textu buňky."""
+    """Vrátí slug ingredience, jejíž název je v textu buňky.
+
+    Skóre je délka nalezeného termu. Při shodě rozhoduje, kolik slov z plného
+    názvu karty se v buňce vyskytuje — jinak by víceslovný název prohrál
+    s cizím aliasem stejné délky jen kvůli pořadí ve frontmatteru
+    („Glukóza – sušený sirup" vs. alias „glukóza monohydrát" u dextrózy).
+    """
     cell_norm = " " + norm(cell_text) + " "
-    best: tuple[int, str] | None = None  # (skóre, slug)
+    cell_words = set(cell_norm.split())
+    best: tuple[int, int, str] | None = None  # (skóre, překryv slov, slug)
     for slug in recipe_slugs:
         info = ing_map.get(slug)
         if not info:
             continue
+        overlap = sum(1 for w in set(norm(info["title"]).split()) if w in cell_words)
         for term in info["terms"]:
             t = " " + term + " "
             if t in cell_norm:
-                score = len(term)
-                if best is None or score > best[0]:
-                    best = (score, slug)
-    return best[1] if best else None
+                cand = (len(term), overlap, slug)
+                if best is None or cand[:2] > best[:2]:
+                    best = cand
+    return best[2] if best else None
 
 
 def process_recipe(path: Path, ing_map: dict, dry_run: bool = False) -> int:

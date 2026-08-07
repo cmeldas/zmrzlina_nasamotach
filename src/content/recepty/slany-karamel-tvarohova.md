@@ -15,7 +15,7 @@ tags:
   - premium
 ingredience:
   - plnotucne-mleko
-  - smetana-33
+  - smetana
   - tvaroh
   - pasta-karamel-agrimontana
   - invertni-cukr
@@ -25,10 +25,10 @@ ingredience:
   - dextroza
   - glukoza-suseny-sirup
   - mec3-natura-50
-  - fleur-de-sel
+  - sol
 description: "Slaný karamel postavený na karamelové pastě Agrimontana a tvarohu — kompromis mezi smetanovým základem a tvarohovou zmrzlinou, ~8,8 % tuku."
 pdf: "/pdfs/recept-09-slany-karamel-tvarohova.pdf"
-stav: navrh
+stav: odladeny
 publikovat: true
 fotky:
   - Slaný karamel.jpg
@@ -58,7 +58,7 @@ fotky:
 | ---------------------------------------------------------------------- | ---------- | --------- |
 | **TEKUTÉ**                                                             |            |           |
 | [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)               | 4 090      | 40,9 %    |
-| [Smetana 33 %](/ingredience/smetana-33/)                               | 2 000      | 20,0 %    |
+| [Smetana 33 %](/ingredience/smetana/)                               | 2 000      | 20,0 %    |
 | [Pasta karamel Agrimontana](/ingredience/pasta-karamel-agrimontana/)   | 750        | 7,5 %     |
 | [Invertní cukr](/ingredience/invertni-cukr/)                           | 100        | 1,0 %     |
 | **SYPKÉ**                                                              |            |           |
@@ -69,7 +69,7 @@ fotky:
 | [MEC3 Natura 50](/ingredience/mec3-natura-50/)                         | 50         | 0,5 %     |
 | **PO PASTERACI**                                                       |            |           |
 | [Tvaroh polotučný (4 %)](/ingredience/tvaroh/)                         | 1 500      | 15,0 %    |
-| [Fleur de sel (jemná mořská sůl)](/ingredience/fleur-de-sel/)          | 30         | 0,3 %     |
+| [Fleur de sel (jemná mořská sůl)](/ingredience/sol/)          | 30         | 0,3 %     |
 | [Citronová šťáva](/ingredience/citronova-stava/)                       | 30         | 0,3 %     |
 | **Celkem**                                                             | **10 000** | **100 %** |
 
@@ -84,15 +84,15 @@ fotky:
 
 **PAC výpočet (na 100 g):**
 
-| Cukr / složka            | g/100 g | FPDF | PAC     |
+| [Cukr / složka](/ingredience/sacharoza/)            | g/100 g | FPDF | PAC     |
 | ------------------------ | ------- | ---- | ------- |
-| Sacharóza (přidaná)      | 7,0     | 1,0  | 7,0     |
+| [Sacharóza (přidaná)](/ingredience/sacharoza/)      | 7,0     | 1,0  | 7,0     |
 | Pasta karamel (cukry)    | ~4,9    | 1,2  | 5,9     |
-| Dextróza                 | 3,0     | 1,9  | 5,7     |
-| Glukóza sušený sirup     | 2,0     | 0,8  | 1,6     |
-| Invertní cukr            | 1,0     | 1,9  | 1,9     |
-| Laktóza (mléko+SOM+tvaroh) | ~4,4 | 1,0  | 4,4     |
-| Sůl (NaCl)               | 0,3     | 5,9  | 1,8     |
+| [Dextróza](/ingredience/dextroza/)                 | 3,0     | 1,9  | 5,7     |
+| [Glukóza sušený sirup](/ingredience/glukoza-suseny-sirup/)     | 2,0     | 0,8  | 1,6     |
+| [Invertní cukr](/ingredience/invertni-cukr/)            | 1,0     | 1,9  | 1,9     |
+| [Laktóza (mléko+SOM+tvaroh)](/ingredience/tvaroh/) | ~4,4 | 1,0  | 4,4     |
+| [Sůl (NaCl)](/ingredience/sol/)               | 0,3     | 5,9  | 1,8     |
 | **Celkem PAC**           |         |      | **~28** |
 
 **PAC ≈ 28** → točená zmrzlina při −10 až −12 °C, drží tvar v kornoutu, krémově nabíratelná. Tučnost 8,8 % maskuje sladkost (~18 % přidaných cukrů + laktóza).

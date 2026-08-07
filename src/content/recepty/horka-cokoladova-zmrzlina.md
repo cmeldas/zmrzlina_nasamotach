@@ -15,7 +15,7 @@ tags:
   - premium
 ingredience:
   - plnotucne-mleko
-  - smetana-33
+  - smetana
   - kakaova-hmota
   - raw-kakao
   - sacharoza
@@ -38,7 +38,7 @@ publikovat: true
 
 **Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
 
-**Cíl:** Hluboce hořká, kakaem nabitá varianta klasické [čokoládové zmrzliny](/recepty/cokoladova-zmrzlina/). Více [kakaové hmoty](/ingredience/kakaova-hmota/) (90 g/kg vs. 60 g/kg) a [raw kakaa](/ingredience/raw-kakao/) (40 g/kg vs. 35 g/kg), méně sacharózy a více [dextrózy](/ingredience/dextroza/) — výsledek je výrazně hořčejší, méně sladký, s vyšší kakaovou sušinou (**7,6 %** oproti 5,8 % v základní variantě). Tuk se drží na ~10 % díky vyššímu podílu kakaového másla z kakaové hmoty (snížená [smetana](/ingredience/smetana-33/)).
+**Cíl:** Hluboce hořká, kakaem nabitá varianta klasické [čokoládové zmrzliny](/recepty/cokoladova-zmrzlina/). Více [kakaové hmoty](/ingredience/kakaova-hmota/) (90 g/kg vs. 60 g/kg) a [raw kakaa](/ingredience/raw-kakao/) (40 g/kg vs. 35 g/kg), méně sacharózy a více [dextrózy](/ingredience/dextroza/) — výsledek je výrazně hořčejší, méně sladký, s vyšší kakaovou sušinou (**7,6 %** oproti 5,8 % v základní variantě). Tuk se drží na ~10 % díky vyššímu podílu kakaového másla z kakaové hmoty (snížená [smetana](/ingredience/smetana/)).
 
 ### Proč právě tato varianta
 
@@ -53,7 +53,7 @@ publikovat: true
 | -------------------------------------------------------------------- | ---------- | --------- |
 | **TEKUTÉ**                                                           |            |           |
 | [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)             | 5 700      | 57,0 %    |
-| [Smetana 33 %](/ingredience/smetana-33/)                             | 800        | 8,0 %     |
+| [Smetana 33 %](/ingredience/smetana/)                             | 800        | 8,0 %     |
 | **SYPKÉ (smíchat předem dohromady)**                                 |            |           |
 | [Přírodní raw kakao (~11 % tuku)](/ingredience/raw-kakao/)           | 400        | 4,0 %     |
 | [Sacharóza](/ingredience/sacharoza/)                                 | 1 300      | 13,0 %    |
@@ -92,7 +92,7 @@ publikovat: true
 Tato varianta používá **nízkoteplotní pasterizaci (63 °C / 30 min)** a [kakaovou hmotu](/ingredience/kakaova-hmota/) přidává až při chlazení na 40 °C — pro zachování enzymů a antioxidantů (polyfenolů) kakaa.
 
 1. **Příprava sypké směsi:** Předem smíchat všechny sypké složky dohromady — [raw kakao](/ingredience/raw-kakao/), [sacharózu](/ingredience/sacharoza/), [dextrózu](/ingredience/dextroza/), [glukózu](/ingredience/glukoza-suseny-sirup/), [SOM](/ingredience/som/) a [MEC3 Natura 50](/ingredience/mec3-natura-50/). Stabilizátor předem promíchat s ~3× větším množstvím sacharózy, aby se netvořily hrudky.
-2. **Ohřev mléka:** [Plnotučné mléko](/ingredience/plnotucne-mleko/) a [smetanu](/ingredience/smetana-33/) nalít do silnostěnného hrnce a za stálého míchání ohřát na **63 °C**.
+2. **Ohřev mléka:** [Plnotučné mléko](/ingredience/plnotucne-mleko/) a [smetanu](/ingredience/smetana/) nalít do silnostěnného hrnce a za stálého míchání ohřát na **63 °C**.
 3. **Vsypání sypkých složek:** Po dosažení 63 °C vsypat předem smíchanou sypkou směs a ponornou tyčí důkladně rozmixovat (2–3 min), aby nevznikly hrudky.
 4. **Pasterizace 63 °C / 30 min:** Udržovat směs na **63 °C po dobu 30 minut** (nízkoteplotní pasterizace LTLT) za občasného míchání. Stírat dno stěrkou, aby se nepřipálila.
 5. **Začít chladit:** Po 30 minutách přesunout hrnec do ledové lázně a chladit za míchání.

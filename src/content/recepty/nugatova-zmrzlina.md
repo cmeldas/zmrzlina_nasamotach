@@ -15,7 +15,7 @@ tags:
   - kakao
 ingredience:
   - plnotucne-mleko
-  - smetana-33
+  - smetana
   - pasta-liskoorisky-agrimontana
   - kakaova-hmota
   - raw-kakao
@@ -24,6 +24,7 @@ ingredience:
   - glukoza-suseny-sirup
   - mec3-natura-50
   - som
+  - sol
 description: "Nugátová (gianduia) zmrzlina ze 100% lískové pasty a kakaa se SOM, ~10,6 % tuku, PAC 24."
 pdf: "/pdfs/recept-13-nugatova-zmrzlina.pdf"
 stav: testovany
@@ -45,7 +46,7 @@ stav: testovany
 | -------------------------------------------------------------------- | ---------- | --------- |
 | **TEKUTÉ** (základ k pasteraci)                                      |            |           |
 | [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)             | 4 699      | 46,99 %   |
-| [Smetana 33 %](/ingredience/smetana-33/)                             | 1 500      | 15,0 %    |
+| [Smetana 33 %](/ingredience/smetana/)                             | 1 500      | 15,0 %    |
 | **ROZPUSTIT V HORKÉM ZÁKLADU (po pasteraci)**                        |            |           |
 | [Lísková pasta 100 %](/ingredience/pasta-liskoorisky-agrimontana/)   | 500        | 5,0 %     |
 | [Kakaová hmota (55 % tuku)](/ingredience/kakaova-hmota/)             | 100        | 1,0 %     |
@@ -56,7 +57,7 @@ stav: testovany
 | [Glukóza (sušený sirup, prášek)](/ingredience/glukoza-suseny-sirup/) | 450        | 4,5 %     |
 | [SOM (sušené odtučněné mléko)](/ingredience/som/)                     | 180        | 1,8 %     |
 | [MEC3 Natura 50](/ingredience/mec3-natura-50/)                       | 50         | 0,5 %     |
-| Špetka soli                                                          | 1          | 0,01 %    |
+| [Špetka soli](/ingredience/sol/)                                                          | 1          | 0,01 %    |
 | **Celkem**                                                           | **10 000** | **100 %** |
 
 ### Bilance
@@ -78,7 +79,7 @@ stav: testovany
 | [Dextróza](/ingredience/dextroza/)                             | 2,0     | 1,9  | 3,8       |
 | [Glukóza (sušený sirup)](/ingredience/glukoza-suseny-sirup/)   | 4,5     | 0,8  | 3,6       |
 | [Laktóza (mléko + smetana + SOM)](/ingredience/som/)           | ~4,0    | 1,0  | 4,0       |
-| Sůl (NaCl)                                                     | 0,01    | 5,9  | 0,06      |
+| [Sůl (NaCl)](/ingredience/sol/)                                                     | 0,01    | 5,9  | 0,06      |
 | **Celkem PAC**                                                 |         |      | **~24,0** |
 
 **PAC ≈ 24** → točená zmrzlina servírovaná při −10 až −12 °C, drží tvar v kornoutu. Vysoký podíl tuku z oříškové pasty a mléčné složky dělá zmrzlinu plnou a krémovou i při tomto nižším PAC.

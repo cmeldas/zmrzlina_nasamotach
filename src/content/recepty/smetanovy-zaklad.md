@@ -14,7 +14,7 @@ tags:
   - klasika
 ingredience:
   - plnotucne-mleko
-  - smetana-33
+  - smetana
   - som
   - sacharoza
   - glukoza-suseny-sirup
@@ -34,7 +34,7 @@ publikovat: true
 | ------------------------------------------------------------ | ---------- | --------- |
 | **TEKUTÉ**                                                   |            |           |
 | [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)     | 6 700      | 67,0 %    |
-| [Smetana 33 %](/ingredience/smetana-33/)                     | 400        | 4,0 %     |
+| [Smetana 33 %](/ingredience/smetana/)                     | 400        | 4,0 %     |
 | **SYPKÉ**                                                    |            |           |
 | [Sušené odtučněné mléko (SOM)](/ingredience/som/)            | 850        | 8,5 %     |
 | [Sacharóza](/ingredience/sacharoza/)                         | 1 000      | 10,0 %    |
@@ -55,7 +55,7 @@ publikovat: true
 
 | [Cukr](/ingredience/sacharoza/)                              | g/10 kg | FPDF | PAC příspěvek |
 | ------------------------------------------------------------ | ------- | ---- | ------------- |
-| Sacharóza                                                    | 1 000   | 1,0  | 10,0          |
+| [Sacharóza](/ingredience/sacharoza/)                                                    | 1 000   | 1,0  | 10,0          |
 | [Glukóza (sušený sirup)](/ingredience/glukoza-suseny-sirup/) | 600     | 0,8  | 4,8           |
 | [Dextróza](/ingredience/dextroza/)                           | 400     | 1,9  | 7,6           |
 | Laktóza (mléko + SOM)                                        | ~780    | 1,0  | 7,8           |

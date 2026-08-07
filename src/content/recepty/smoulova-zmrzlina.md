@@ -15,7 +15,7 @@ tags:
   - prirodni-barvivo
 ingredience:
   - plnotucne-mleko
-  - smetana-33
+  - smetana
   - pasta-kokos-agrimontana
   - som
   - sacharoza
@@ -23,6 +23,7 @@ ingredience:
   - glukoza-suseny-sirup
   - mec3-natura-50
   - modra-spirulina
+  - sol
 description: "Sytě modrá kokosová zmrzlina pro děti — přírodní modř z fykocyaninu (modrá spirulina), kokosová chuť z pasty Agrimontana, bez umělých barviv a bez tvarohu."
 pdf: "/pdfs/recept-14-smoulova-zmrzlina.pdf"
 stav: navrh
@@ -57,7 +58,7 @@ fotky:
 | -------------------------------------------------------------------- | ---------- | --------- |
 | **TEKUTÉ**                                                           |            |           |
 | [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)             | 5 679      | 56,79 %   |
-| [Smetana 33 %](/ingredience/smetana-33/)                             | 1 800      | 18,0 %    |
+| [Smetana 33 %](/ingredience/smetana/)                             | 1 800      | 18,0 %    |
 | [Pasta kokos Agrimontana](/ingredience/pasta-kokos-agrimontana/)     | 1 000      | 10,0 %    |
 | **SYPKÉ**                                                            |            |           |
 | [Sacharóza](/ingredience/sacharoza/)                                 | 700        | 7,0 %     |
@@ -65,7 +66,7 @@ fotky:
 | [Glukóza (sušený sirup, prášek)](/ingredience/glukoza-suseny-sirup/) | 200        | 2,0 %     |
 | [Sušené odtučněné mléko (SOM)](/ingredience/som/)                    | 250        | 2,5 %     |
 | [MEC3 Natura 50](/ingredience/mec3-natura-50/)                       | 50         | 0,5 %     |
-| Špetka soli                                                          | 1          | 0,01 %    |
+| [Špetka soli](/ingredience/sol/)                                                          | 1          | 0,01 %    |
 | **PO PASTERACI (do vychlazené směsi)**                              |            |           |
 | [Modrá spirulina (fykocyanin)](/ingredience/modra-spirulina/)       | 20         | 0,2 %     |
 | **Celkem**                                                           | **10 000** | **100 %** |
@@ -80,14 +81,14 @@ fotky:
 
 **PAC výpočet (na 100 g):**
 
-| Cukr / složka              | g/100 g | FPDF | PAC     |
+| [Cukr / složka](/ingredience/sacharoza/)              | g/100 g | FPDF | PAC     |
 | -------------------------- | ------- | ---- | ------- |
-| Sacharóza (přidaná)        | 7,0     | 1,0  | 7,0     |
-| Pasta kokos (cukry)        | ~6,0    | 0,9  | 5,4     |
-| Dextróza                   | 3,0     | 1,9  | 5,7     |
-| Glukóza sušený sirup       | 2,0     | 0,8  | 1,6     |
+| [Sacharóza (přidaná)](/ingredience/sacharoza/)        | 7,0     | 1,0  | 7,0     |
+| [Pasta kokos (cukry)](/ingredience/pasta-kokos-agrimontana/)        | ~6,0    | 0,9  | 5,4     |
+| [Dextróza](/ingredience/dextroza/)                   | 3,0     | 1,9  | 5,7     |
+| [Glukóza sušený sirup](/ingredience/glukoza-suseny-sirup/)       | 2,0     | 0,8  | 1,6     |
 | Laktóza (mléko + SOM)      | ~4,5    | 1,0  | 4,5     |
-| Sůl (NaCl)                 | 0,01    | 5,9  | 0,06    |
+| [Sůl (NaCl)](/ingredience/sol/)                 | 0,01    | 5,9  | 0,06    |
 | **Celkem PAC**             |         |      | **~24** |
 
 **PAC ≈ 24** → pevnější točená zmrzlina, drží tvar v kornoutu i za teplého letního dne. Nižší PAC (proti default 28) je záměr — kokosová pasta je hodně sladká, nižší PAC znamená méně „rozteklou" konzistenci při stejné sladkosti.
@@ -129,7 +130,7 @@ fotky:
 | -------------------------------- | ------------------------------------------- | ----------------------------------------------------------- |
 | Barva je šedá/zelenošedá         | Spirulina přidána za tepla nebo do kyselé směsi | Přidávat až do vychlazené (≤ 30 °C), žádná citronka         |
 | Barva bledne při skladování      | Kontakt se světlem / kyslíkem               | Skladovat v uzavřené gastronádobě, chránit před světlem     |
-| Modrá je moc světlá              | Málo spiruliny                              | Zvednout na 0,25–0,3 %                                       |
+| [Modrá je moc světlá](/ingredience/modra-spirulina/)              | Málo spiruliny                              | Zvednout na 0,25–0,3 %                                       |
 | Řasová „mořská" pachuť           | Použita celá zelená spirulina, ne fykocyanin | Použít extrakt fykocyaninu (blue spirulina), ne zelený prášek |
 | Zmrzlina je tvrdá jako kámen     | PAC < 22                                     | Zvednout dextrózu o 50–100 g                                |
 | Příliš sladká                    | Kokosová pasta hodně sladí                   | Ubrat sacharózu o 100 g, dorovnat mlékem                    |

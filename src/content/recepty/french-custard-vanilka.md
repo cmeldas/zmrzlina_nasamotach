@@ -15,7 +15,7 @@ tags:
   - francouzska
 ingredience:
   - plnotucne-mleko
-  - smetana-33
+  - smetana
   - vajecny-zloutek
   - invertni-cukr
   - som
@@ -23,6 +23,7 @@ ingredience:
   - dextroza
   - vanilkovy-lusk
   - stabilizator-guar-lbg
+  - sol
 description: "Klasická francouzská vanilková zmrzlina na bázi crème anglaise, vysoký podíl žloutků."
 pdf: "/pdfs/recept-07-french-custard-vanilka.pdf"
 stav: navrh
@@ -44,7 +45,7 @@ publikovat: false
 | -------------------------- | ---------- | --------- |
 | **TEKUTÉ** (infuze + temperování) |       |           |
 | [Plnotučné mléko (3,5 %)](/ingredience/plnotucne-mleko/)    | 3 800      | 38,0 %    |
-| [Smetana 33 %](/ingredience/smetana-33/)               | 2 800      | 28,0 %    |
+| [Smetana 33 %](/ingredience/smetana/)               | 2 800      | 28,0 %    |
 | [Vaječný žloutek (pasterovaný)](/ingredience/vajecny-zloutek/) | 600      | 6,0 %     |
 | [Invertní cukr](/ingredience/invertni-cukr/)              | 150        | 1,5 %     |
 | Voda                       | 529        | 5,29 %    |
@@ -53,7 +54,7 @@ publikovat: false
 | [Dextróza](/ingredience/dextroza/)                   | 500        | 5,0 %     |
 | [Sušené odtučněné mléko (SOM)](/ingredience/som/) | 350        | 3,5 %     |
 | [Stabilizátor (guar + LBG)](/ingredience/stabilizator-guar-lbg/)  | 20         | 0,2 %     |
-| Špetka soli                | 1          | 0,01 %    |
+| [Špetka soli](/ingredience/sol/)                | 1          | 0,01 %    |
 | **DO INFUZE S MLÉKEM**     |            |           |
 | [Vanilkový lusk](/ingredience/vanilkovy-lusk/)             | 50 (~10 ks)| 0,5 %     |
 | **Celkem**                 | **10 000** | **100 %** |
