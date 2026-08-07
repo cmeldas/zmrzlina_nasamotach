@@ -32,7 +32,7 @@ pdf: "/pdfs/recept-11-horka-cokoladova-zmrzlina.pdf"
 fotky:
   - hořká_čokoláda_1.jpg
   - hořká_čokoláda_2.jpg
-stav: testovany
+stav: odladeny
 publikovat: true
 ---
 

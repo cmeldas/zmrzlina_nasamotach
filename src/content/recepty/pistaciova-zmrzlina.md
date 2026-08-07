@@ -3,7 +3,7 @@ title: "Pistáciová zmrzlina"
 cislo: 16
 typ: "tocena"
 obtiznost: "stredne-pokrocily"
-stav: "navrh"
+stav: "testovany"
 publikovat: true
 tuk_pct: 10.9
 pac: 24
@@ -27,6 +27,9 @@ ingredience:
   - sol
 description: "Pistáciová zmrzlina ze 100% pasty z Bronte v plné výrobcem doporučené dávce 9 %, bez vajec a bez tvarohu, ~10,9 % tuku, PAC 24 — tužší, drží tvar."
 pdf: "/pdfs/recept-16-pistaciova-zmrzlina.pdf"
+fotky:
+  - Pistáciová_1.jpg
+  - Pistáciová_2.jpg
 ---
 
 **Typ:** točená zmrzlina | **Servírování:** −10 až −12 °C
