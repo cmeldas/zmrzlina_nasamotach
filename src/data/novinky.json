@@ -1,5 +1,17 @@
 [
   {
+    "datum": "2026-08-08",
+    "typ": "nove",
+    "popis": "Nový recept — tiramisu zmrzlina s tvarohem místo mascarpone.",
+    "odkaz": "/recepty/tiramisu-zmrzlina/"
+  },
+  {
+    "datum": "2026-08-07",
+    "typ": "nove",
+    "popis": "Nový recept — arašídová zmrzlina ze 100% pasty, bez vajec a tvarohu. Konstrukčně dvojče pistáciové, ale osmkrát levnější.",
+    "odkaz": "/recepty/arasidova-zmrzlina/"
+  },
+  {
     "datum": "2026-08-07",
     "typ": "nove",
     "popis": "Nový recept — pistáciová zmrzlina ze 100% pasty z Bronte, bez vajec a tvarohu.",
