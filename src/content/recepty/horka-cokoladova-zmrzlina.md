@@ -45,7 +45,7 @@ publikovat: true
 - **Spin-off** [čokoládové zmrzliny](/recepty/cokoladova-zmrzlina/) — stejný postup, stejné suroviny, jen jiný poměr.
 - **Tak silná, že volá po lehkém protějšku** v točeném kornoutu: intenzivní hořké kakao nejlépe vyváží lehká, decentní zmrzlina — [vanilka](/recepty/french-custard-vanilka/) nebo [tvaroh](/recepty/tvarohova-zmrzlina/). Sólo působí pro mnoho zákazníků až příliš tvrdě.
 - **Méně sladká** = lepší pro dospělé zákazníky, kteří chtějí „opravdovou" čokoládu, ne dezert.
-- **Vyšší podíl dextrózy** (3,5 % vs. 2,5 %) drží PAC ≈ 26 i při snížené sacharóze — zmrzlina zůstává v kornoutu plastická.
+- **Vyšší podíl dextrózy** (3,5 % vs. 2,0 % v základní variantě) drží PAC ≈ 26 i při snížené sacharóze — zmrzlina zůstává v kornoutu plastická. Hořká varianta si vyšší PAC může dovolit: má o 1,8 bodu víc kakaové sušiny, která váže vodu a strukturu drží za PAC.
 
 ### Receptura
 
