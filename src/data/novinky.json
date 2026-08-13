@@ -2,13 +2,25 @@
   {
     "datum": "2026-08-10",
     "typ": "zmena",
+    "popis": "Jahodový sherbet přepočten na PAC 26 — méně dextrózy, víc glukózového sirupu. Pevnější tělo ve vitríně, sladkost zůstala stejná.",
+    "odkaz": "/recepty/jahodovy-sherbet-tvarohovy/"
+  },
+  {
+    "datum": "2026-08-10",
+    "typ": "nove",
+    "popis": "Samoťáček — náš jahodovo-malinový nanuk z 50 % BIO ovoce a tvarohu je venku. Recept je open source pod CC BY-SA 4.0, tak si ho klidně vyrob a prodávej.",
+    "odkaz": "/recepty/samotacek/"
+  },
+  {
+    "datum": "2026-08-10",
+    "typ": "zmena",
     "popis": "Čokoládová zmrzlina přepočtena na PAC 24 a bez invertního cukru — při PAC 28 padala v kornoutu a byla zbytečně sladká.",
     "odkaz": "/recepty/cokoladova-zmrzlina/"
   },
   {
     "datum": "2026-08-08",
     "typ": "nove",
-    "popis": "Nový recept — tiramisu zmrzlina s tvarohem místo mascarpone.",
+    "popis": "Nový recept — tiramisu zmrzlina s mascarpone a tvarohem, počítaná podle technického listu Agrimontana pasty.",
     "odkaz": "/recepty/tiramisu-zmrzlina/"
   },
   {

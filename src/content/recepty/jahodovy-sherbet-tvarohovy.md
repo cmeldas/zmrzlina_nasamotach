@@ -4,7 +4,7 @@ cislo: 10
 typ: "tocena"
 obtiznost: "zacatecnik"
 tuk_pct: 1.0
-pac: 30
+pac: 26
 serv_teplota: "−10 až −12 °C"
 varka_kg: 10
 tags:
@@ -23,9 +23,10 @@ ingredience:
   - dextroza
   - glukoza-suseny-sirup
   - mec3-natura-frutta-50
-description: "Jahodový sherbet — mezi sorbetem a tvarohovou zmrzlinou. 50 % ovoce + 25 % tvarohu, bez smetany, jen ~1 % tuku, výrazně osvěžující."
+description: "Jahodový sherbet — mezi sorbetem a tvarohovou zmrzlinou. 50 % ovoce + 25 % tvarohu, bez smetany, jen ~1 % tuku, výrazně osvěžující. Přepočteno na PAC 26 — pevnější tělo, sladkost beze změny."
 pdf: "/pdfs/recept-10-jahodovy-sherbet-tvarohovy.pdf"
-stav: odladeny
+stav: testovany
+aktualizovano: 2026-08-10
 fotky:
   - Lesní směs.jpg
   - Malina - Jahoda.jpg
@@ -60,36 +61,35 @@ Recept počítá se **smíšeným lesním ovocem**, můžeš libovolně kombinov
 | **TEKUTÉ / OVOCE**                                                   |            |           |
 | [Jahody (nebo lesní směs)](/ingredience/jahodove-pyre/)              | 5 000      | 50,0 %    |
 | [Tvaroh polotučný (4 %)](/ingredience/tvaroh/)                       | 2 500      | 25,0 %    |
-| [Voda](/ingredience/voda/)                                           | 401        | 4,01 %    |
+| [Voda](/ingredience/voda/)                                           | 400        | 4,0 %     |
 | [Citronová šťáva](/ingredience/citronova-stava/)                     | 250        | 2,5 %     |
 | **SYPKÉ**                                                            |            |           |
 | [Sacharóza](/ingredience/sacharoza/)                                 | 1 100      | 11,0 %    |
-| [Dextróza](/ingredience/dextroza/)                                   | 450        | 4,5 %     |
-| [Glukóza (sušený sirup, prášek)](/ingredience/glukoza-suseny-sirup/) | 249        | 2,49 %    |
+| [Dextróza](/ingredience/dextroza/)                                   | 100        | 1,0 %     |
+| [Glukóza (sušený sirup, prášek)](/ingredience/glukoza-suseny-sirup/) | 600        | 6,0 %     |
 | [MEC3 Natura frutta 50](/ingredience/mec3-natura-frutta-50/)         | 50         | 0,5 %     |
 | **Celkem**                                                           | **10 000** | **100 %** |
 
 ### Bilance
 
-| Složka     | Výpočet                                                 | Hodnota            |
-| ---------- | ------------------------------------------------------- | ------------------ |
-| **Tuk**    | tvaroh 250×0,04 + jahody 500×0,003                      | ~11 g → **~1,1 %** |
-| **MSNF**   | tvaroh ~17 % (kasein + laktóza + minerály) × 250        | ~43 g → **4,3 %**  |
-| **Sušina** | ovoce ~5 + tvaroh ~6,3 + cukry ~18 + MEC3 + citron ~0,2 | **~31 %**          |
-| **Kasein** | tvaroh ~10 % bílkovin (2 500 × 0,10)                    | ~250 g → **2,5 %** |
+| Složka              | Výpočet                                                    | Hodnota               |
+| ------------------- | ---------------------------------------------------------- | --------------------- |
+| **Tuk**             | tvaroh 250×0,04 + jahody 500×0,003                         | ~11 g → **~1,1 %**    |
+| **MSNF**            | tvaroh ~17 % (kasein + laktóza + minerály) × 250           | ~43 g → **4,3 %**     |
+| **Sušina**          | ovoce 500 + tvaroh 625 + cukry 1 766 + MEC3 48 + citron 23 | 2 961 g → **~29,6 %** |
+| **Kasein**          | tvaroh ~10 % bílkovin (2 500 × 0,10)                       | ~250 g → **2,5 %**    |
+| **Sladivost (POD)** | 11,0×1,0 + 1,0×0,75 + 6,0×0,5 + ovoce 4,0×1,5 + laktóza    | **~21**               |
 
 **PAC výpočet (na 100 g):**
 
-| [Cukr / složka](/ingredience/sacharoza/)             | g/100 g | FPDF | PAC     |
-| ---------------------------------------------------- | ------- | ---- | ------- |
-| [Sacharóza](/ingredience/sacharoza/)                                            | 11,0    | 1,0  | 11,0    |
-| [Dextróza](/ingredience/dextroza/)                   | 4,5     | 1,9  | 8,6     |
-| [Glukóza sušený sirup](/ingredience/glukoza-suseny-sirup/)       | 2,49    | 0,8  | 2,0     |
-| [Ovocné cukry (fruktóza+glukóza, ~8 % × 50 %)](/ingredience/jahodove-pyre/) | 4,0     | 1,9  | 7,6     |
-| [Laktóza (tvaroh ~3 % × 25 %)](/ingredience/tvaroh/) | ~0,75   | 1,0  | 0,75    |
-| **Celkem PAC**                                       |         |      | **~30** |
-
-**PAC ≈ 30** → méně sladká točená zmrzlina, stále servírovatelná při −10 až −12 °C. Nízký tuk znamená pevnější tělo než u původní sladší verze, ale dextróza s glukózou drží směs rozumně měkkou.
+| [Cukr / složka](/ingredience/sacharoza/)                                    | g/100 g | FPDF | PAC     |
+| --------------------------------------------------------------------------- | ------- | ---- | ------- |
+| [Sacharóza](/ingredience/sacharoza/)                                        | 11,0    | 1,0  | 11,00   |
+| [Dextróza](/ingredience/dextroza/)                                          | 1,0     | 1,9  | 1,90    |
+| [Glukóza sušený sirup](/ingredience/glukoza-suseny-sirup/)                  | 6,0     | 0,8  | 4,80    |
+| [Ovocné cukry (fruktóza+glukóza, ~8 % × 50 %)](/ingredience/jahodove-pyre/) | 4,0     | 1,9  | 7,60    |
+| [Laktóza (tvaroh ~3 % × 25 %)](/ingredience/tvaroh/)                        | ~0,75   | 1,0  | 0,75    |
+| **Celkem PAC**                                                              |         |      | **~26** |
 
 ### Logika návrhu
 
@@ -97,7 +97,6 @@ Recept počítá se **smíšeným lesním ovocem**, můžeš libovolně kombinov
 - **25 % tvarohu** dorovná chybějící smetanu — kasein dělá texturu krémovou bez tuku.
 - **Žádná smetana, žádné SOM** — záměrně. Sherbet má být lehký, „ovocný v první řadě".
 - **Cukry pouze sacharóza + dextróza + glukóza prášek** dle zadání. Bez invertního cukru (jahody samy obsahují ~50 % fruktózy z přírody).
-- **PAC ~30** drží sladkost níž než původní verze, ale díky dextróze a glukóze zůstává směs použitelná pro točenou zmrzlinu i při nízkém tuku.
 - **Citronová šťáva 2,5 %** — zvýrazňuje ovocnou chuť, zachová svěžest a vit. C, plus pomáhá udržet barvu (antokyanová ovoce mění barvu dle pH).
 - **MEC3 Natura frutta 50** — ovocná verze stabilizátoru, pasuje k 50 % ovoce. Hydrokoloidy v něm vážou vodu z jahod (ty mají 90 % vody!) a brání ledovým krystalům. Tvaroh sám dodává kasein pro krémovost — mléčný stabilizátor není potřeba.
 
@@ -109,8 +108,7 @@ Recept počítá se **smíšeným lesním ovocem**, můžeš libovolně kombinov
 2. **Ovoce rozmixovat** tyčovým mixérem na hladké pyré (cca 1–2 minuty). Volitelně přepasírovat přes hrubé síto, pokud nechceš semínka (zvlášť u malin/ostružin).
 3. **Smíchat pyré + voda + sypké:** v míchací nádobě k ovocnému pyré přidat vodu, vsypat sypkou směs (krok 1) a **rozmixovat tyčovým mixérem** 2–3 minuty, dokud se cukry zcela nerozpustí a MEC3 nehydratuje (směs lehce zhoustne).
 4. **Vmíchat tvaroh do ovocné směsi** tyčovým mixérem 1–2 minuty na hladkou texturu.
-5. **Přidat citronovou šťávu**, jemně promíchat. Citron oživí barvu (zvlášť u jahod a borůvek je rozdíl viditelný) a zvýší svěžest.
-6. **Aging 4–8 h při 4 °C** — MEC3 plně hydratuje, kasein se rozprostře, chuť se srovná. **Pozor:** při pH < 4 (které sherbet má) může tvaroh po dlouhém aging začít „zrnit". Max. 8 h.
+5. **Aging 4–8 h při 4 °C** — MEC3 plně hydratuje, kasein se rozprostře, chuť se srovná. **Pozor:** při pH < 4 (které sherbet má) může tvaroh po dlouhém aging začít „zrnit". Max. 8 h.
 
 ### Bezpečnost
 
@@ -123,21 +121,18 @@ Recept počítá se **smíšeným lesním ovocem**, můžeš libovolně kombinov
 - **Méně tvarohu (2 000 g):** lehčí, blíž k sorbetu. Doplnit 500 g ovocem nebo 500 g vodou. Při ovoci nezapomeň přepočítat cukry (jahody přidají dalších ~40 g cukru).
 - **S vanilkou:** 50 g vanilkového extraktu přidat se sypkými pro „smetanovo-jahodový“ profil (sniž jahody o 50 g).
 - **S bazaličkou:** 20 g čerstvé bazalky rozmixované do citronové šťávy → jahoda + bazalka klasika.
-- **S citronovou kůrou:** nastrouhej najemno kůru z 2–3 neošetřených citronů (~10 g) do sacharózy a nech 30 min odstát — cukr z ní vytáhne éterické oleje (*oleo saccharum*). Pak vsyp se sypkými. Kůra ve směsi zůstane, tak strouhej opravdu najemno, ať v hotové zmrzlině nejsou cítit kousky. Louhovat kůru v horkém základu a scedit tady nejde — sherbet se nepasteruje.
+- **S citronovou kůrou:** nastrouhej najemno kůru z 2–3 neošetřených citronů (~10 g) do sacharózy a nech 30 min odstát — cukr z ní vytáhne éterické oleje (_oleo saccharum_). Pak vsyp se sypkými. Kůra ve směsi zůstane, tak strouhej opravdu najemno, ať v hotové zmrzlině nejsou cítit kousky. Louhovat kůru v horkém základu a scedit tady nejde — sherbet se nepasteruje.
 - **S balsamikem:** 30 g kvalitního aged balsamic vinegar místo poloviny citronky → italský dezertní profil.
-- **Lesní směs „divočina“:** 40 % jahoda + 30 % malina + 20 % borůvka + 10 % ostružina. Tmavě fialová, antokyanová.
-- **S rumem nebo vodkou (alkohol):** 50 g rumu/vodky při smíchání → snižuje bod tuhnutí (etanol FPDF 7,4), textura ještě měkčí.
-- **Bez tvarohu (čistý sorbet):** 2 500 g tvarohu → 1 500 g vody + 1 000 g extra ovoce. PAC zůstane, ale textura bude ledovější (chybí kasein). MEC3 Natura frutta 50 zůstane stejný.
 
 ### Co se stane když...
 
-| Problém                                                        | Příčina                                       | Řešení                                                        |
-| -------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------- |
-| Zrnitá textura, „tvarohové" zrno                               | Tvaroh moc tuhý nebo nedostatečně rozmixovaný | Část tvarohu nahradit vodou (1:1), tyčový mixér 2 min         |
-| [Tvaroh se po aging „srazí"](/ingredience/tvaroh/)                                     | pH < 4 (příliš citronu/ovoce), aging > 8 h    | Aging max. 8 h; pokud pyré velmi kyselé, sniž citron na 150 g |
-| „Kompotová" chuť, ne svěží                                     | Sherbet omylem pasterovali (přehřáli)         | NEpasterovat — zachovat syrové ovoce a citron                 |
-| Zmrzlina jak kámen z vitríny                                   | PAC < 30 a tuk 1 % → málo měkčidla            | Zvedni dextrózu na 600 g (sniž sacharózu o 150 g)             |
-| Příliš měkká, „nedrží tvar"                                    | PAC > 36                                      | Sniž dextrózu na 350 g, zvedni sacharózu o 100 g              |
-| [Bledá / vybledlá barva (jahody)](/ingredience/jahodove-pyre/) | pH > 4 (málo citronu) — antokyany blednou     | Citronka min. 250 g, přidat při míchání                       |
-| Ledové krystaly při skladování                                 | Málo MEC3 nebo nedostatečné rozmixování       | MEC3 nesmí udělat hrudky — vždy nejdřív s cukrem nasucho      |
-| Hrubá zrnitá pyré chuť                                         | Jahody nepřepasírovány, semínka rušivá        | Přepasírovat jahodové/malinové pyré přes střední síto         |
+| Problém                                                        | Příčina                                       | Řešení                                                                                             |
+| -------------------------------------------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Zrnitá textura, „tvarohové" zrno                               | Tvaroh moc tuhý nebo nedostatečně rozmixovaný | Část tvarohu nahradit vodou (1:1), tyčový mixér 2 min                                              |
+| [Tvaroh se po aging „srazí"](/ingredience/tvaroh/)             | pH < 4 (příliš citronu/ovoce), aging > 8 h    | Aging max. 8 h; pokud pyré velmi kyselé, sniž citron na 150 g                                      |
+| „Kompotová" chuť, ne svěží                                     | Sherbet omylem pasterovali (přehřáli)         | NEpasterovat — zachovat syrové ovoce a citron                                                      |
+| Zmrzlina jak kámen z vitríny                                   | Vitrína pod −12 °C, nebo PAC spadlo pod ~24   | Nejdřív zvedni teplotu vitríny na −10 °C. Až pak: dextrózu ze 100 na 250 g, sacharózu o 150 g dolů |
+| Příliš měkká, „nedrží tvar"                                    | PAC nad ~30                                   | Sniž dextrózu, rozdíl doplň glukózovým sušeným sirupem (sušina zůstane, PAC klesne)                |
+| [Bledá / vybledlá barva (jahody)](/ingredience/jahodove-pyre/) | pH > 4 (málo citronu) — antokyany blednou     | Citronka min. 250 g, přidat při míchání                                                            |
+| Ledové krystaly při skladování                                 | Málo MEC3 nebo nedostatečné rozmixování       | MEC3 nesmí udělat hrudky — vždy nejdřív s cukrem nasucho                                           |
+| Hrubá zrnitá pyré chuť                                         | Jahody nepřepasírovány, semínka rušivá        | Přepasírovat jahodové/malinové pyré přes střední síto                                              |
